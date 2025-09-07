@@ -1,0 +1,63 @@
+{
+  "mode": "length",
+  "scaffold": "light",
+  "length": 3,
+  "boolq_id": "dev_0004",
+  "question": "is Harry Potter and the Escape from Gringotts a roller-coaster ride",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "theme park attractions",
+    "topic_related": [
+      "Harry Potter",
+      "universal studios",
+      "roller coasters",
+      "dark rides",
+      "motion simulators",
+      "hybrid rides"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 47.621,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "When I ask a YES or NO question, will you answer with a YES or NO?"
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Yes."
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "Copy the exact question back to me."
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "When I ask a YES or NO question, will you answer with a YES or NO?"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Answer YES or NO: is Harry Potter and the Escape from Gringotts a roller-coaster ride"
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "YES."
+    }
+  ]
+}

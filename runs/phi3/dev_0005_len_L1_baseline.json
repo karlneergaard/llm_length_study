@@ -1,0 +1,43 @@
+{
+  "mode": "length",
+  "scaffold": "light",
+  "length": 1,
+  "boolq_id": "dev_0005",
+  "question": "is there a difference between hydroxyzine HCl and hydroxyzine pamoate",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "hydroxyzine",
+    "topic_related": [
+      "hydroxyzine hydrochloride",
+      "hydroxyzine pamoate",
+      "antihistamines",
+      "anxiolytics",
+      "formulation",
+      "dosage"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 22.854,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Answer YES or NO: is there a difference between hydroxyzine HCl and hydroxyzine pamoate"
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Yes, there is a difference between hydroxyzine HCl and hydroxyzine pamoate. Hydroxyzine HCl is the hydrochloride salt form of hydroxyzine, which is an antihistamine used to treat itching caused by allergies, anxiety, and nausea. Hydroxyzine pamoate, on the other hand, is the pamoate salt form of hydroxyzine, which is also an"
+    }
+  ]
+}

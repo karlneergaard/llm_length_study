@@ -1,0 +1,63 @@
+{
+  "mode": "length",
+  "scaffold": "rich",
+  "length": 3,
+  "boolq_id": "dev_0003",
+  "question": "is pain experienced in a missing body part or a paralyzed area",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "pain perception",
+    "topic_related": [
+      "phantom limb pain",
+      "neuropathic pain",
+      "paralysis",
+      "amputation",
+      "nervous system",
+      "somatosensory cortex"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 50.647,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Give me an short overview of pain perception."
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Pain perception, also known as nociception, is the process by which the nervous system detects and responds to harmful stimuli. It involves the detection of noxious stimuli by specialized sensory receptors called nociceptors, which are found throughout the body"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "In 1-2 sentences, how does phantom limb pain relate to pain perception?"
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "Phantom limb pain is a phenomenon where individuals experience pain in a limb that has been amputated, suggesting that pain perception is not solely dependent on the presence of physical tissue. It is believed to be related to the brain's representation of the body and the persistence of nerve"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Answer YES or NO: is pain experienced in a missing body part or a paralyzed area"
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "YES"
+    }
+  ]
+}

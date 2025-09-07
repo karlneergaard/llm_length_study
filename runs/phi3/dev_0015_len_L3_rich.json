@@ -1,0 +1,63 @@
+{
+  "mode": "length",
+  "scaffold": "rich",
+  "length": 3,
+  "boolq_id": "dev_0015",
+  "question": "is Fantastic Beasts and Where to Find Them a prequel",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "wizarding world",
+    "topic_related": [
+      "fantastic beasts",
+      "prequel",
+      "harry potter",
+      "spin-off",
+      "film series",
+      "timeline"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 55.115,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Give me an short overview of wizarding world."
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "The Wizarding World is a fictional universe created by British author J.K. Rowling, which primarily consists of the Harry Potter book series and the associated films, as well as other spin-off works such as Fantastic Beasts and the Harry Potter series. The series follows the adventures of"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "In 1-2 sentences, how does fantastic beasts relate to wizarding world?"
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "Fantastic Beasts and Where to Find Them is a prequel to the Harry Potter series, set in the same universe, and follows the story of Newt Scamander, a magizoologist, as he explores the magical world and its creatures. The series expands on the history"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Answer YES or NO: is Fantastic Beasts and Where to Find Them a prequel"
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "YES"
+    }
+  ]
+}

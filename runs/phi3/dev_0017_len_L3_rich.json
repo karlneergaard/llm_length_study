@@ -1,0 +1,63 @@
+{
+  "mode": "length",
+  "scaffold": "rich",
+  "length": 3,
+  "boolq_id": "dev_0017",
+  "question": "was the movie The Strangers based on a true story",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "horror film",
+    "topic_related": [
+      "the strangers",
+      "home invasion",
+      "true story",
+      "inspiration",
+      "marketing",
+      "film production"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 39.161,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Give me an short overview of horror film."
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "A horror film is a genre of movie that aims to elicit fear, disgust, or terror in its audience. It often features supernatural elements, monsters, or psychopathic characters, and uses suspense, gore, and shock to create a sense of dread and unease."
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "In 1-2 sentences, how does the strangers relate to horror film?"
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "The concept of strangers in horror films often serves as a catalyst for the unfolding of terrifying events, as they may bring unknown dangers or hidden secrets into the lives of the characters. The presence of strangers can also create a sense of vulnerability and isolation, heightening the fear and"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Answer YES or NO: was the movie The Strangers based on a true story"
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "NO"
+    }
+  ]
+}

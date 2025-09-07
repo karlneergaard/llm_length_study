@@ -1,0 +1,63 @@
+{
+  "mode": "length",
+  "scaffold": "rich",
+  "length": 3,
+  "boolq_id": "dev_0012",
+  "question": "is the show Bloodline based on a true story",
+  "gold_answer": false,
+  "enriched": {
+    "topic_primary": "television series",
+    "topic_related": [
+      "bloodline",
+      "drama",
+      "netflix",
+      "true story",
+      "fiction",
+      "production"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 41.257,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Give me an short overview of television series."
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Television series, also known as TV shows or TV dramas, are a form of entertainment that consists of a set of episodes, usually with a continuous storyline or theme. They are typically broadcasted on television networks and can be either scripted or unscripted.\n\nScripted TV series are"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "In 1-2 sentences, how does bloodline relate to television series?"
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "Bloodline is a television series that explores the complex relationships and conflicts within a family, often focusing on themes of power, betrayal, and inheritance. It delves into the dynamics of family ties and the impact they have on the characters' lives."
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Answer YES or NO: is the show Bloodline based on a true story"
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "NO"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "mode": "length",
+  "scaffold": "rich",
+  "length": 3,
+  "boolq_id": "dev_0001",
+  "question": "does ethanol take more energy to make than it produces",
+  "gold_answer": false,
+  "enriched": {
+    "topic_primary": "renewable energy",
+    "topic_related": [
+      "biofuel",
+      "ethanol",
+      "energy balance",
+      "energy return on investment",
+      "corn ethanol",
+      "sugarcane ethanol"
+    ]
+  },
+  "model": {
+    "id": "microsoft/Phi-3-mini-4k-instruct",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 52.475,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Give me an short overview of renewable energy."
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Renewable energy refers to energy sources that are naturally replenished and have a minimal impact on the environment. These sources include solar, wind, hydro, geothermal, and biomass energy. Unlike fossil fuels, which are finite and contribute to climate change, renewable energy"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "In 1-2 sentences, how does biofuel relate to renewable energy?"
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "Biofuel is a type of renewable energy derived from organic materials such as plants and animal waste. It is considered renewable because it can be replenished through natural processes and does not deplete finite resources."
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Answer YES or NO: does ethanol take more energy to make than it produces"
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "NO. Ethanol, a type of biofuel, is considered to be energy positive, meaning it produces more energy than it takes to create. This is because the plants used to produce ethanol absorb carbon dioxide from the atmosphere during their growth, which offsets the energy used in its production."
+    }
+  ]
+}

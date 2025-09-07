@@ -1,0 +1,123 @@
+{
+  "mode": "length",
+  "scaffold": "rich",
+  "length": 9,
+  "boolq_id": "dev_0016",
+  "question": "will there be a season 8 of The Vampire Diaries",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "television seasons",
+    "topic_related": [
+      "the vampire diaries",
+      "cw network",
+      "final season",
+      "episode order",
+      "broadcast schedule",
+      "spinoff"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 115.111,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Give me an overview of television seasons."
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Television seasons are a series of episodes that are broadcast on television, typically organized into a specific order and timeline. They are usually divided into a set number of episodes, which can vary depending on the show.\n\nA television season typically begins with a premiere, which is the first episode of the season"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "In 1-2 sentences, how does the vampire diaries relate to television seasons?"
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "The Vampire Diaries is a popular supernatural drama series that follows the lives of vampires, werewolves, and witches in the fictional town of Mystic Falls. The show is divided into multiple television seasons, each consisting of a set number of episodes, and follows a specific story"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Based on the topic, briefly define cw network."
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "The CW Network is a television network in the United States that was formed in 2006 through a merger between The WB and UPN. It primarily focuses on broadcasting popular television series, including drama, comedy, and reality shows, and is known for its diverse programming.\n\n##"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "prompt": "Compare the vampire diaries and cw network in 1-2 sentences."
+    },
+    {
+      "turn": 4,
+      "role": "model",
+      "reply": "The Vampire Diaries is a popular television series that airs on the CW Network, which is a television network in the United States. The show is known for its supernatural drama genre and has gained a large fan base over the years."
+    },
+    {
+      "turn": 5,
+      "role": "user",
+      "prompt": "Summarize the relation between cw network and television seasons in one sentence."
+    },
+    {
+      "turn": 5,
+      "role": "model",
+      "reply": "The CW Network is a television network that airs television seasons of various popular shows, including The Vampire Diaries, which is a supernatural drama series."
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "prompt": "Based on the topic, briefly define final season."
+    },
+    {
+      "turn": 6,
+      "role": "model",
+      "reply": "A final season is the last season of a television series, which concludes the storyline and brings closure to the characters and plotlines. It is often highly anticipated by fans and can sometimes lead to a series finale or a spin-off.\n\n##"
+    },
+    {
+      "turn": 7,
+      "role": "user",
+      "prompt": "Compare cw network and final season in 1-2 sentences."
+    },
+    {
+      "turn": 7,
+      "role": "model",
+      "reply": "The CW Network is a television network that airs television seasons of various popular shows, including The Vampire Diaries, which has had multiple seasons. The final season of a show like The Vampire Diaries is the last season that concludes the storyline and brings closure to the characters and plotlines"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "prompt": "Summarize the relation between final season and television seasons in one sentence."
+    },
+    {
+      "turn": 8,
+      "role": "model",
+      "reply": "A final season is the last season of a television series, which concludes the storyline and brings closure to the characters and plotlines, and is part of the overall television season structure."
+    },
+    {
+      "turn": 9,
+      "role": "user",
+      "prompt": "Answer YES or NO: will there be a season 8 of The Vampire Diaries"
+    },
+    {
+      "turn": 9,
+      "role": "model",
+      "reply": "NO\n\n##"
+    }
+  ]
+}

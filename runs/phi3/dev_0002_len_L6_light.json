@@ -1,0 +1,93 @@
+{
+  "mode": "length",
+  "scaffold": "light",
+  "length": 6,
+  "boolq_id": "dev_0002",
+  "question": "is house tax the same as property tax",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "property tax",
+    "topic_related": [
+      "taxation",
+      "municipal finance",
+      "real estate",
+      "assessed value",
+      "local government",
+      "homeowner"
+    ]
+  },
+  "model": {
+    "id": "microsoft/Phi-3-mini-4k-instruct",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 105.727,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "When I ask a YES or NO question, will you answer with a YES or NO?"
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Yes."
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "Copy the exact question back to me."
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "When I ask a YES or NO question, will you answer with a YES or NO?"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Confirm you’ll base your answer only on widely accepted facts."
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "Yes, I will base my answer only on widely accepted facts."
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "prompt": "Confirm you’ll pinpoint any ambiguous terms after you answer YES or NO."
+    },
+    {
+      "turn": 4,
+      "role": "model",
+      "reply": "Yes, I will pinpoint any ambiguous terms after I answer YES or NO."
+    },
+    {
+      "turn": 5,
+      "role": "user",
+      "prompt": "Can you repeat my instructions?"
+    },
+    {
+      "turn": 5,
+      "role": "model",
+      "reply": "Certainly. You asked me to:\n1. Answer YES or NO to questions.\n2. Copy the exact question back to you.\n3. Base my answer only on widely accepted facts.\n4. Pinpoint any ambiguous terms after answering."
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "prompt": "Answer YES or NO: is house tax the same as property tax"
+    },
+    {
+      "turn": 6,
+      "role": "model",
+      "reply": "NO, house tax and property tax are not the same. House tax is a specific type of property tax that is levied on the value of a house. Property tax, on the other hand, is a broader term that includes taxes on all types of real estate, including houses, land, and commercial properties. The specifics of how these taxes are calculated and applied can vary by jurisdiction."
+    }
+  ]
+}

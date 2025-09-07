@@ -1,0 +1,43 @@
+{
+  "mode": "length",
+  "scaffold": "light",
+  "length": 1,
+  "boolq_id": "dev_0004",
+  "question": "is Harry Potter and the Escape from Gringotts a roller-coaster ride",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "theme park attractions",
+    "topic_related": [
+      "Harry Potter",
+      "universal studios",
+      "roller coasters",
+      "dark rides",
+      "motion simulators",
+      "hybrid rides"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 20.803,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Answer YES or NO: is Harry Potter and the Escape from Gringotts a roller-coaster ride"
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Yes, Harry Potter and the Escape from Gringotts is a roller-coaster ride. It is a themed roller coaster located at Universal Studios Florida and Universal Studios Hollywood. The ride is based on the Harry Potter series and features various elements from the books and films, including the Hogwarts Express, the Forbidden Journey, and the Chamber of Secrets. It is designed to take riders on a thrilling journey"
+    }
+  ]
+}

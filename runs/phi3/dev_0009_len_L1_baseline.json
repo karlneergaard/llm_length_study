@@ -1,0 +1,43 @@
+{
+  "mode": "length",
+  "scaffold": "light",
+  "length": 1,
+  "boolq_id": "dev_0009",
+  "question": "can you drive in Canada with a US license",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "driver licensing",
+    "topic_related": [
+      "international driving",
+      "reciprocity agreement",
+      "tourism",
+      "rental cars",
+      "identification",
+      "provincial law"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 26.04,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Answer YES or NO: can you drive in Canada with a US license"
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Yes, you can drive in Canada with a US license. However, you must have a valid driver's license from your home country. If your US driver's license is expired, you may need to apply for a Canadian driver's license."
+    }
+  ]
+}

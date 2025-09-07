@@ -1,0 +1,43 @@
+{
+  "mode": "length",
+  "scaffold": "light",
+  "length": 1,
+  "boolq_id": "dev_0015",
+  "question": "is Fantastic Beasts and Where to Find Them a prequel",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "fantasy fiction",
+    "topic_related": [
+      "Harry Potter series",
+      "wizarding world",
+      "fantastic beasts",
+      "prequels",
+      "Harry Potter",
+      "spin-offs"
+    ]
+  },
+  "model": {
+    "id": "microsoft/Phi-3-mini-4k-instruct",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 12.354,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Answer YES or NO: is Fantastic Beasts and Where to Find Them a prequel"
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Yes, Fantastic Beasts and Where to Find Them is a prequel to the Harry Potter series. It was released in 2016 and is set in the 1920s, focusing on the character Newt Scamander, a magizoologist who travels to New York City to study magical creatures. The film introduces several characters and events that are referenced in the Harry Potter series, providing background information and setting"
+    }
+  ]
+}

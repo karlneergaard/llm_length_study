@@ -1,0 +1,43 @@
+{
+  "mode": "length",
+  "scaffold": "light",
+  "length": 1,
+  "boolq_id": "dev_0001",
+  "question": "does ethanol take more energy to make than it produces",
+  "gold_answer": false,
+  "enriched": {
+    "topic_primary": "renewable energy",
+    "topic_related": [
+      "biofuel",
+      "ethanol",
+      "energy balance",
+      "energy return on investment",
+      "corn ethanol",
+      "sugarcane ethanol"
+    ]
+  },
+  "model": {
+    "id": "microsoft/Phi-3-mini-4k-instruct",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 10.951,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Answer YES or NO: does ethanol take more energy to make than it produces"
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "YES.\n\n\n\nEthanol, like other biofuels, is considered to be a renewable energy source because it is derived from biomass, which can be replenished over a relatively short period of time. The production of ethanol from biomass involves several steps, including the cultivation of feedstock (such as corn or sugarcane), harvesting, transportation, and processing. The most common method of producing eth"
+    }
+  ]
+}

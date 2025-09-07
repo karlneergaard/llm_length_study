@@ -1,0 +1,63 @@
+{
+  "mode": "length",
+  "scaffold": "rich",
+  "length": 3,
+  "boolq_id": "dev_0008",
+  "question": "is there an English word with Q not followed by U",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "english orthography",
+    "topic_related": [
+      "loanword",
+      "romanization",
+      "transliteration",
+      "proper noun",
+      "spelling rule",
+      "word list"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 35.78,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Give me an short overview of english orthography."
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "English orthography refers to the conventional spelling system of the English language. It is a complex system that includes a wide array of rules and exceptions. English orthography is largely phonemic, meaning that words are generally spelled the way they sound. However, there are many irregularities due to the language'"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "In 1-2 sentences, how does loanword relate to english orthography?"
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "Loanwords are words adopted from a foreign language with little or no modification to their original spelling, which can introduce irregularities and exceptions into English orthography. For example, the French word \"ballet\" retains its original spelling in English, despite the pronunciation differences."
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Answer YES or NO: is there an English word with Q not followed by U"
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "YES. There are a few English words that contain Q not followed by U, such as \"qiana\" (a type of synthetic fiber), \"qwerty\" (the layout of keys on a keyboard), and \"qoph\" (a letter in the Hebrew alphabet)."
+    }
+  ]
+}

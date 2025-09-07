@@ -1,0 +1,181 @@
+path,file,boolq_id,L,scaffold,gold,question,first_token,compliant,pred,correct_strict,correct_comp_only,reply_len_words,reply_len_chars,has_explanation,degenerate_flag,timing_s
+runs/phi3/dev_0019_len_L9_rich.json,dev_0019_len_L9_rich.json,dev_0019,9,rich,True,is the TV show The Resident over for the season,i,0,,0,0,30,177,0,0,104.181
+runs/phi3/dev_0004_len_L9_light.json,dev_0004_len_L9_light.json,dev_0004,9,light,True,is Harry Potter and the Escape from Gringotts a roller-coaster ride,yes,1,True,1,1,1,4,1,0,170.85
+runs/phi3/dev_0003_len_L3_rich.json,dev_0003_len_L3_rich.json,dev_0003,3,rich,True,is pain experienced in a missing body part or a paralyzed area,yes,1,True,1,1,1,3,0,0,50.647
+runs/phi3/dev_0004_len_L6_rich.json,dev_0004_len_L6_rich.json,dev_0004,6,rich,True,is Harry Potter and the Escape from Gringotts a roller-coaster ride,yes,1,True,1,1,1,3,0,0,69.04
+runs/phi3/dev_0007_len_L3_light.json,dev_0007_len_L3_light.json,dev_0007,3,light,True,can an odd number be divided by an even number,no,1,False,0,0,1,3,1,0,51.071
+runs/phi3/dev_0020_len_L1_baseline.json,dev_0020_len_L1_baseline.json,dev_0020,1,light,True,does magnesium citrate contain citric acid,yes,1,True,1,1,54,338,1,0,13.169
+runs/phi3/dev_0018_len_L9_light.json,dev_0018_len_L9_light.json,dev_0018,9,light,True,is Durham University part of the Russell Group,no,1,False,0,0,1,3,1,0,90.959
+runs/phi3/dev_0018_len_L1_baseline.json,dev_0018_len_L1_baseline.json,dev_0018,1,light,True,is Durham University part of the Russell Group,durham,0,,0,0,67,432,0,0,13.807
+runs/phi3/dev_0006_len_L9_rich.json,dev_0006_len_L9_rich.json,dev_0006,9,rich,False,is Barq’s root beer a Pepsi product,no,1,False,1,1,1,2,0,0,104.826
+runs/phi3/dev_0010_len_L12_rich.json,dev_0010_len_L12_rich.json,dev_0010,12,rich,True,is there a playoff for third place in the FIFA World Cup,yes,1,True,1,1,1,3,0,0,144.611
+runs/phi3/dev_0003_len_L6_light.json,dev_0003_len_L6_light.json,dev_0003,6,light,True,is pain experienced in a missing body part or a paralyzed area,no,1,False,0,0,1,3,1,0,98.859
+runs/phi3/dev_0009_len_L12_light.json,dev_0009_len_L12_light.json,dev_0009,12,light,True,can you drive in Canada with a US license,yes,1,True,1,1,1,4,1,0,205.523
+runs/phi3/dev_0017_len_L1_baseline.json,dev_0017_len_L1_baseline.json,dev_0017,1,light,True,was the movie The Strangers based on a true story,no,1,False,0,0,52,296,1,0,10.7
+runs/phi3/dev_0009_len_L12_rich.json,dev_0009_len_L12_rich.json,dev_0009,12,rich,True,can you drive in Canada with a US license,yes,1,True,1,1,33,183,1,0,133.746
+runs/phi3/dev_0001_len_L9_light.json,dev_0001_len_L9_light.json,dev_0001,9,light,False,does ethanol take more energy to make than it produces,no,1,False,1,1,1,3,1,0,87.978
+runs/phi3/dev_0004_len_L12_light.json,dev_0004_len_L12_light.json,dev_0004,12,light,True,is Harry Potter and the Escape from Gringotts a roller-coaster ride,yes,1,True,1,1,1,4,1,0,222.472
+runs/phi3/dev_0010_len_L6_rich.json,dev_0010_len_L6_rich.json,dev_0010,6,rich,True,is there a playoff for third place in the FIFA World Cup,yes,1,True,1,1,1,3,0,0,71.571
+runs/phi3/dev_0008_len_L3_rich.json,dev_0008_len_L3_rich.json,dev_0008,3,rich,True,is there an English word with Q not followed by U,yes,1,True,1,1,38,204,1,0,35.78
+runs/phi3/dev_0012_len_L9_rich.json,dev_0012_len_L9_rich.json,dev_0012,9,rich,False,is the show Bloodline based on a true story,no,1,False,1,1,1,2,0,0,137.418
+runs/phi3/dev_0014_len_L12_light.json,dev_0014_len_L12_light.json,dev_0014,12,light,True,is the liver part of the excretory system,yes,1,True,1,1,1,4,1,0,115.712
+runs/phi3/dev_0012_len_L1_baseline.json,dev_0012_len_L1_baseline.json,dev_0012,1,light,False,is the show Bloodline based on a true story,the,0,,0,0,70,378,0,0,23.335
+runs/phi3/dev_0002_len_L3_light.json,dev_0002_len_L3_light.json,dev_0002,3,light,True,is house tax the same as property tax,no,1,False,0,0,1,3,1,0,57.075
+runs/phi3/dev_0019_len_L12_light.json,dev_0019_len_L12_light.json,dev_0019,12,light,True,is the TV show The Resident over for the season,no,1,False,0,0,1,3,1,0,109.025
+runs/phi3/dev_0006_len_L6_light.json,dev_0006_len_L6_light.json,dev_0006,6,light,False,is Barq’s root beer a Pepsi product,no,1,False,1,1,37,205,1,0,91.156
+runs/phi3/dev_0017_len_L3_rich.json,dev_0017_len_L3_rich.json,dev_0017,3,rich,True,was the movie The Strangers based on a true story,no,1,False,0,0,1,2,0,0,39.161
+runs/phi3/dev_0015_len_L12_rich.json,dev_0015_len_L12_rich.json,dev_0015,12,rich,True,is Fantastic Beasts and Where to Find Them a prequel,yes,1,True,1,1,1,3,0,0,160.116
+runs/phi3/dev_0009_len_L9_rich.json,dev_0009_len_L9_rich.json,dev_0009,9,rich,True,can you drive in Canada with a US license,yes,1,True,1,1,19,106,1,0,101.657
+runs/phi3/dev_0017_len_L12_light.json,dev_0017_len_L12_light.json,dev_0017,12,light,True,was the movie The Strangers based on a true story,no,1,False,0,0,1,3,1,0,121.64
+runs/phi3/dev_0005_len_L9_light.json,dev_0005_len_L9_light.json,dev_0005,9,light,True,is there a difference between hydroxyzine HCl and hydroxyzine pamoate,yes,1,True,1,1,1,4,1,0,165.873
+runs/phi3/dev_0013_len_L3_rich.json,dev_0013_len_L3_rich.json,dev_0013,3,rich,True,is it bad to wash your hair with shower gel,no,1,False,0,0,30,154,1,0,42.222
+runs/phi3/dev_0014_len_L6_rich.json,dev_0014_len_L6_rich.json,dev_0014,6,rich,True,is the liver part of the excretory system,yes,1,True,1,1,1,3,0,0,119.391
+runs/phi3/dev_0007_len_L12_light.json,dev_0007_len_L12_light.json,dev_0007,12,light,True,can an odd number be divided by an even number,no,1,False,0,0,1,3,1,0,313.542
+runs/phi3/dev_0006_len_L3_light.json,dev_0006_len_L3_light.json,dev_0006,3,light,False,is Barq’s root beer a Pepsi product,no,1,False,1,1,1,2,0,0,46.774
+runs/phi3/dev_0005_len_L1_baseline.json,dev_0005_len_L1_baseline.json,dev_0005,1,light,True,is there a difference between hydroxyzine HCl and hydroxyzine pamoate,yes,1,True,1,1,51,326,1,0,22.854
+runs/phi3/dev_0011_len_L12_rich.json,dev_0011_len_L12_rich.json,dev_0011,12,rich,True,can minors drink with their parents in New York,no,1,False,0,0,1,2,0,0,156.174
+runs/phi3/dev_0016_len_L9_rich.json,dev_0016_len_L9_rich.json,dev_0016,9,rich,True,will there be a season 8 of The Vampire Diaries,no,1,False,0,0,2,6,1,0,115.111
+runs/phi3/dev_0019_len_L9_light.json,dev_0019_len_L9_light.json,dev_0019,9,light,True,is the TV show The Resident over for the season,no,1,False,0,0,1,3,1,0,87.895
+runs/phi3/dev_0002_len_L6_light.json,dev_0002_len_L6_light.json,dev_0002,6,light,True,is house tax the same as property tax,no,1,False,0,0,67,370,1,0,105.727
+runs/phi3/dev_0008_len_L12_rich.json,dev_0008_len_L12_rich.json,dev_0008,12,rich,True,is there an English word with Q not followed by U,yes,1,True,1,1,23,128,1,0,138.464
+runs/phi3/dev_0018_len_L3_rich.json,dev_0018_len_L3_rich.json,dev_0018,3,rich,True,is Durham University part of the Russell Group,yes,1,True,1,1,1,3,0,0,44.598
+runs/phi3/dev_0002_len_L9_rich.json,dev_0002_len_L9_rich.json,dev_0002,9,rich,True,is house tax the same as property tax,yes,1,True,1,1,14,79,1,0,192.113
+runs/phi3/dev_0020_len_L12_rich.json,dev_0020_len_L12_rich.json,dev_0020,12,rich,True,does magnesium citrate contain citric acid,yes,1,True,1,1,1,3,0,0,398.376
+runs/phi3/dev_0003_len_L3_light.json,dev_0003_len_L3_light.json,dev_0003,3,light,True,is pain experienced in a missing body part or a paralyzed area,no,1,False,0,0,1,3,1,0,44.912
+runs/phi3/dev_0007_len_L3_rich.json,dev_0007_len_L3_rich.json,dev_0007,3,rich,True,can an odd number be divided by an even number,no,1,False,0,0,1,2,0,0,36.109
+runs/phi3/dev_0007_len_L6_light.json,dev_0007_len_L6_light.json,dev_0007,6,light,True,can an odd number be divided by an even number,no,1,False,0,0,12,61,1,0,107.5
+runs/phi3/dev_0014_len_L12_rich.json,dev_0014_len_L12_rich.json,dev_0014,12,rich,True,is the liver part of the excretory system,yes,1,True,1,1,1,3,0,0,218.89
+runs/phi3/dev_0006_len_L9_light.json,dev_0006_len_L9_light.json,dev_0006,9,light,False,is Barq’s root beer a Pepsi product,no,1,False,1,1,1,3,1,0,143.42
+runs/phi3/dev_0007_len_L9_rich.json,dev_0007_len_L9_rich.json,dev_0007,9,rich,True,can an odd number be divided by an even number,no,1,False,0,0,1,2,0,0,105.16
+runs/phi3/dev_0005_len_L6_rich.json,dev_0005_len_L6_rich.json,dev_0005,6,rich,True,is there a difference between hydroxyzine HCl and hydroxyzine pamoate,yes,1,True,1,1,1,3,0,0,70.679
+runs/phi3/dev_0016_len_L1_baseline.json,dev_0016_len_L1_baseline.json,dev_0016,1,light,True,will there be a season 8 of The Vampire Diaries,no,1,False,0,0,21,110,1,0,13.092
+runs/phi3/dev_0019_len_L3_light.json,dev_0019_len_L3_light.json,dev_0019,3,light,True,is the TV show The Resident over for the season,no,1,False,0,0,1,2,0,0,34.087
+runs/phi3/dev_0005_len_L3_light.json,dev_0005_len_L3_light.json,dev_0005,3,light,True,is there a difference between hydroxyzine HCl and hydroxyzine pamoate,yes,1,True,1,1,1,4,1,0,56.962
+runs/phi3/dev_0002_len_L3_rich.json,dev_0002_len_L3_rich.json,dev_0002,3,rich,True,is house tax the same as property tax,no,1,False,0,0,37,218,1,0,65.4
+runs/phi3/dev_0012_len_L12_rich.json,dev_0012_len_L12_rich.json,dev_0012,12,rich,False,is the show Bloodline based on a true story,no,1,False,1,1,1,2,0,0,172.276
+runs/phi3/dev_0018_len_L9_rich.json,dev_0018_len_L9_rich.json,dev_0018,9,rich,True,is Durham University part of the Russell Group,yes,1,True,1,1,1,3,0,0,157.374
+runs/phi3/dev_0013_len_L1_baseline.json,dev_0013_len_L1_baseline.json,dev_0013,1,light,True,is it bad to wash your hair with shower gel,yes,1,True,1,1,70,396,1,0,24.159
+runs/phi3/dev_0001_len_L6_light.json,dev_0001_len_L6_light.json,dev_0001,6,light,False,does ethanol take more energy to make than it produces,no,1,False,1,1,1,3,1,0,48.149
+runs/phi3/dev_0003_len_L9_light.json,dev_0003_len_L9_light.json,dev_0003,9,light,True,is pain experienced in a missing body part or a paralyzed area,no,1,False,0,0,1,3,1,0,137.277
+runs/phi3/dev_0016_len_L3_rich.json,dev_0016_len_L3_rich.json,dev_0016,3,rich,True,will there be a season 8 of The Vampire Diaries,no,1,False,0,0,1,2,0,0,37.708
+runs/phi3/dev_0018_len_L6_light.json,dev_0018_len_L6_light.json,dev_0018,6,light,True,is Durham University part of the Russell Group,no,1,False,0,0,1,3,1,0,60.153
+runs/phi3/dev_0011_len_L12_light.json,dev_0011_len_L12_light.json,dev_0011,12,light,True,can minors drink with their parents in New York,no,1,False,0,0,1,3,1,0,210.476
+runs/phi3/dev_0013_len_L9_rich.json,dev_0013_len_L9_rich.json,dev_0013,9,rich,True,is it bad to wash your hair with shower gel,no,1,False,0,0,67,391,1,0,123.073
+runs/phi3/dev_0019_len_L1_baseline.json,dev_0019_len_L1_baseline.json,dev_0019,1,rich,True,is the TV show The Resident over for the season,i,0,,0,0,28,183,0,0,15.853
+runs/phi3/dev_0001_len_L12_light.json,dev_0001_len_L12_light.json,dev_0001,12,light,False,does ethanol take more energy to make than it produces,no,1,False,1,1,1,3,1,0,172.365
+runs/phi3/dev_0009_len_L3_rich.json,dev_0009_len_L3_rich.json,dev_0009,3,rich,True,can you drive in Canada with a US license,yes,1,True,1,1,32,153,1,0,34.809
+runs/phi3/dev_0011_len_L6_rich.json,dev_0011_len_L6_rich.json,dev_0011,6,rich,True,can minors drink with their parents in New York,no,1,False,0,0,1,2,0,0,75.774
+runs/phi3/dev_0004_len_L6_light.json,dev_0004_len_L6_light.json,dev_0004,6,light,True,is Harry Potter and the Escape from Gringotts a roller-coaster ride,yes,1,True,1,1,1,4,1,0,90.099
+runs/phi3/dev_0017_len_L12_rich.json,dev_0017_len_L12_rich.json,dev_0017,12,rich,True,was the movie The Strangers based on a true story,no,1,False,0,0,1,2,0,0,178.35
+runs/phi3/dev_0007_len_L9_light.json,dev_0007_len_L9_light.json,dev_0007,9,light,True,can an odd number be divided by an even number,no,1,False,0,0,1,3,1,0,147.909
+runs/phi3/dev_0017_len_L9_rich.json,dev_0017_len_L9_rich.json,dev_0017,9,rich,True,was the movie The Strangers based on a true story,no,1,False,0,0,1,2,0,0,129.069
+runs/phi3/dev_0018_len_L3_light.json,dev_0018_len_L3_light.json,dev_0018,3,light,True,is Durham University part of the Russell Group,no,1,False,0,0,1,3,1,0,32.182
+runs/phi3/dev_0015_len_L6_rich.json,dev_0015_len_L6_rich.json,dev_0015,6,rich,True,is Fantastic Beasts and Where to Find Them a prequel,yes,1,True,1,1,1,3,0,0,76.473
+runs/phi3/dev_0002_len_L12_light.json,dev_0002_len_L12_light.json,dev_0002,12,light,True,is house tax the same as property tax,no,1,False,0,0,1,3,1,0,191.993
+runs/phi3/dev_0004_len_L3_light.json,dev_0004_len_L3_light.json,dev_0004,3,light,True,is Harry Potter and the Escape from Gringotts a roller-coaster ride,yes,1,True,1,1,1,4,1,0,47.621
+runs/phi3/dev_0012_len_L3_rich.json,dev_0012_len_L3_rich.json,dev_0012,3,rich,False,is the show Bloodline based on a true story,no,1,False,1,1,1,2,0,0,41.257
+runs/phi3/dev_0008_len_L9_rich.json,dev_0008_len_L9_rich.json,dev_0008,9,rich,True,is there an English word with Q not followed by U,yes,1,True,1,1,12,61,1,0,98.491
+runs/phi3/dev_0013_len_L12_rich.json,dev_0013_len_L12_rich.json,dev_0013,12,rich,True,is it bad to wash your hair with shower gel,no,1,False,0,0,63,393,1,0,171.699
+runs/phi3/dev_0012_len_L12_light.json,dev_0012_len_L12_light.json,dev_0012,12,light,False,is the show Bloodline based on a true story,no,1,False,1,1,1,3,1,0,218.352
+runs/phi3/dev_0002_len_L9_light.json,dev_0002_len_L9_light.json,dev_0002,9,light,True,is house tax the same as property tax,no,1,False,0,0,1,3,1,0,150.388
+runs/phi3/dev_0020_len_L6_rich.json,dev_0020_len_L6_rich.json,dev_0020,6,rich,True,does magnesium citrate contain citric acid,yes,1,True,1,1,1,3,0,0,99.351
+runs/phi3/dev_0006_len_L3_rich.json,dev_0006_len_L3_rich.json,dev_0006,3,rich,False,is Barq’s root beer a Pepsi product,no,1,False,1,1,1,2,0,0,35.069
+runs/phi3/dev_0019_len_L6_light.json,dev_0019_len_L6_light.json,dev_0019,6,light,True,is the TV show The Resident over for the season,no,1,False,0,0,1,3,1,0,60.776
+runs/phi3/dev_0001_len_L1_baseline.json,dev_0001_len_L1_baseline.json,dev_0001,1,light,False,does ethanol take more energy to make than it produces,yes,1,True,0,0,60,399,1,0,10.951
+runs/phi3/dev_0003_len_L9_rich.json,dev_0003_len_L9_rich.json,dev_0003,9,rich,True,is pain experienced in a missing body part or a paralyzed area,yes,1,True,1,1,1,3,0,0,99.755
+runs/phi3/dev_0001_len_L3_light.json,dev_0001_len_L3_light.json,dev_0001,3,light,False,does ethanol take more energy to make than it produces,no,1,False,1,1,1,3,1,0,28.449
+runs/phi3/dev_0004_len_L1_baseline.json,dev_0004_len_L1_baseline.json,dev_0004,1,light,True,is Harry Potter and the Escape from Gringotts a roller-coaster ride,yes,1,True,1,1,67,410,1,0,20.803
+runs/phi3/dev_0005_len_L6_light.json,dev_0005_len_L6_light.json,dev_0005,6,light,True,is there a difference between hydroxyzine HCl and hydroxyzine pamoate,yes,1,True,1,1,1,4,1,0,113.153
+runs/phi3/dev_0001_len_L6_rich.json,dev_0001_len_L6_rich.json,dev_0001,6,rich,False,does ethanol take more energy to make than it produces,no,1,False,1,1,1,2,0,0,108.305
+runs/phi3/dev_0019_len_L3_rich.json,dev_0019_len_L3_rich.json,dev_0019,3,rich,True,is the TV show The Resident over for the season,no,1,False,0,0,1,2,0,0,40.676
+runs/phi3/dev_0016_len_L12_rich.json,dev_0016_len_L12_rich.json,dev_0016,12,rich,True,will there be a season 8 of The Vampire Diaries,no,1,False,0,0,2,6,1,0,152.122
+runs/phi3/dev_0014_len_L3_light.json,dev_0014_len_L3_light.json,dev_0014,3,light,True,is the liver part of the excretory system,yes,1,True,1,1,1,4,1,0,69.184
+runs/phi3/dev_0015_len_L3_rich.json,dev_0015_len_L3_rich.json,dev_0015,3,rich,True,is Fantastic Beasts and Where to Find Them a prequel,yes,1,True,1,1,1,3,0,0,55.115
+runs/phi3/dev_0013_len_L12_light.json,dev_0013_len_L12_light.json,dev_0013,12,light,True,is it bad to wash your hair with shower gel,no,1,False,0,0,1,3,1,0,215.816
+runs/phi3/dev_0003_len_L12_rich.json,dev_0003_len_L12_rich.json,dev_0003,12,rich,True,is pain experienced in a missing body part or a paralyzed area,yes,1,True,1,1,1,3,0,0,144.848
+runs/phi3/dev_0007_len_L1_baseline.json,dev_0007_len_L1_baseline.json,dev_0007,1,light,True,can an odd number be divided by an even number,no,1,False,0,0,63,325,1,0,21.547
+runs/phi3/dev_0010_len_L6_light.json,dev_0010_len_L6_light.json,dev_0010,6,light,True,is there a playoff for third place in the FIFA World Cup,no,1,False,0,0,1,3,1,0,100.092
+runs/phi3/dev_0020_len_L3_light.json,dev_0020_len_L3_light.json,dev_0020,3,light,True,does magnesium citrate contain citric acid,yes,1,True,1,1,1,4,1,0,32.522
+runs/phi3/dev_0017_len_L9_light.json,dev_0017_len_L9_light.json,dev_0017,9,light,True,was the movie The Strangers based on a true story,no,1,False,0,0,1,3,1,0,95.797
+runs/phi3/dev_0010_len_L9_rich.json,dev_0010_len_L9_rich.json,dev_0010,9,rich,True,is there a playoff for third place in the FIFA World Cup,yes,1,True,1,1,1,3,0,0,113.404
+runs/phi3/dev_0002_len_L1_baseline.json,dev_0002_len_L1_baseline.json,dev_0002,1,light,True,is house tax the same as property tax,yes,1,True,1,1,67,386,1,0,24.031
+runs/phi3/dev_0003_len_L12_light.json,dev_0003_len_L12_light.json,dev_0003,12,light,True,is pain experienced in a missing body part or a paralyzed area,no,1,False,0,0,1,3,1,0,184.685
+runs/phi3/dev_0012_len_L6_rich.json,dev_0012_len_L6_rich.json,dev_0012,6,rich,False,is the show Bloodline based on a true story,no,1,False,1,1,1,2,0,0,85.818
+runs/phi3/dev_0008_len_L3_light.json,dev_0008_len_L3_light.json,dev_0008,3,light,True,is there an English word with Q not followed by U,yes,1,True,1,1,1,4,1,0,77.777
+runs/phi3/dev_0004_len_L9_rich.json,dev_0004_len_L9_rich.json,dev_0004,9,rich,True,is Harry Potter and the Escape from Gringotts a roller-coaster ride,yes,1,True,1,1,1,3,0,0,106.345
+runs/phi3/dev_0011_len_L3_light.json,dev_0011_len_L3_light.json,dev_0011,3,light,True,can minors drink with their parents in New York,yes,1,True,1,1,1,4,1,0,58.677
+runs/phi3/dev_0015_len_L6_light.json,dev_0015_len_L6_light.json,dev_0015,6,light,True,is Fantastic Beasts and Where to Find Them a prequel,yes,1,True,1,1,60,340,1,0,59.313
+runs/phi3/dev_0020_len_L3_rich.json,dev_0020_len_L3_rich.json,dev_0020,3,rich,True,does magnesium citrate contain citric acid,yes,1,True,1,1,1,3,0,0,38.848
+runs/phi3/dev_0006_len_L6_rich.json,dev_0006_len_L6_rich.json,dev_0006,6,rich,False,is Barq’s root beer a Pepsi product,no,1,False,1,1,1,2,0,0,73.759
+runs/phi3/dev_0006_len_L12_rich.json,dev_0006_len_L12_rich.json,dev_0006,12,rich,False,is Barq’s root beer a Pepsi product,no,1,False,1,1,1,2,0,0,137.407
+runs/phi3/dev_0012_len_L9_light.json,dev_0012_len_L9_light.json,dev_0012,9,light,False,is the show Bloodline based on a true story,no,1,False,1,1,1,3,1,0,175.952
+runs/phi3/dev_0008_len_L1_baseline.json,dev_0008_len_L1_baseline.json,dev_0008,1,light,True,is there an English word with Q not followed by U,yes,1,True,1,1,26,121,1,0,28.8
+runs/phi3/dev_0001_len_L3_rich.json,dev_0001_len_L3_rich.json,dev_0001,3,rich,False,does ethanol take more energy to make than it produces,no,1,False,1,1,48,288,1,0,52.475
+runs/phi3/dev_0019_len_L6_rich.json,dev_0019_len_L6_rich.json,dev_0019,6,rich,True,is the TV show The Resident over for the season,i,0,,0,0,30,177,0,0,72.306
+runs/phi3/dev_0009_len_L6_light.json,dev_0009_len_L6_light.json,dev_0009,6,light,True,can you drive in Canada with a US license,yes,1,True,1,1,70,425,1,0,104.111
+runs/phi3/dev_0015_len_L3_light.json,dev_0015_len_L3_light.json,dev_0015,3,light,True,is Fantastic Beasts and Where to Find Them a prequel,yes,1,True,1,1,1,4,1,0,30.965
+runs/phi3/dev_0005_len_L3_rich.json,dev_0005_len_L3_rich.json,dev_0005,3,rich,True,is there a difference between hydroxyzine HCl and hydroxyzine pamoate,yes,1,True,1,1,46,316,1,0,36.138
+runs/phi3/dev_0020_len_L12_light.json,dev_0020_len_L12_light.json,dev_0020,12,light,True,does magnesium citrate contain citric acid,yes,1,True,1,1,1,4,1,0,112.813
+runs/phi3/dev_0002_len_L12_rich.json,dev_0002_len_L12_rich.json,dev_0002,12,rich,True,is house tax the same as property tax,no,1,False,0,0,20,114,1,0,273.495
+runs/phi3/dev_0011_len_L6_light.json,dev_0011_len_L6_light.json,dev_0011,6,light,True,can minors drink with their parents in New York,no,1,False,0,0,1,3,1,0,102.428
+runs/phi3/dev_0016_len_L9_light.json,dev_0016_len_L9_light.json,dev_0016,9,light,True,will there be a season 8 of The Vampire Diaries,no,1,False,0,0,1,3,1,0,94.477
+runs/phi3/dev_0002_len_L6_rich.json,dev_0002_len_L6_rich.json,dev_0002,6,rich,True,is house tax the same as property tax,no,1,False,0,0,15,85,1,0,123.444
+runs/phi3/dev_0009_len_L3_light.json,dev_0009_len_L3_light.json,dev_0009,3,light,True,can you drive in Canada with a US license,yes,1,True,1,1,1,4,1,0,56.233
+runs/phi3/dev_0014_len_L9_rich.json,dev_0014_len_L9_rich.json,dev_0014,9,rich,True,is the liver part of the excretory system,yes,1,True,1,1,1,3,0,0,163.006
+runs/phi3/dev_0010_len_L3_light.json,dev_0010_len_L3_light.json,dev_0010,3,light,True,is there a playoff for third place in the FIFA World Cup,no,1,False,0,0,1,3,1,0,54.247
+runs/phi3/dev_0014_len_L6_light.json,dev_0014_len_L6_light.json,dev_0014,6,light,True,is the liver part of the excretory system,yes,1,True,1,1,48,285,1,0,115.608
+runs/phi3/dev_0010_len_L1_baseline.json,dev_0010_len_L1_baseline.json,dev_0010,1,light,True,is there a playoff for third place in the FIFA World Cup,no,1,False,0,0,47,254,1,0,12.348
+runs/phi3/dev_0016_len_L6_rich.json,dev_0016_len_L6_rich.json,dev_0016,6,rich,True,will there be a season 8 of The Vampire Diaries,no,1,False,0,0,1,2,0,0,73.46
+runs/phi3/dev_0007_len_L12_rich.json,dev_0007_len_L12_rich.json,dev_0007,12,rich,True,can an odd number be divided by an even number,no,1,False,0,0,1,2,0,0,142.115
+runs/phi3/dev_0013_len_L9_light.json,dev_0013_len_L9_light.json,dev_0013,9,light,True,is it bad to wash your hair with shower gel,no,1,False,0,0,1,3,1,0,158.72
+runs/phi3/dev_0008_len_L6_light.json,dev_0008_len_L6_light.json,dev_0008,6,light,True,is there an English word with Q not followed by U,yes,1,True,1,1,1,4,1,0,158.34
+runs/phi3/dev_0009_len_L6_rich.json,dev_0009_len_L6_rich.json,dev_0009,6,rich,True,can you drive in Canada with a US license,yes,1,True,1,1,19,106,1,0,59.217
+runs/phi3/dev_0011_len_L3_rich.json,dev_0011_len_L3_rich.json,dev_0011,3,rich,True,can minors drink with their parents in New York,no,1,False,0,0,23,123,1,0,36.863
+runs/phi3/dev_0020_len_L6_light.json,dev_0020_len_L6_light.json,dev_0020,6,light,True,does magnesium citrate contain citric acid,yes,1,True,1,1,1,4,1,0,58.045
+runs/phi3/dev_0015_len_L1_baseline.json,dev_0015_len_L1_baseline.json,dev_0015,1,light,True,is Fantastic Beasts and Where to Find Them a prequel,yes,1,True,1,1,65,392,1,0,12.354
+runs/phi3/dev_0010_len_L12_light.json,dev_0010_len_L12_light.json,dev_0010,12,light,True,is there a playoff for third place in the FIFA World Cup,no,1,False,0,0,1,3,1,0,217.02
+runs/phi3/dev_0016_len_L3_light.json,dev_0016_len_L3_light.json,dev_0016,3,light,True,will there be a season 8 of The Vampire Diaries,no,1,False,0,0,1,2,0,0,32.109
+runs/phi3/dev_0013_len_L6_rich.json,dev_0013_len_L6_rich.json,dev_0013,6,rich,True,is it bad to wash your hair with shower gel,no,1,False,0,0,74,386,1,0,88.177
+runs/phi3/dev_0006_len_L12_light.json,dev_0006_len_L12_light.json,dev_0006,12,light,False,is Barq’s root beer a Pepsi product,no,1,False,1,1,1,3,1,0,203.423
+runs/phi3/dev_0009_len_L9_light.json,dev_0009_len_L9_light.json,dev_0009,9,light,True,can you drive in Canada with a US license,yes,1,True,1,1,1,4,1,0,158.164
+runs/phi3/dev_0001_len_L12_rich.json,dev_0001_len_L12_rich.json,dev_0001,12,rich,False,does ethanol take more energy to make than it produces,no,1,False,1,1,1,2,0,0,246.943
+runs/phi3/dev_0011_len_L9_rich.json,dev_0011_len_L9_rich.json,dev_0011,9,rich,True,can minors drink with their parents in New York,no,1,False,0,0,1,2,0,0,111.929
+runs/phi3/dev_0012_len_L6_light.json,dev_0012_len_L6_light.json,dev_0012,6,light,False,is the show Bloodline based on a true story,no,1,False,1,1,1,3,1,0,110.456
+runs/phi3/dev_0016_len_L12_light.json,dev_0016_len_L12_light.json,dev_0016,12,light,True,will there be a season 8 of The Vampire Diaries,no,1,False,0,0,1,3,1,0,119.767
+runs/phi3/dev_0015_len_L9_light.json,dev_0015_len_L9_light.json,dev_0015,9,light,True,is Fantastic Beasts and Where to Find Them a prequel,no,1,False,0,0,1,3,1,0,85.656
+runs/phi3/dev_0009_len_L1_baseline.json,dev_0009_len_L1_baseline.json,dev_0009,1,light,True,can you drive in Canada with a US license,yes,1,True,1,1,39,214,1,0,26.04
+runs/phi3/dev_0014_len_L3_rich.json,dev_0014_len_L3_rich.json,dev_0014,3,rich,True,is the liver part of the excretory system,yes,1,True,1,1,1,3,0,0,48.843
+runs/phi3/dev_0013_len_L3_light.json,dev_0013_len_L3_light.json,dev_0013,3,light,True,is it bad to wash your hair with shower gel,no,1,False,0,0,1,3,1,0,54.363
+runs/phi3/dev_0006_len_L1_baseline.json,dev_0006_len_L1_baseline.json,dev_0006,1,light,False,is Barq’s root beer a Pepsi product,no,1,False,1,1,51,271,1,0,23.616
+runs/phi3/dev_0018_len_L6_rich.json,dev_0018_len_L6_rich.json,dev_0018,6,rich,True,is Durham University part of the Russell Group,yes,1,True,1,1,1,3,0,0,89.213
+runs/phi3/dev_0017_len_L6_light.json,dev_0017_len_L6_light.json,dev_0017,6,light,True,was the movie The Strangers based on a true story,no,1,False,0,0,1,3,1,0,66.283
+runs/phi3/dev_0004_len_L12_rich.json,dev_0004_len_L12_rich.json,dev_0004,12,rich,True,is Harry Potter and the Escape from Gringotts a roller-coaster ride,yes,1,True,1,1,1,3,0,0,139.089
+runs/phi3/dev_0018_len_L12_rich.json,dev_0018_len_L12_rich.json,dev_0018,12,rich,True,is Durham University part of the Russell Group,yes,1,True,1,1,1,3,0,0,210.821
+runs/phi3/dev_0010_len_L9_light.json,dev_0010_len_L9_light.json,dev_0010,9,light,True,is there a playoff for third place in the FIFA World Cup,no,1,False,0,0,1,3,1,0,153.942
+runs/phi3/dev_0003_len_L1_baseline.json,dev_0003_len_L1_baseline.json,dev_0003,1,light,True,is pain experienced in a missing body part or a paralyzed area,yes,1,True,1,1,73,398,1,0,18.542
+runs/phi3/dev_0007_len_L6_rich.json,dev_0007_len_L6_rich.json,dev_0007,6,rich,True,can an odd number be divided by an even number,no,1,False,0,0,1,2,0,0,73.807
+runs/phi3/dev_0005_len_L9_rich.json,dev_0005_len_L9_rich.json,dev_0005,9,rich,True,is there a difference between hydroxyzine HCl and hydroxyzine pamoate,yes,1,True,1,1,1,3,0,0,107.189
+runs/phi3/dev_0003_len_L6_rich.json,dev_0003_len_L6_rich.json,dev_0003,6,rich,True,is pain experienced in a missing body part or a paralyzed area,yes,1,True,1,1,1,3,0,0,111.814
+runs/phi3/dev_0017_len_L3_light.json,dev_0017_len_L3_light.json,dev_0017,3,light,True,was the movie The Strangers based on a true story,no,1,False,0,0,1,3,1,0,38.006
+runs/phi3/dev_0020_len_L9_light.json,dev_0020_len_L9_light.json,dev_0020,9,light,True,does magnesium citrate contain citric acid,yes,1,True,1,1,1,4,1,0,90.529
+runs/phi3/dev_0011_len_L1_baseline.json,dev_0011_len_L1_baseline.json,dev_0011,1,light,True,can minors drink with their parents in New York,in,0,,0,0,72,435,0,0,21.626
+runs/phi3/dev_0008_len_L9_light.json,dev_0008_len_L9_light.json,dev_0008,9,light,True,is there an English word with Q not followed by U,yes,1,True,1,1,1,4,1,0,199.822
+runs/phi3/dev_0001_len_L9_rich.json,dev_0001_len_L9_rich.json,dev_0001,9,rich,False,does ethanol take more energy to make than it produces,no,1,False,1,1,1,2,0,0,166.046
+runs/phi3/dev_0013_len_L6_light.json,dev_0013_len_L6_light.json,dev_0013,6,light,True,is it bad to wash your hair with shower gel,no,1,False,0,0,30,149,1,0,116.94
+runs/phi3/dev_0014_len_L1_baseline.json,dev_0014_len_L1_baseline.json,dev_0014,1,light,True,is the liver part of the excretory system,yes,1,True,1,1,52,313,1,0,23.303
+runs/phi3/dev_0014_len_L9_light.json,dev_0014_len_L9_light.json,dev_0014,9,light,True,is the liver part of the excretory system,yes,1,True,1,1,1,4,1,0,73.823
+runs/phi3/dev_0020_len_L9_rich.json,dev_0020_len_L9_rich.json,dev_0020,9,rich,True,does magnesium citrate contain citric acid,yes,1,True,1,1,1,3,0,0,234.9
+runs/phi3/dev_0004_len_L3_rich.json,dev_0004_len_L3_rich.json,dev_0004,3,rich,True,is Harry Potter and the Escape from Gringotts a roller-coaster ride,yes,1,True,1,1,19,124,1,0,35.473
+runs/phi3/dev_0015_len_L12_light.json,dev_0015_len_L12_light.json,dev_0015,12,light,True,is Fantastic Beasts and Where to Find Them a prequel,yes,1,True,1,1,1,4,1,0,115.21
+runs/phi3/dev_0012_len_L3_light.json,dev_0012_len_L3_light.json,dev_0012,3,light,False,is the show Bloodline based on a true story,no,1,False,1,1,1,3,1,0,53.074
+runs/phi3/dev_0018_len_L12_light.json,dev_0018_len_L12_light.json,dev_0018,12,light,True,is Durham University part of the Russell Group,no,1,False,0,0,1,3,1,0,113.091
+runs/phi3/dev_0010_len_L3_rich.json,dev_0010_len_L3_rich.json,dev_0010,3,rich,True,is there a playoff for third place in the FIFA World Cup,yes,1,True,1,1,1,3,0,0,43.699
+runs/phi3/dev_0008_len_L6_rich.json,dev_0008_len_L6_rich.json,dev_0008,6,rich,True,is there an English word with Q not followed by U,yes,1,True,1,1,38,204,1,0,69.135
+runs/phi3/dev_0016_len_L6_light.json,dev_0016_len_L6_light.json,dev_0016,6,light,True,will there be a season 8 of The Vampire Diaries,yes,1,True,1,1,1,4,1,0,59.622
+runs/phi3/dev_0005_len_L12_rich.json,dev_0005_len_L12_rich.json,dev_0005,12,rich,True,is there a difference between hydroxyzine HCl and hydroxyzine pamoate,yes,1,True,1,1,1,3,0,0,142.943
+runs/phi3/dev_0011_len_L9_light.json,dev_0011_len_L9_light.json,dev_0011,9,light,True,can minors drink with their parents in New York,no,1,False,0,0,1,3,1,0,153.1
+runs/phi3/dev_0019_len_L12_rich.json,dev_0019_len_L12_rich.json,dev_0019,12,rich,True,is the TV show The Resident over for the season,i,0,,0,0,30,177,0,0,132.863
+runs/phi3/dev_0008_len_L12_light.json,dev_0008_len_L12_light.json,dev_0008,12,light,True,is there an English word with Q not followed by U,yes,1,True,1,1,1,4,1,0,197.247
+runs/phi3/dev_0017_len_L6_rich.json,dev_0017_len_L6_rich.json,dev_0017,6,rich,True,was the movie The Strangers based on a true story,no,1,False,0,0,1,2,0,0,87.057
+runs/phi3/dev_0005_len_L12_light.json,dev_0005_len_L12_light.json,dev_0005,12,light,True,is there a difference between hydroxyzine HCl and hydroxyzine pamoate,yes,1,True,1,1,1,4,1,0,219.396
+runs/phi3/dev_0015_len_L9_rich.json,dev_0015_len_L9_rich.json,dev_0015,9,rich,True,is Fantastic Beasts and Where to Find Them a prequel,yes,1,True,1,1,1,3,0,0,101.805

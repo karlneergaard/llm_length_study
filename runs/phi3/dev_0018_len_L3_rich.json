@@ -1,0 +1,63 @@
+{
+  "mode": "length",
+  "scaffold": "rich",
+  "length": 3,
+  "boolq_id": "dev_0018",
+  "question": "is Durham University part of the Russell Group",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "russell group",
+    "topic_related": [
+      "durham university",
+      "research university",
+      "uk higher education",
+      "membership",
+      "group of universities",
+      "university ranking"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 44.598,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Give me an short overview of russell group."
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "The Russell Group is a coalition of 24 leading public research universities in the United Kingdom, named after the philosopher and logician Bertrand Russell. The group was established in 1994 to promote the interests of its member institutions and to advocate for the importance of research-int"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "In 1-2 sentences, how does durham university relate to russell group?"
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "Durham University is a member of the Russell Group, which is a coalition of 24 leading public research universities in the United Kingdom. The Russell Group promotes the interests of its member institutions and advocates for the importance of research-intensive education."
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Answer YES or NO: is Durham University part of the Russell Group"
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "YES"
+    }
+  ]
+}

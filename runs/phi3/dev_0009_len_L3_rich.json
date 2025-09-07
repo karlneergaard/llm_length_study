@@ -1,0 +1,63 @@
+{
+  "mode": "length",
+  "scaffold": "rich",
+  "length": 3,
+  "boolq_id": "dev_0009",
+  "question": "can you drive in Canada with a US license",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "driver licensing",
+    "topic_related": [
+      "international driving",
+      "reciprocity agreement",
+      "tourism",
+      "rental car",
+      "identification",
+      "provincial law"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 34.809,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Give me an short overview of driver licensing."
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Driver licensing is a regulatory process that grants individuals the legal authority to operate motor vehicles on public roads. The process typically involves meeting certain age requirements, passing written and practical driving tests, and paying a fee. The specific requirements and tests vary by country and state, but the goal is to ensure that"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "In 1-2 sentences, how does international driving relate to driver licensing?"
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "International driving often requires individuals to obtain a license that is recognized by the country they plan to drive in, which may involve additional tests or requirements beyond their home country's licensing process."
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Answer YES or NO: can you drive in Canada with a US license"
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "YES, you can drive in Canada with a US license for a limited period of time, but you may need to apply for a Canadian license if you plan to stay longer."
+    }
+  ]
+}

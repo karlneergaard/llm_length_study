@@ -1,0 +1,9 @@
+{"length":9,"scaffold":"rich","turn":1,"prompt":"In one sentence, give me an overview of {topic_primary}."}
+{"length":9,"scaffold":"rich","turn":2,"prompt":"In one sentence, explain what ‘{related_a}’ refers to in the context of {topic_primary}."}
+{"length":9,"scaffold":"rich","turn":3,"prompt":"In one sentence, explain what ‘{related_b}’ refers to in the context of {topic_primary}."}
+{"length":9,"scaffold":"rich","turn":4,"prompt":"In one sentence, state one key difference between ‘{related_a}’ and ‘{related_b}’ in terms of {topic_primary}."}
+{"length":9,"scaffold":"rich","turn":5,"prompt":"In one sentence, state one common assumption people make about ‘{related_b}’ in terms of {topic_primary}."}
+{"length":9,"scaffold":"rich","turn":6,"prompt":"In one sentence, explain what ‘{related_c}’ refers to in the context of {topic_primary}."}
+{"length":9,"scaffold":"rich","turn":7,"prompt":"In one sentence, state one key difference between ‘{related_b}’ and ‘{related_c}’ in terms of {topic_primary}."}
+{"length":9,"scaffold":"rich","turn":8,"prompt":"In one sentence, state one common assumption people make about ‘{related_c}’ in terms of {topic_primary}."}
+{"length":9,"scaffold":"rich","turn":9,"prompt":"Answer YES or NO: {QUESTION}"}

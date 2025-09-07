@@ -1,0 +1,3 @@
+{"length":3,"scaffold":"rich","turn":1,"prompt":"In one sentence, give me an overview of {topic_primary}."}
+{"length":3,"scaffold":"rich","turn":2,"prompt":"In one sentence, explain what ‘{related_a}’ refers to in the context of {topic_primary}."}
+{"length":3,"scaffold":"rich","turn":3,"prompt":"Answer YES or NO: {QUESTION}"}

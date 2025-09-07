@@ -1,0 +1,93 @@
+{
+  "mode": "length",
+  "scaffold": "light",
+  "length": 6,
+  "boolq_id": "dev_0014",
+  "question": "is the liver part of the excretory system",
+  "gold_answer": true,
+  "enriched": {
+    "topic_primary": "digestive system",
+    "topic_related": [
+      "excretory system",
+      "liver",
+      "kidney",
+      "bile",
+      "metabolism",
+      "detoxification"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 115.608,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "When I ask a YES or NO question, will you answer with a YES or NO?"
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "Yes."
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "prompt": "Copy the exact question back to me."
+    },
+    {
+      "turn": 2,
+      "role": "model",
+      "reply": "When I ask a YES or NO question, will you answer with a YES or NO?"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "prompt": "Confirm you’ll base your answer only on widely accepted facts."
+    },
+    {
+      "turn": 3,
+      "role": "model",
+      "reply": "Yes, I will base my answer only on widely accepted facts."
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "prompt": "Confirm you’ll pinpoint any ambiguous terms after you answer YES or NO."
+    },
+    {
+      "turn": 4,
+      "role": "model",
+      "reply": "Yes, I will pinpoint any ambiguous terms after I answer YES or NO."
+    },
+    {
+      "turn": 5,
+      "role": "user",
+      "prompt": "Can you repeat my instructions?"
+    },
+    {
+      "turn": 5,
+      "role": "model",
+      "reply": "Certainly. You asked me to:\n1. Answer YES or NO to questions.\n2. Copy the exact question back to you.\n3. Base my answer only on widely accepted facts.\n4. Pinpoint any ambiguous terms after answering."
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "prompt": "Answer YES or NO: is the liver part of the excretory system"
+    },
+    {
+      "turn": 6,
+      "role": "model",
+      "reply": "YES. The liver is part of the excretory system. It plays a crucial role in detoxifying the blood, producing bile to aid in digestion, and excreting waste products such as bilirubin and excess substances into the bile, which is then eliminated from the body through the digestive tract."
+    }
+  ]
+}

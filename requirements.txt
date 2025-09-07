@@ -1,0 +1,13 @@
+# Core inference + assets
+transformers>=4.42,<5
+torch>=2.3  # MPS/CPU/CUDA as available
+safetensors>=0.4.2
+
+# Analysis & plotting
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+
+# Convenience (optional but helpful)
+tqdm>=4.66
+huggingface_hub>=0.23

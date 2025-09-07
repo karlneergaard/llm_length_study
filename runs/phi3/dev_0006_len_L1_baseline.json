@@ -1,0 +1,43 @@
+{
+  "mode": "length",
+  "scaffold": "light",
+  "length": 1,
+  "boolq_id": "dev_0006",
+  "question": "is Barq’s root beer a Pepsi product",
+  "gold_answer": false,
+  "enriched": {
+    "topic_primary": "brand ownership",
+    "topic_related": [
+      "Barq's",
+      "Coca-Cola company",
+      "Pepsico",
+      "root beer",
+      "beverage portfolio",
+      "trademarks"
+    ]
+  },
+  "model": {
+    "id": "phi3mini",
+    "device": "mps",
+    "dtype": "float16"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens_tasks": 64,
+    "max_new_tokens_final": 96,
+    "stop_seq": "### User"
+  },
+  "timing_s": 23.616,
+  "transcript": [
+    {
+      "turn": 1,
+      "role": "user",
+      "prompt": "Answer YES or NO: is Barq’s root beer a Pepsi product"
+    },
+    {
+      "turn": 1,
+      "role": "model",
+      "reply": "No, Barq's root beer is not a Pepsi product. Barq's is a brand of root beer that is owned by the Dr Pepper Snapple Group, which is a separate entity from PepsiCo. PepsiCo is the parent company of Pepsi, Mountain Dew, and other beverage brands, but it does not own Barq's."
+    }
+  ]
+}
