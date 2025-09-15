@@ -155,7 +155,7 @@ def p_to_stars(p: float) -> str:
 def mcnemar_adjacent_pairs(df: pd.DataFrame) -> pd.DataFrame:
     """
     Adjacent lengths within each scaffold using strict correctness.
-    Returns tidy rows per (scaffold, L1->L2).
+    Returns tidy rows per (scaffold, e.g., L1->L2).
     """
     records = []
     for sc in sorted(df["scaffold"].dropna().unique()):

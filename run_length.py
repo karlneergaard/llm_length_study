@@ -18,20 +18,20 @@ Usage: change scaffold and out-root as needed
     --out-root runs/phi3 \
     --id-include dev_0021-dev_0022 --skip-existing \
     --model microsoft/Phi-3-mini-4k-instruct \
-    --device mps --dtype float16 \
+    --device mps --dtype float32 \
     --max-new-tokens-tasks 64 --max-new-tokens-final 96 \
     --temperature 0 --stop-seq "### User" \
       
   # If scaffold is light or rich, lengths can be multiple values but not 1
   python run_length.py \
-    --scaffold light \
-    --lengths 3,6,9,12 \
+    --scaffold rich \
+    --lengths 41 \
     --in-dev data/dev.jsonl \
     --in-enriched data/boolq_enriched.jsonl \
     --out-root runs/phi3 \
-    --id-include dev_0014-dev_0020 --skip-existing \
+    --num 20 \
     --model microsoft/Phi-3-mini-4k-instruct \
-    --device mps --dtype float16 \
+    --device mps --dtype float32 \
     --max-new-tokens-tasks 64 --max-new-tokens-final 96 \
     --temperature 0 --stop-seq "### User" \
 
@@ -258,9 +258,13 @@ class ModelRunner:
     def generate(self, prompt: str, max_new_tokens: int = 64, temperature: float = 0.0,
                  stop: Optional[List[str]] = None) -> str:
         import torch
+        print(f"[DEBUG] Generate called: prompt_len={len(prompt)}, max_tokens={max_new_tokens}")
         with torch.inference_mode():
+            print("[DEBUG] Tokenizing input...")
             enc = self.tok(prompt, return_tensors="pt")
+            print(f"[DEBUG] Input tokens: {enc['input_ids'].shape}")
             inputs = enc.to(self._input_device) if self.device != "auto" else {k: v.to(self._input_device) for k, v in enc.items()}
+            print("[DEBUG] About to call model.generate...")
             output_ids = self.model.generate(
                 **inputs,
                 max_new_tokens=max_new_tokens,
@@ -268,6 +272,7 @@ class ModelRunner:
                 temperature=temperature if (temperature and temperature > 0) else 1.0,
                 pad_token_id=self.tok.pad_token_id,
             )[0]
+        print("[DEBUG] Generation complete, decoding...")
         in_len = inputs["input_ids"].shape[-1]
         gen_only_ids = output_ids[in_len:]
         reply = self.tok.decode(gen_only_ids, skip_special_tokens=True).strip()
@@ -339,12 +344,21 @@ def main():
     # Cap by --num
     if args.num is not None and args.num > 0:
         items = items[: args.num]
+    #Debug
+    print(f"[DEBUG] Loaded {len(dev)} dev items, {len(enr)} enriched items")
+    print(f"[DEBUG] After joining: {len(joined)} items")
+    print(f"[DEBUG] After filtering: {len(items)} items")
+    if items:
+        first_item = items[0]
+        print(f"[DEBUG] First item ID: {first_item[1].get('id', 'unknown')}")
 
     # Load model
     print(f"[INFO] Loading model {args.model} on {args.device} ({args.dtype})")
     runner = ModelRunner(args.model, device=args.device, dtype=args.dtype)
     # Warmup
+    print("[DEBUG] Model loaded, starting warmup...")
     _ = runner.generate("### User\nok\n### Assistant\n", max_new_tokens=1, temperature=0.0, stop=None)
+    print("[DEBUG] Warmup complete")
 
     # Stop list (trim reply only)
     stop_list = None
@@ -370,7 +384,9 @@ def main():
         "items": [],
     }
 
-    for (drow, erow) in items:
+    print(f"[DEBUG] Starting processing of {len(items)} items for lengths {lengths}")
+    for i, (drow, erow) in enumerate(items):
+        print(f"[DEBUG] Processing item {i+1}/{len(items)}: {erow.get('id', 'unknown')}")
         q_raw = drow.get("question", "")
         q_corr = erow.get("corrected") or q_raw
         boolq_id_raw = erow.get("id") or drow.get("id")
@@ -386,6 +402,7 @@ def main():
         ph_map = build_placeholder_map(enriched_meta)
 
         for L in lengths:
+            print(f"[DEBUG] Processing length L={L} for item {boolq_id}")
             # Output path
             fname = f"{boolq_id}_len_L{L}_{args.scaffold}.json"
             out_path = out_root / fname
@@ -396,13 +413,16 @@ def main():
 
             # Load assets
             turns = load_length_file(assets_root, args.scaffold, L)
+            print(f"[DEBUG] Loaded {len(turns)} turns for L={L}")
             # Build rolling conversation
             transcript = []
             rolling = ""
             t_start = time.time()
             for t in range(1, L + 1):
+                print(f"[DEBUG] Processing turn {t}/{L}")
                 entry = turns[t-1]
                 prompt_tpl = entry.get("prompt", "")
+                print(f"[DEBUG] Turn {t} prompt template length: {len(prompt_tpl)} chars")
                 # Substitute placeholders
                 if args.scaffold == "rich":
                     prompt_text = substitute_placeholders(prompt_tpl, ph_map)
@@ -416,8 +436,13 @@ def main():
                 is_final = (t == L)
                 cap = args.max_new_tokens_final if is_final else args.max_new_tokens_tasks
 
+                print(f"[DEBUG] Turn {t} full prompt length: {len(full_prompt)} chars")
+                print(f"[DEBUG] About to generate for turn {t}, max_tokens={cap}")
+
                 reply = runner.generate(full_prompt, max_new_tokens=cap,
                                         temperature=args.temperature, stop=stop_list)
+
+                print(f"[DEBUG] Turn {t} generation complete, reply length: {len(reply)} chars")
 
                 transcript.append({"turn": t, "role": "user", "prompt": prompt_text})
                 transcript.append({"turn": t, "role": "model", "reply": reply})

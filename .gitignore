@@ -1,1 +1,6 @@
 /Articles-LLM-Length
+/qc_boolq_enriched.py
+/data/boolq_enriched_processed.jsonl
+/data/clean_boolq.py
+/data/domains.xlsx
+/data/boolq_to-be-processed.jsonl
