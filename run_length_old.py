@@ -3,53 +3,47 @@
 """
 run_length.py — Length vs Veracity (BoolQ) runner, rolling context only.
 
-Assets (per length L; file must contain exactly L lines):
-  data/length/baseline/L1.jsonl
-  data/length/meta/L{L}_info-meta.jsonl            # or L{L}_{scaffold}.jsonl or L{L}.jsonl
-  data/length/semantic/L{L}_info-semantic.jsonl    # or L{L}_{scaffold}.jsonl or L{L}.jsonl
-  data/length/underspecified/L{L}_info-underspecified.jsonl  # or L{L}_{scaffold}.jsonl or L{L}.jsonl
+Assets:
+  data/length/baseline/L{L}.jsonl          # each line: {"length":L,"turn":k,"prompt":"..."}
+  data/length/light/L{L}_info-light.jsonl   # each line: {"length":L,"scaffold":"light","turn":k,"prompt":"..."}
+  data/length/rich/L{L}_info-rich.jsonl     # each line: {"length":L,"scaffold":"rich","turn":k,"prompt":"..."}
 
-Usage examples:
-  # Baseline (L=1 only)
+Usage: change scaffold and out-root as needed
+  # If scaffold is baseline, lengths is always 1
   python run_length.py \
     --scaffold baseline \
     --lengths 1 \
+    --in-dev data/dev.jsonl \
     --in-enriched data/boolq_enriched.jsonl \
-    --out-root runs/baseline_phi3 \
+    --out-root runs/phi3 \
+    --id-include dev_0021-dev_0022 --skip-existing \
     --model microsoft/Phi-3-mini-4k-instruct \
     --device mps --dtype float32 \
     --max-new-tokens-tasks 64 --max-new-tokens-final 96 \
-    --temperature 0 --stop-seq "### User"
-
-  # Meta, any subset of {6,11,16,21}
+    --temperature 0 --stop-seq "### User" \
+      
+  # If scaffold is light or rich, lengths can be multiple values but not 1
   python run_length.py \
-    --scaffold meta \
-    --lengths 6,11,16,21 \
+    --scaffold rich \
+    --lengths 41 \
+    --in-dev data/dev.jsonl \
     --in-enriched data/boolq_enriched.jsonl \
-    --out-root runs/meta_phi3 \
-    --num 50 --skip-existing \
+    --out-root runs/phi3 \
+    --num 20 \
     --model microsoft/Phi-3-mini-4k-instruct \
-    --device mps --dtype float32
+    --device mps --dtype float32 \
+    --max-new-tokens-tasks 64 --max-new-tokens-final 96 \
+    --temperature 0 --stop-seq "### User" \
 
-  # Semantic
-  python run_length.py \
-    --scaffold semantic \
-    --lengths 6,11,16,21 \
-    --in-enriched data/boolq_enriched.jsonl \
-    --out-root runs/semantic_phi3
-
-  # Underspecified
-  python run_length.py \
-    --scaffold underspecified \
-    --lengths 6,11,16,21 \
-    --in-enriched data/boolq_enriched.jsonl \
-    --out-root runs/underspecified_phi3
-
+# Example to run only a few specific IDs:
+    --id-include dev_0003-dev_0020 --skip-existing \
+# or a larger range:
+    --num 100 \
 """
 
 import argparse, json, re, time
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 # -----------------------
 # Small IO helpers
@@ -63,6 +57,15 @@ def read_jsonl(path: Path) -> List[dict]:
                 rows.append(json.loads(s))
     return rows
 
+def join_dev_with_enriched(dev: List[dict], enr: List[dict]) -> List[Tuple[dict, dict]]:
+    idx = {e.get("question"): e for e in enr if isinstance(e.get("question"), str)}
+    out = []
+    for d in dev:
+        q = d.get("question")
+        if isinstance(q, str) and q in idx:
+            out.append((d, idx[q]))
+    return out
+
 def write_json(path: Path, obj: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
@@ -74,9 +77,12 @@ def sanitize_id(s: Optional[str], fallback: str) -> str:
     return s if s else fallback
 
 # -----------------------
-# ID include parsing (e.g., 'dev_0063-dev_0100,dev_0123')
+# ID include parsing
 # -----------------------
 def expand_id_spec(spec: Optional[str]) -> set:
+    """
+    'dev_0063-dev_0100,dev_0123' -> {'dev_0063',...,'dev_0100','dev_0123'}
+    """
     out = set()
     if not spec:
         return out
@@ -102,14 +108,14 @@ def expand_id_spec(spec: Optional[str]) -> set:
 # Asset loader (one JSONL per length)
 # -----------------------
 def load_length_file(base_dir: Path, scaffold: str, L: int) -> List[dict]:
-    if scaffold not in ("baseline", "meta", "semantic", "underspecified"):
-        raise ValueError("scaffold must be 'baseline', 'meta', 'semantic', or 'underspecified'")
+    if scaffold not in ("baseline", "light", "rich"):
+        raise ValueError("scaffold must be 'baseline', 'light', or 'rich'")
 
     # Enforce scaffold/length rules here too (defensive)
     if scaffold == "baseline" and L != 1:
         raise ValueError("Baseline scaffold only supports L=1.")
-    if scaffold in ("meta", "semantic", "underspecified") and L == 1:
-        raise ValueError(f"{scaffold} scaffold does not include L=1 (run baseline for L=1).")
+    if scaffold in ("light", "rich") and L == 1:
+        raise ValueError(f"{scaffold} scaffold does not include L=1 (use baseline for L=1).")
 
     # Candidate filenames in priority order
     if scaffold == "baseline":
@@ -142,7 +148,7 @@ def load_length_file(base_dir: Path, scaffold: str, L: int) -> List[dict]:
     raise FileNotFoundError(f"No asset file found for scaffold={scaffold} length={L} under {base_dir/scaffold}")
 
 # -----------------------
-# Placeholder substitution for SEMANTIC prompts
+# Placeholder substitution for RICH prompts
 # -----------------------
 def build_placeholder_map(enriched: dict) -> Dict[str, str]:
     topic = enriched.get("topic_primary") or enriched.get("topic") or ""
@@ -154,55 +160,111 @@ def build_placeholder_map(enriched: dict) -> Dict[str, str]:
             return rel[idx]
         return fallback or (rel[-1] if rel else topic or "")
 
-    return {
-        "{QUESTION}": enriched.get("corrected") or enriched.get("question") or "",
+    mapping = {
+        # lower-case variants
         "{topic_primary}": topic,
         "{related_a}": get_rel(0),
         "{related_b}": get_rel(1),
         "{related_c}": get_rel(2),
         "{related_d}": get_rel(3),
+        "{related_e}": get_rel(4),
+        "{related_f}": get_rel(5),
+        # UPPER-case variants
+        "{TOPIC_PRIMARY}": topic,
+        "{RELATED_A}": get_rel(0),
+        "{RELATED_B}": get_rel(1),
+        "{RELATED_C}": get_rel(2),
+        "{RELATED_D}": get_rel(3),
+        "{RELATED_E}": get_rel(4),
+        "{RELATED_F}": get_rel(5),
+        # question
+        "{QUESTION}": enriched.get("corrected") or enriched.get("question") or "",
     }
+    return mapping
 
-def substitute_placeholders(template: str, mapping: Dict[str, str]) -> str:
-    out = template
+def substitute_placeholders(text: str, mapping: Dict[str, str]) -> str:
+    out = text
     for k, v in mapping.items():
-        out = out.replace(k, v)
+        out = out.replace(k, str(v))
     return out
 
 # -----------------------
-# Simple HF causal runner (same as before)
+# Minimal HF causal LM runner
 # -----------------------
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
 class ModelRunner:
-    def __init__(self, model_key_or_id: str, device: str = "auto", dtype: str = "auto"):
-        cfg = MODEL_REGISTRY.get(model_key_or_id, {"backend": "hf_causal", "model_id": model_key_or_id})
-        if cfg.get("backend") != "hf_causal":
-            raise NotImplementedError("Only HF causal backend is implemented here.")
-        self.model_id = cfg["model_id"]
-        self.device = device
-        self.dtype = dtype
-        self._init_hf()
-
-    def _init_hf(self):
-        torch_dtype = {"auto": None, "float32": torch.float32, "float16": torch.float16, "bfloat16": torch.bfloat16}[self.dtype]
-        self.tok = AutoTokenizer.from_pretrained(self.model_id)
-        self.model = AutoModelForCausalLM.from_pretrained(self.model_id, torch_dtype=torch_dtype or "auto")
-        if self.device == "auto":
-            self._input_device = torch.device("cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu"))
-        elif self.device == "cuda":
-            self._input_device = torch.device("cuda")
-        elif self.device == "mps":
-            self._input_device = torch.device("mps")
+    def __init__(self, model_name: str, device: str = "cpu", dtype: str = "auto"):
+        self.model_name = model_name
+        self.device_mode = device.lower()
+        self.dtype_mode = dtype.lower()
+        if model_name in MODEL_REGISTRY:
+            cfg = MODEL_REGISTRY[model_name]
+            self.backend = cfg["backend"]; model_id = cfg["model_id"]
         else:
-            self._input_device = torch.device("cpu")
-        self.model.to(self._input_device)
+            self.backend = "hf_causal"; model_id = model_name
+        if self.backend != "hf_causal":
+            raise ValueError(f"Unsupported backend: {self.backend}")
+        self._init_hf_causal(model_id)
 
-    def generate(self, prompt: str, max_new_tokens: int, temperature: float = 0.0, stop: Optional[List[str]] = None) -> str:
+    def _pick_torch_dtype(self, torch):
+        if self.dtype_mode == "float32": return torch.float32
+        if self.dtype_mode == "float16": return torch.float16
+        if self.dtype_mode == "bfloat16": return torch.bfloat16
+        if self.device_mode in ("cuda","auto"):
+            if hasattr(torch.cuda, "is_bf16_supported") and torch.cuda.is_available() and torch.cuda.is_bf16_supported():
+                return torch.bfloat16
+            return torch.float16
+        return torch.float32
+
+    def _init_hf_causal(self, model_id: str):
+        from transformers import AutoTokenizer, AutoModelForCausalLM
+        import torch
+        self.tok = AutoTokenizer.from_pretrained(model_id)
+        if self.tok.pad_token is None:
+            self.tok.pad_token = self.tok.eos_token
+        dtype = self._pick_torch_dtype(torch)
+        if self.device_mode == "cpu":
+            self.device = torch.device("cpu")
+            self.model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype)
+            self.model.to(self.device); self._input_device = self.device
+        elif self.device_mode == "cuda":
+            if not torch.cuda.is_available():
+                raise RuntimeError("CUDA requested but not available.")
+            self.device = torch.device("cuda")
+            self.model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype)
+            self.model.to(self.device); self._input_device = self.device
+        elif self.device_mode == "mps":
+            if not getattr(torch.backends, "mps", None) or not torch.backends.mps.is_available():
+                raise RuntimeError("MPS requested but not available.")
+            self.device = torch.device("mps")
+            if self.dtype_mode == "auto":
+                dtype = torch.float32  # safer on MPS
+            self.model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype)
+            self.model.to(self.device); self._input_device = self.device
+        elif self.device_mode == "auto":
+            self.model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype, device_map="auto")
+            self.device = "auto"; self._input_device = self._infer_first_device_from_map()
+        else:
+            raise ValueError(f"Unknown --device '{self.device_mode}'")
+        self.model.eval()
+
+    def _infer_first_device_from_map(self):
+        dm = getattr(self.model, "hf_device_map", None)
+        if isinstance(dm, dict):
+            for v in dm.values():
+                if isinstance(v, str) and v != "disk":
+                    return v
+        return "cpu"
+
+    def generate(self, prompt: str, max_new_tokens: int = 64, temperature: float = 0.0,
+                 stop: Optional[List[str]] = None) -> str:
+        import torch
+        print(f"[DEBUG] Generate called: prompt_len={len(prompt)}, max_tokens={max_new_tokens}")
         with torch.inference_mode():
+            print("[DEBUG] Tokenizing input...")
             enc = self.tok(prompt, return_tensors="pt")
+            print(f"[DEBUG] Input tokens: {enc['input_ids'].shape}")
             inputs = enc.to(self._input_device) if self.device != "auto" else {k: v.to(self._input_device) for k, v in enc.items()}
+            print("[DEBUG] About to call model.generate...")
             output_ids = self.model.generate(
                 **inputs,
                 max_new_tokens=max_new_tokens,
@@ -210,6 +272,7 @@ class ModelRunner:
                 temperature=temperature if (temperature and temperature > 0) else 1.0,
                 pad_token_id=self.tok.pad_token_id,
             )[0]
+        print("[DEBUG] Generation complete, decoding...")
         in_len = inputs["input_ids"].shape[-1]
         gen_only_ids = output_ids[in_len:]
         reply = self.tok.decode(gen_only_ids, skip_special_tokens=True).strip()
@@ -222,8 +285,8 @@ class ModelRunner:
         return reply
 
 MODEL_REGISTRY = {
+    "phi2": {"backend": "hf_causal", "model_id": "microsoft/phi-2"},
     "phi3mini": {"backend": "hf_causal", "model_id": "microsoft/Phi-3-mini-4k-instruct"},
-    # Add others as needed
 }
 
 # -----------------------
@@ -231,9 +294,10 @@ MODEL_REGISTRY = {
 # -----------------------
 def main():
     ap = argparse.ArgumentParser(description="Length vs Veracity runner (rolling context).")
-    ap.add_argument("--scaffold", choices=["baseline","meta","semantic","underspecified"], required=True)
-    ap.add_argument("--lengths", required=True, help="Comma list of lengths, e.g., '1' (baseline) or '6,11,16,21'")
-    ap.add_argument("--in-enriched", required=True, help="Path to boolq_enriched.jsonl (authoritative source incl. gold 'answer').")
+    ap.add_argument("--scaffold", choices=["baseline","light","rich"], required=True)
+    ap.add_argument("--lengths", required=True, help="Comma list of lengths, e.g., '1' or '3,6,9,12'")
+    ap.add_argument("--in-dev", required=True)
+    ap.add_argument("--in-enriched", required=True)
     ap.add_argument("--out-root", required=True)
     ap.add_argument("--num", type=int, default=None, help="Cap number of items after filtering")
     ap.add_argument("--id-include", default=None, help="Comma list/ranges of BoolQ ids, e.g. 'dev_0001-dev_0100'")
@@ -254,7 +318,7 @@ def main():
     try:
         lengths = [int(x.strip()) for x in args.lengths.split(",") if x.strip()]
     except Exception:
-        raise SystemExit("--lengths must be comma-separated integers, e.g., '1' or '6,11,16,21'")
+        raise SystemExit("--lengths must be comma-separated integers, e.g., '1' or '3,6,9,12'")
 
     # Enforce scaffold/length policy
     if args.scaffold == "baseline":
@@ -264,33 +328,37 @@ def main():
         if 1 in lengths:
             raise SystemExit(f"For scaffold={args.scaffold}, remove L=1 (run baseline separately).")
 
-    # Load enriched only
-    enr_path = Path(args.in_enriched)
-    if not enr_path.exists():
-        raise SystemExit(f"Not found: {enr_path}")
-    enriched = read_jsonl(enr_path)
-    if not enriched:
-        raise SystemExit("No rows found in --in-enriched.")
+    dev = read_jsonl(Path(args.in_dev))
+    enr = read_jsonl(Path(args.in_enriched))
+    joined = join_dev_with_enriched(dev, enr)
+    if not joined:
+        raise SystemExit("No joined items; check that dev.jsonl and boolq_enriched.jsonl share identical 'question' text.")
 
     # Filter by id if requested
-    items = enriched
+    items = joined
     if args.id_include:
         wanted = expand_id_spec(args.id_include)
-        items = [e for e in items if (e.get("id") in wanted)]
+        items = [(d,e) for (d,e) in items if (e.get("id") in wanted) or (d.get("id") in wanted)]
         print(f"[FILTER] id-include -> {len(items)} items")
 
     # Cap by --num
     if args.num is not None and args.num > 0:
         items = items[: args.num]
-
-    print(f"[DEBUG] Loaded {len(enriched)} enriched items")
+    #Debug
+    print(f"[DEBUG] Loaded {len(dev)} dev items, {len(enr)} enriched items")
+    print(f"[DEBUG] After joining: {len(joined)} items")
     print(f"[DEBUG] After filtering: {len(items)} items")
+    if items:
+        first_item = items[0]
+        print(f"[DEBUG] First item ID: {first_item[1].get('id', 'unknown')}")
 
     # Load model
     print(f"[INFO] Loading model {args.model} on {args.device} ({args.dtype})")
     runner = ModelRunner(args.model, device=args.device, dtype=args.dtype)
     # Warmup
+    print("[DEBUG] Model loaded, starting warmup...")
     _ = runner.generate("### User\nok\n### Assistant\n", max_new_tokens=1, temperature=0.0, stop=None)
+    print("[DEBUG] Warmup complete")
 
     # Stop list (trim reply only)
     stop_list = None
@@ -317,11 +385,12 @@ def main():
     }
 
     print(f"[DEBUG] Starting processing of {len(items)} items for lengths {lengths}")
-    for i, erow in enumerate(items):
-        boolq_id_raw = erow.get("id")
-        boolq_id = sanitize_id(boolq_id_raw, "unknown")
-        q_raw = erow.get("question", "")
+    for i, (drow, erow) in enumerate(items):
+        print(f"[DEBUG] Processing item {i+1}/{len(items)}: {erow.get('id', 'unknown')}")
+        q_raw = drow.get("question", "")
         q_corr = erow.get("corrected") or q_raw
+        boolq_id_raw = erow.get("id") or drow.get("id")
+        boolq_id = sanitize_id(boolq_id_raw, "unknown")
 
         enriched_meta = {
             "id": boolq_id_raw,
@@ -333,6 +402,7 @@ def main():
         ph_map = build_placeholder_map(enriched_meta)
 
         for L in lengths:
+            print(f"[DEBUG] Processing length L={L} for item {boolq_id}")
             # Output path
             fname = f"{boolq_id}_len_L{L}_{args.scaffold}.json"
             out_path = out_root / fname
@@ -343,19 +413,22 @@ def main():
 
             # Load assets
             turns = load_length_file(assets_root, args.scaffold, L)
+            print(f"[DEBUG] Loaded {len(turns)} turns for L={L}")
             # Build rolling conversation
             transcript = []
             rolling = ""
             t_start = time.time()
             for t in range(1, L + 1):
+                print(f"[DEBUG] Processing turn {t}/{L}")
                 entry = turns[t-1]
                 prompt_tpl = entry.get("prompt", "")
-
+                print(f"[DEBUG] Turn {t} prompt template length: {len(prompt_tpl)} chars")
                 # Substitute placeholders
-                if args.scaffold == "semantic":
+                if args.scaffold == "rich":
                     prompt_text = substitute_placeholders(prompt_tpl, ph_map)
                 else:
-                    # baseline/meta/underspecified: only {QUESTION} replacement (harmless for turns without it)
+                    # baseline & light: only final turn may contain {QUESTION};
+                    # replace if present (harmless no-op for earlier turns)
                     prompt_text = substitute_placeholders(prompt_tpl, {"{QUESTION}": q_corr})
 
                 # Construct prompt with rolling history
@@ -363,8 +436,13 @@ def main():
                 is_final = (t == L)
                 cap = args.max_new_tokens_final if is_final else args.max_new_tokens_tasks
 
+                print(f"[DEBUG] Turn {t} full prompt length: {len(full_prompt)} chars")
+                print(f"[DEBUG] About to generate for turn {t}, max_tokens={cap}")
+
                 reply = runner.generate(full_prompt, max_new_tokens=cap,
                                         temperature=args.temperature, stop=stop_list)
+
+                print(f"[DEBUG] Turn {t} generation complete, reply length: {len(reply)} chars")
 
                 transcript.append({"turn": t, "role": "user", "prompt": prompt_text})
                 transcript.append({"turn": t, "role": "model", "reply": reply})
@@ -379,9 +457,9 @@ def main():
                 "length": L,
                 "boolq_id": boolq_id,
                 "question": q_corr,
-                "gold_answer": erow.get("answer"),
-                "enriched": {"topic_primary": erow.get("topic_primary"),
-                             "topic_related": erow.get("topic_related") or []},
+                "gold_answer": drow.get("answer"),
+                "enriched": {"topic_primary": enriched_meta["topic_primary"],
+                             "topic_related": enriched_meta["topic_related"]},
                 "model": {"id": args.model, "device": args.device, "dtype": args.dtype},
                 "decoding": {"temperature": args.temperature,
                              "max_new_tokens_tasks": args.max_new_tokens_tasks,

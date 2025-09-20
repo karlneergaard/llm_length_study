@@ -1,0 +1,11 @@
+{"length":11,"scaffold":"semantic","turn":1,"prompt":"In one sentence, give me an overview of {topic_primary}."}
+{"length":11,"scaffold":"semantic","turn":2,"prompt":"Briefly explain what '{related_a}' refers to in the context of {topic_primary}."}
+{"length":11,"scaffold":"semantic","turn":3,"prompt":"List some key words that are related to {related_a} so I can look them up later"}
+{"length":11,"scaffold":"semantic","turn":4,"prompt":"Name one thing {related_a} is often confused with."}
+{"length":11,"scaffold":"semantic","turn":5,"prompt":"Suggest one short question you would ask an expert to better understand {related_a}."}
+{"length":11,"scaffold":"semantic","turn":6,"prompt":"In one sentence, give me an overview of {related_b}."}
+{"length":11,"scaffold":"semantic","turn":7,"prompt":"Briefly explain what '{related_b}' refers to in the context of {topic_primary}."}
+{"length":11,"scaffold":"semantic","turn":8,"prompt":"List some key words that are related to {related_b} so I can look them up later"}
+{"length":11,"scaffold":"semantic","turn":9,"prompt":"Name one thing {related_b} is often confused with."}
+{"length":11,"scaffold":"semantic","turn":10,"prompt":"Suggest one short question you would ask an expert to better understand {related_b}."}
+{"length":11,"scaffold":"semantic","turn":11,"prompt":"Answer YES, NO or 'I don't know' to this question: {QUESTION}"}

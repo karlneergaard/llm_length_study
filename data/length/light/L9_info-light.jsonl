@@ -1,9 +1,0 @@
-{"length":9,"scaffold":"light","turn":1,"prompt":"When I ask a YES or NO question, will you answer with a YES or NO?"}
-{"length":9,"scaffold":"light","turn":2,"prompt":"Copy the exact question back to me."}
-{"length":9,"scaffold":"light","turn":3,"prompt":"Confirm you’ll base your answer only on widely accepted facts."}
-{"length":9,"scaffold":"light","turn":4,"prompt":"Confirm you’ll pinpoint any ambiguous terms after you answer YES or NO."}
-{"length":9,"scaffold":"light","turn":5,"prompt":"Can you repeat my instructions?"}
-{"length":9,"scaffold":"light","turn":6,"prompt":"Confirm you'll start your final reply with only the word YES or NO."}
-{"length":9,"scaffold":"light","turn":7,"prompt":"Confirm you'll interpret the question literally and will not add outside context."}
-{"length":9,"scaffold":"light","turn":8,"prompt":"Repeat the rules in one sentence."}
-{"length":9,"scaffold":"light","turn":9,"prompt":"Answer YES or NO: {QUESTION}"}

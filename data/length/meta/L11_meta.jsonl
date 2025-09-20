@@ -1,0 +1,11 @@
+{"length":11,"scaffold":"meta","turn":1,"prompt":"When I ask a question, will you answer?"}
+{"length":11,"scaffold":"meta","turn":2,"prompt":"Can you answer with either a YES or NO?"}
+{"length":11,"scaffold":"meta","turn":3,"prompt":"When I ask the question, can you answer either a YES, NO or 'I don't know'?"}
+{"length":11,"scaffold":"meta","turn":4,"prompt":"Confirm you won't guess if you don't know the answer."}
+{"length":11,"scaffold":"meta","turn":5,"prompt":"Confirm you’ll base your answer only on widely accepted facts."}
+{"length":11,"scaffold":"meta","turn":6,"prompt":"Can you repeat my instructions?"}
+{"length":11,"scaffold":"meta","turn":7,"prompt":"Copy the exact question back to me."}
+{"length":11,"scaffold":"meta","turn":8,"prompt":"Confirm you’ll pinpoint any ambiguous terms after you answer YES, NO or 'I don't know'."}
+{"length":11,"scaffold":"meta","turn":9,"prompt":"Confirm you'll treat numbers, dates, and names exactly as written."}
+{"length":11,"scaffold":"meta","turn":10,"prompt":"Repeat the rules in one sentence."}
+{"length":11,"scaffold":"meta","turn":11,"prompt":"Answer YES, NO or 'I don't know' to this question: {QUESTION}"}

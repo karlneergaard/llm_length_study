@@ -3,51 +3,67 @@
 """
 analyze_length.py — scoring & plots for the Length vs Veracity study
 
-- Scores final-turn YES/NO (English only) -> strict correctness
-- Summaries by (L, scaffold)
-- McNemar tests:
-    (A) Adjacent lengths within each scaffold (e.g., 3→6, 6→9, 9→12)
+Now supports:
+- Strict Y/N compliance & accuracy (unchanged from before).
+- Lenient (abstention-aware) parsing with labels: {yes,no,idk,other}.
+- Coverage (commit rate), IDK rate, answered-only accuracy.
+- Strict McNemar:
+    (A) Adjacent lengths within each scaffold (e.g., 3→6, 6→9, ...)
     (B) Versus baseline (L=1, scaffold='baseline') for each scaffold & length L>1
-- Plot: accuracy vs L by scaffold with annotations for (A) and (B)
+- Answered-only McNemar (lenient): adjacent lengths, restricted to rows that answered in both.
 
+Also writes paired-by-id tables with extended columns for inspection.
+
+Usage
+-----
 python analyze_length.py --in-root runs \
-  --make-plots
-# (point --in-root at a parent containing runs/baseline_*, runs/light_*, runs/rich_*)
+  --make-plots \
+  --yn-map extended
+
+Notes
+-----
+- This script is a drop-in replacement; outputs are written to --out-dir
+  (default: <in-root>/_analysis) and include both strict and lenient views.
+- If you prefer your old-only layout, the "strict" CSVs/plots here are
+  directly comparable to your previous ones.
+
+
+
+  
 """
 
-import argparse, json, re, math
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import re
+from collections import defaultdict
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Tuple
-import pandas as pd
+from typing import Dict, Iterable, List, Optional, Tuple
+
 import numpy as np
-import matplotlib.pyplot as plt
+import pandas as pd
 
+try:
+    import matplotlib.pyplot as plt
+except Exception:
+    plt = None
 
 # -----------------------
-# Basic helpers
+# Utility
 # -----------------------
-def read_json(path: Path) -> dict:
-    with path.open("r", encoding="utf-8") as f:
+
+def read_json(p: Path):
+    with p.open("r", encoding="utf-8") as f:
         return json.load(f)
 
-_word_re = re.compile(r"^\W*([A-Za-z]+)")
-
-def first_token_english_yes_no(text: str) -> Tuple[str, bool]:
-    """
-    Return (first_token_lower, compliant_flag).
-    Compliant iff token is 'yes' or 'no' (English only).
-    """
-    s = text.strip()
-    m = _word_re.search(s)
-    if not m:
-        return ("", False)
-    tok = m.group(1).lower()
-    if tok in ("yes", "no"):
-        return (tok, True)
-    return (tok, False)
+def find_manifests(root: Path) -> List[Path]:
+    return list(root.rglob("_manifest.json"))
 
 def wilson_ci(k: int, n: int, z: float = 1.96) -> Tuple[float, float]:
-    if n == 0:
+    if n <= 0:
         return (float("nan"), float("nan"))
     p = k / n
     denom = 1 + (z**2)/n
@@ -55,406 +71,469 @@ def wilson_ci(k: int, n: int, z: float = 1.96) -> Tuple[float, float]:
     halfw = (z * ((p*(1-p)/n + (z**2)/(4*n*n)) ** 0.5)) / denom
     return (max(0.0, center - halfw), min(1.0, center + halfw))
 
+def mcnemar_cc(b: int, c: int) -> Tuple[float, float]:
+    """Continuity-corrected McNemar (chi2, p) with 1 dof; p approx via exp(-x/2)."""
+    if b + c == 0:
+        return (0.0, 1.0)
+    chi2 = (abs(b - c) - 1.0) ** 2 / (b + c)
+    p = math.exp(-chi2 / 2.0)
+    return (chi2, p)
+
+def p_to_stars(p: float) -> str:
+    if p < 1e-3: return "***"
+    if p < 1e-2: return "**"
+    if p < 5e-2: return "*"
+    return ""
 
 # -----------------------
-# Extract final reply & score
+# Extract final reply & parsers
 # -----------------------
+
+_WORD_RE = re.compile(r"[A-Za-z]+")
+_IDK_PATTERNS = [
+    r"\bi\s*(?:do\s*not|don'?t)\s*know\b",
+    r"\bnot\s*sure\b",
+    r"\bunsure\b",
+    r"\bunknown\b",
+    r"\bcannot\s*(?:tell|determine)\b",
+    r"\bno\s*idea\b",
+]
+_YES_PATTERNS_EXT = [r"^yes\b", r"^\by\b", r"\btrue\b", r"\bcorrect\b"]
+_NO_PATTERNS_EXT  = [r"^no\b",  r"^\bn\b", r"\bfalse\b", r"\bincorrect\b"]
+
 def extract_final_reply(d: dict) -> str:
-    L = int(d.get("length", 0))
     tr = d.get("transcript", [])
-    final = None
+    best_turn = -1
+    final_reply = ""
     for row in tr:
-        if row.get("role") == "model" and int(row.get("turn", -1)) == L:
-            final = row.get("reply", "")
-    if final is None:
-        for row in reversed(tr):
-            if row.get("role") == "model":
-                final = row.get("reply", "")
-                break
-    return final or ""
+        if row.get("role") == "model":
+            t = int(row.get("turn", -1))
+            if t >= best_turn:
+                best_turn = t
+                final_reply = row.get("reply", "") or ""
+    return final_reply
+
+def first_token_english_yes_no(text: str) -> Tuple[str, bool]:
+    """Strict: only accept first word yes/no as compliant."""
+    s = (text or "").lstrip()
+    m = _WORD_RE.search(s)
+    if not m:
+        return ("", False)
+    tok = m.group(0).lower()
+    if tok in ("yes", "no"):
+        return (tok, True)
+    return (tok, False)
+
+def extract_decision_lenient(text: str, yn_map: str) -> Tuple[str, str]:
+    """
+    Lenient: return (pred_label, pred_raw), pred_label ∈ {'yes','no','idk','other'}.
+    pred_raw is the matched phrase (for auditing). Earliest decisive cue wins.
+    """
+    s = (text or "").strip().lower()
+    # Remove leading 'Answer:' labels if present
+    s = re.sub(r"^\s*(?:answer|final answer)\s*[:\-–]\s*", "", s)
+
+    def _search_any(patterns: List[str]) -> Optional[re.Match]:
+        first = None
+        for pat in patterns:
+            m = re.search(pat, s, flags=re.I)
+            if m and (first is None or m.start() < first.start()):
+                first = m
+        return first
+
+    idk_m = _search_any(_IDK_PATTERNS)
+    yes_pats = [r"^yes\b"] if yn_map == "plain" else _YES_PATTERNS_EXT
+    no_pats  = [r"^no\b"]  if yn_map == "plain" else _NO_PATTERNS_EXT
+    yes_m = _search_any(yes_pats)
+    no_m  = _search_any(no_pats)
+
+    candidates = []
+    if idk_m: candidates.append(("idk", idk_m))
+    if yes_m: candidates.append(("yes", yes_m))
+    if no_m:  candidates.append(("no",  no_m))
+    if not candidates:
+        return ("other", "")
+    label, match = min(candidates, key=lambda kv: kv[1].start())
+    return (label, s[match.start():match.end()])
 
 def degenerate_reply(text: str) -> bool:
+    if not text or not text.strip():
+        return True
     s = text.strip()
-    if not s:
+    if len(s) <= 1:
         return True
-    if all(ch in "!?.;:-_=+*/\\|~`'^\"”“’’,<>()[]{} \t" for ch in s):
-        return True
-    if len(set(s)) == 1 and len(s) >= 3:
+    if re.fullmatch(r"[\.\,\!\?]+", s):
         return True
     return False
 
-def score_file(path: Path) -> Dict:
-    d = read_json(path)
-    scaffold = d.get("scaffold")
-    L = int(d.get("length", 0))
-    boolq_id = d.get("boolq_id") or ""
-    gold = d.get("gold_answer")
-    question = d.get("question", "")
+# -----------------------
+# Rows & scoring
+# -----------------------
 
+@dataclass
+class Row:
+    scaffold: str
+    L: int
+    boolq_id: str
+    gold: int  # 1 if True, 0 if False
+    reply: str
+    timing_s: float
+
+    # strict
+    first_token: str
+    compliant: bool
+    pred_strict: Optional[int]  # 1 yes, 0 no, None if non-compliant
+    correct_strict: Optional[bool]
+
+    # lenient
+    pred_label: str            # 'yes','no','idk','other'
+    pred_raw: str
+    is_answered: bool
+    is_idk: bool
+    answered_correct: Optional[bool]
+
+def score_record(d: dict, yn_map: str) -> Row:
+    L = int(d.get("length", 0))
+    sc = str(d.get("scaffold", "") or "")
+    bid = str(d.get("boolq_id", "") or "")
+    gold = 1 if int(d.get("gold_answer", 0)) == 1 else 0
     reply = extract_final_reply(d)
     first_tok, compliant = first_token_english_yes_no(reply)
-    pred = None
+    pred_strict = None
+    correct_strict = None
     if compliant:
-        pred = True if first_tok == "yes" else False
-    correct_strict = int(compliant and pred == gold)
-    correct_comp_only = int(compliant and pred == gold)
+        pred_strict = 1 if first_tok == "yes" else 0
+        correct_strict = (pred_strict == gold)
 
-    has_expl = False
-    if compliant:
-        rest = reply.strip()[len(first_tok):].strip()
-        has_expl = len(rest) > 0
+    pred_label, pred_raw = extract_decision_lenient(reply, yn_map)
+    is_answered = (pred_label in ("yes", "no"))
+    is_idk = (pred_label == "idk")
+    answered_correct = None
+    if is_answered:
+        answered_correct = ((pred_label == "yes") == (gold == 1))
 
-    words = len(reply.strip().split())
-    chars = len(reply)
+    return Row(
+        scaffold=sc, L=L, boolq_id=bid, gold=gold, reply=reply,
+        timing_s=float(d.get("timing_s", float("nan"))),
+        first_token=first_tok, compliant=compliant,
+        pred_strict=pred_strict, correct_strict=correct_strict,
+        pred_label=pred_label, pred_raw=pred_raw,
+        is_answered=is_answered, is_idk=is_idk,
+        answered_correct=answered_correct,
+    )
 
-    return {
-        "path": str(path),
-        "file": path.name,
-        "boolq_id": boolq_id,
-        "L": L,
-        "scaffold": scaffold,
-        "gold": gold,
-        "question": question,
-        "first_token": first_tok,
-        "compliant": int(compliant),
-        "pred": pred if pred is not None else "",
-        "correct_strict": correct_strict,
-        "correct_comp_only": correct_comp_only,
-        "reply_len_words": words,
-        "reply_len_chars": chars,
-        "has_explanation": int(has_expl),
-        "degenerate_flag": int(degenerate_reply(reply)),
-        "timing_s": float(d.get("timing_s", np.nan)),
-    }
-
-
-# -----------------------
-# McNemar utilities
-# -----------------------
-def mcnemar(b: int, c: int) -> Tuple[float, float]:
-    """
-    Continuity-corrected McNemar chi-square and p-value (df=1).
-    If b+c==0 => chi2=0, p=1.
-    """
-    if (b + c) == 0:
-        return 0.0, 1.0
-    chi2 = ((abs(b - c) - 1.0) ** 2) / (b + c)
-    # Chi-square df=1 => p = erfc(sqrt(chi2/2))
-    pval = math.erfc(math.sqrt(chi2 / 2.0))
-    return chi2, pval
-
-def p_to_stars(p: float) -> str:
-    if p < 1e-3:
-        return "***"
-    if p < 1e-2:
-        return "**"
-    if p < 5e-2:
-        return "*"
-    return "ns"
-
-def mcnemar_adjacent_pairs(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Adjacent lengths within each scaffold using strict correctness.
-    Returns tidy rows per (scaffold, e.g., L1->L2).
-    """
-    records = []
-    for sc in sorted(df["scaffold"].dropna().unique()):
-        dsc = df[df["scaffold"] == sc].copy()
-        piv = dsc.pivot_table(index="boolq_id", columns="L",
-                              values="correct_strict", aggfunc="first")
-        lens = sorted([c for c in piv.columns if pd.notnull(c)])
-        for i in range(len(lens) - 1):
-            L1, L2 = int(lens[i]), int(lens[i+1])
-            sub = piv[[L1, L2]].dropna()
-            if sub.empty:
-                b = c = n_pair = 0
-                a11 = a00 = 0
-                acc_L1 = acc_L2 = float("nan")
-            else:
-                a11 = int(((sub[L1] == 1) & (sub[L2] == 1)).sum())
-                a00 = int(((sub[L1] == 0) & (sub[L2] == 0)).sum())
-                b = int(((sub[L1] == 1) & (sub[L2] == 0)).sum())
-                c = int(((sub[L1] == 0) & (sub[L2] == 1)).sum())
-                n_pair = len(sub)
-                acc_L1 = float((sub[L1] == 1).mean())
-                acc_L2 = float((sub[L2] == 1).mean())
-            chi2, pval = mcnemar(b, c)
-            records.append({
-                "type": "adjacent",
-                "scaffold": sc,
-                "L1": L1,
-                "L2": L2,
-                "n_pairs": int(n_pair),
-                "both_correct": int(a11),
-                "both_incorrect": int(a00),
-                "b_L1_correct_L2_incorrect": int(b),
-                "c_L1_incorrect_L2_correct": int(c),
-                "chi2_cc": float(chi2),
-                "p_value": float(pval),
-                "acc_L1": acc_L1,
-                "acc_L2": acc_L2,
-                "acc_diff": (acc_L2 - acc_L1) if (n_pair > 0 and not np.isnan(acc_L1) and not np.isnan(acc_L2)) else float("nan"),
-            })
-    return pd.DataFrame.from_records(records)
-
-def mcnemar_vs_baseline(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Compare each scaffold & length L>1 against baseline (scaffold='baseline', L=1)
-    using strict correctness on paired items.
-    """
-    # Baseline correctness per id
-    base = df[(df["scaffold"] == "baseline") & (df["L"] == 1)][["boolq_id", "correct_strict"]].copy()
-    base = base.rename(columns={"correct_strict": "corr_base"})
-    base.set_index("boolq_id", inplace=True)
-
-    records = []
-    if base.empty:
-        return pd.DataFrame(columns=[
-            "type","scaffold","L_base","L_target","n_pairs","both_correct","both_incorrect",
-            "b_base_correct_target_incorrect","c_base_incorrect_target_correct",
-            "chi2_cc","p_value","acc_base","acc_target","acc_diff"
-        ])
-
-    for sc in sorted(df["scaffold"].dropna().unique()):
-        if sc == "baseline":
-            continue
-        dsc = df[df["scaffold"] == sc].copy()
-        piv = dsc.pivot_table(index="boolq_id", columns="L",
-                              values="correct_strict", aggfunc="first")
-        for L in sorted([c for c in piv.columns if pd.notnull(c) and c != 1]):
-            target = piv[[L]].dropna().rename(columns={L: "corr_target"})
-            # align with baseline
-            merged = base.join(target, how="inner")
-            if merged.empty:
-                b = c = n_pair = 0
-                a11 = a00 = 0
-                acc_b = acc_t = float("nan")
-            else:
-                a11 = int(((merged["corr_base"] == 1) & (merged["corr_target"] == 1)).sum())
-                a00 = int(((merged["corr_base"] == 0) & (merged["corr_target"] == 0)).sum())
-                b = int(((merged["corr_base"] == 1) & (merged["corr_target"] == 0)).sum())
-                c = int(((merged["corr_base"] == 0) & (merged["corr_target"] == 1)).sum())
-                n_pair = len(merged)
-                acc_b = float((merged["corr_base"] == 1).mean())
-                acc_t = float((merged["corr_target"] == 1).mean())
-            chi2, pval = mcnemar(b, c)
-            records.append({
-                "type": "vs_baseline",
-                "scaffold": sc,
-                "L_base": 1,
-                "L_target": int(L),
-                "n_pairs": int(n_pair),
-                "both_correct": int(a11),
-                "both_incorrect": int(a00),
-                "b_base_correct_target_incorrect": int(b),
-                "c_base_incorrect_target_correct": int(c),
-                "chi2_cc": float(chi2),
-                "p_value": float(pval),
-                "acc_base": acc_b,
-                "acc_target": acc_t,
-                "acc_diff": (acc_t - acc_b) if (not np.isnan(acc_b) and not np.isnan(acc_t)) else float("nan"),
-            })
-    return pd.DataFrame.from_records(records)
-
+def load_rows(in_root: Path, yn_map: str) -> List[Row]:
+    rows: List[Row] = []
+    for mani in find_manifests(in_root):
+        m = read_json(mani)
+        items = m.get("items", [])
+        base = mani.parent
+        for it in items:
+            p = base / it["path"]
+            try:
+                d = read_json(p)
+            except Exception:
+                continue
+            rows.append(score_record(d, yn_map))
+    return rows
 
 # -----------------------
-# Main analysis
+# Summaries
 # -----------------------
-def main():
-    ap = argparse.ArgumentParser(description="Analyze Length vs Veracity outputs and plot curves.")
-    ap.add_argument("--in-root", required=True, help="Directory containing JSON outputs from run_length.py (you can point to a parent folder containing baseline/light/rich).")
-    ap.add_argument("--out-dir", default=None, help="Where to write CSVs/plots (default: <in-root>/analysis)")
-    ap.add_argument("--make-plots", action="store_true", help="Save accuracy/compliance plots as PNGs")
-    args = ap.parse_args()
 
-    in_root = Path(args.in_root)
-    if not in_root.exists():
-        raise SystemExit(f"Not found: {in_root}")
-
-    out_dir = Path(args.out_dir) if args.out_dir else (in_root / "analysis")
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    # Collect JSONs
-    files = [p for p in in_root.rglob("*.json") if p.name != "_manifest.json"]
-    if not files:
-        raise SystemExit("No JSON files found under --in-root.")
-
-    # Score
-    rows = [score_file(p) for p in files]
-    df = pd.DataFrame(rows)
-
-    # Detailed results
-    detailed_path = out_dir / "results_detailed.csv"
-    df.to_csv(detailed_path, index=False)
-    print(f"[WRITE] {detailed_path}")
-
-    # Summary by (L, scaffold)
-    grp = df.groupby(["L", "scaffold"], as_index=False)
-    def summarize(group: pd.DataFrame) -> Dict:
-        n = len(group)
-        comp = int(group["compliant"].sum())
-        acc_strict = int(group["correct_strict"].sum())
-        comp_rows = group[group["compliant"] == 1]
-        acc_comp = int(comp_rows["correct_comp_only"].sum())
-        n_comp = len(comp_rows)
-
-        c_lo, c_hi = wilson_ci(comp, n)
-        a_lo, a_hi = wilson_ci(acc_strict, n)
-        ac_lo, ac_hi = wilson_ci(acc_comp, n_comp) if n_comp > 0 else (float("nan"), float("nan"))
-
-        return {
-            "N": n,
-            "compliance_rate": comp / n if n else float("nan"),
-            "compliance_ci_low": c_lo,
-            "compliance_ci_high": c_hi,
-            "acc_strict": acc_strict / n if n else float("nan"),
-            "acc_strict_ci_low": a_lo,
-            "acc_strict_ci_high": a_hi,
-            "acc_comp_only": acc_comp / n_comp if n_comp else float("nan"),
-            "acc_comp_only_ci_low": ac_lo,
-            "acc_comp_only_ci_high": ac_hi,
-            "mean_time_s": group["timing_s"].mean(),
-            "mean_words": group["reply_len_words"].mean(),
-        }
-
-    summary_records = []
-    for (L, sc), g in grp:
-        rec = {"L": int(L), "scaffold": sc}
-        rec.update(summarize(g))
-        summary_records.append(rec)
-    df_sum = pd.DataFrame(summary_records).sort_values(["scaffold", "L"])
-    sum_path = out_dir / "summary_by_L_scaffold.csv"
-    df_sum.to_csv(sum_path, index=False)
-    print(f"[WRITE] {sum_path}")
-
-    # Overall summary
-    grp2 = df.groupby("scaffold", as_index=False)
-    overall_records = []
-    for sc, g in grp2:
+def summarize_strict(df: pd.DataFrame) -> pd.DataFrame:
+    recs = []
+    for (sc, L), g in df.groupby(["scaffold","L"], as_index=False):
         n = len(g)
         comp = int(g["compliant"].sum())
-        acc_strict = int(g["correct_strict"].sum())
+        acc_n = int(g["correct_strict"].fillna(False).sum())
         c_lo, c_hi = wilson_ci(comp, n)
-        a_lo, a_hi = wilson_ci(acc_strict, n)
-        overall_records.append({
-            "scaffold": sc,
-            "N": n,
+        a_lo, a_hi = wilson_ci(acc_n, n)
+        recs.append({
+            "scaffold": sc, "L": L, "N": n,
             "compliance_rate": comp / n if n else float("nan"),
             "compliance_ci_low": c_lo,
             "compliance_ci_high": c_hi,
-            "acc_strict": acc_strict / n if n else float("nan"),
+            "acc_strict": acc_n / n if n else float("nan"),
             "acc_strict_ci_low": a_lo,
             "acc_strict_ci_high": a_hi,
-            "mean_time_s": g["timing_s"].mean(),
-            "mean_words": g["reply_len_words"].mean(),
         })
-    df_overall = pd.DataFrame(overall_records).sort_values("scaffold")
-    overall_path = out_dir / "summary_overall.csv"
-    df_overall.to_csv(overall_path, index=False)
-    print(f"[WRITE] {overall_path}")
+    return pd.DataFrame(recs).sort_values(["scaffold","L"])
 
-    # Paired tables (per scaffold), useful for sanity checks
+def summarize_lenient(df: pd.DataFrame) -> pd.DataFrame:
+    recs = []
+    for (sc, L), g in df.groupby(["scaffold","L"], as_index=False):
+        n = len(g)
+        idk = int((g["pred_label"] == "idk").sum())
+        answered = int(g["is_answered"].sum())
+        ans_corr = int(g["answered_correct"].fillna(False).sum())
+        # overall acc if IDK counted wrong (for easy comparability)
+        overall_acc_wrong = (
+            int(((g["pred_label"] == "yes") & (g["gold"] == 1)).sum()) +
+            int(((g["pred_label"] == "no")  & (g["gold"] == 0)).sum())
+        ) / n if n else float("nan")
+        answered_acc = (ans_corr / answered) if answered else float("nan")
+        recs.append({
+            "scaffold": sc, "L": L, "N": n,
+            "coverage": answered / n if n else float("nan"),
+            "idk_rate": idk / n if n else float("nan"),
+            "answered_acc": answered_acc,
+            "overall_acc_idk_wrong": overall_acc_wrong,
+        })
+    return pd.DataFrame(recs).sort_values(["scaffold","L"])
+
+def write_paired_tables(df: pd.DataFrame, out_dir: Path):
     for sc in sorted(df["scaffold"].dropna().unique()):
         dsc = df[df["scaffold"] == sc].copy()
-        piv_pred = dsc.pivot_table(index="boolq_id", columns="L", values="pred", aggfunc="first")
+        piv_pred = dsc.pivot_table(index="boolq_id", columns="L", values="first_token", aggfunc="first")
         piv_comp = dsc.pivot_table(index="boolq_id", columns="L", values="compliant", aggfunc="first")
         piv_corr = dsc.pivot_table(index="boolq_id", columns="L", values="correct_strict", aggfunc="first")
-        piv_pred.columns = [f"pred_L{int(c)}" for c in piv_pred.columns]
-        piv_comp.columns = [f"comp_L{int(c)}" for c in piv_comp.columns]
-        piv_corr.columns = [f"corr_L{int(c)}" for c in piv_corr.columns]
-        paired = pd.concat([piv_pred, piv_comp, piv_corr], axis=1).reset_index()
-        paired_path = out_dir / f"paired_by_id_{sc}.csv"
+        piv_label = dsc.pivot_table(index="boolq_id", columns="L", values="pred_label", aggfunc="first")
+        piv_ans = dsc.pivot_table(index="boolq_id", columns="L", values="is_answered", aggfunc="first")
+        piv_idk = dsc.pivot_table(index="boolq_id", columns="L", values="is_idk", aggfunc="first")
+        piv_anscorr = dsc.pivot_table(index="boolq_id", columns="L", values="answered_correct", aggfunc="first")
+
+        def _rename(prefix, df_):
+            df_ = df_.copy()
+            df_.columns = [f"{prefix}_L{int(c)}" for c in df_.columns]
+            return df_
+
+        paired = pd.concat([
+            _rename("pred", piv_pred),
+            _rename("comp", piv_comp),
+            _rename("corr", piv_corr),
+            _rename("label", piv_label),
+            _rename("answered", piv_ans),
+            _rename("idk", piv_idk),
+            _rename("anscorr", piv_anscorr),
+        ], axis=1).reset_index()
+        paired_path = out_dir / f"paired_by_id_{sc}_extended.csv"
         paired.to_csv(paired_path, index=False)
-        print(f"[WRITE] {paired_path}")
 
-    # Significance: adjacent within-scaffold
-    df_sig_adj = mcnemar_adjacent_pairs(df)
-    sig_adj_path = out_dir / "significance_adjacent_by_scaffold.csv"
-    df_sig_adj.to_csv(sig_adj_path, index=False)
-    print(f"[WRITE] {sig_adj_path}")
+# -----------------------
+# Significance tests
+# -----------------------
 
-    # Significance: vs baseline (per scaffold & L>1)
-    df_sig_base = mcnemar_vs_baseline(df)
-    sig_base_path = out_dir / "significance_vs_baseline_by_scaffold.csv"
-    df_sig_base.to_csv(sig_base_path, index=False)
-    print(f"[WRITE] {sig_base_path}")
+def significance_adjacent_strict(df: pd.DataFrame) -> pd.DataFrame:
+    recs = []
+    for sc in sorted(df["scaffold"].dropna().unique()):
+        dsc = df[df["scaffold"] == sc].copy()
+        Ls = sorted(dsc["L"].unique())
+        for a, b in zip(Ls, Ls[1:]):
+            da = dsc[dsc["L"] == a][["boolq_id","correct_strict"]].copy()
+            db = dsc[dsc["L"] == b][["boolq_id","correct_strict"]].copy()
+            merged = pd.merge(da, db, on="boolq_id", suffixes=(f"_{a}", f"_{b}"))
+            a_corr = merged[f"correct_strict_{a}"].fillna(False)
+            b_corr = merged[f"correct_strict_{b}"].fillna(False)
+            b_cnt = int((a_corr & ~b_corr).sum())  # a correct, b wrong
+            c_cnt = int((~a_corr & b_corr).sum())  # a wrong, b correct
+            chi2, p = mcnemar_cc(b_cnt, c_cnt)
+            recs.append({
+                "scaffold": sc, "L_a": a, "L_b": b,
+                "n_paired": int(len(merged)),
+                "b_a_correct_b_incorrect": b_cnt,
+                "c_a_incorrect_b_correct": c_cnt,
+                "chi2_cc": chi2, "p_value": p, "stars": p_to_stars(p),
+            })
+    return pd.DataFrame(recs)
+
+def significance_vs_baseline_strict(df: pd.DataFrame, baseline_scaffold: str = "baseline", baseline_L: int = 1) -> pd.DataFrame:
+    recs = []
+    dbase = df[(df["scaffold"] == baseline_scaffold) & (df["L"] == baseline_L)][["boolq_id","correct_strict"]].copy()
+    if dbase.empty:
+        return pd.DataFrame([])
+    for sc in sorted(df["scaffold"].dropna().unique()):
+        Ls = sorted(df[df["scaffold"] == sc]["L"].unique())
+        for L in Ls:
+            if sc == baseline_scaffold and L == baseline_L:
+                continue
+            dcur = df[(df["scaffold"] == sc) & (df["L"] == L)][["boolq_id","correct_strict"]].copy()
+            merged = pd.merge(dbase, dcur, on="boolq_id", suffixes=("_base", "_cur"))
+            if merged.empty:
+                continue
+            a_corr = merged["correct_strict_base"].fillna(False)
+            b_corr = merged["correct_strict_cur"].fillna(False)
+            b_cnt = int((a_corr & ~b_corr).sum())
+            c_cnt = int((~a_corr & b_corr).sum())
+            chi2, p = mcnemar_cc(b_cnt, c_cnt)
+            recs.append({
+                "scaffold": sc, "L": L,
+                "n_paired": int(len(merged)),
+                "b_base_correct_cur_incorrect": b_cnt,
+                "c_base_incorrect_cur_correct": c_cnt,
+                "chi2_cc": chi2, "p_value": p, "stars": p_to_stars(p),
+            })
+    return pd.DataFrame(recs)
+
+def significance_adjacent_answered_only(df: pd.DataFrame) -> pd.DataFrame:
+    """Lenient: adjacent lengths, rows that answered (Yes/No) in both."""
+    recs = []
+    for sc in sorted(df["scaffold"].dropna().unique()):
+        dsc = df[df["scaffold"] == sc].copy()
+        Ls = sorted(dsc["L"].unique())
+        for a, b in zip(Ls, Ls[1:]):
+            da = dsc[dsc["L"] == a][["boolq_id","is_answered","answered_correct"]].copy()
+            db = dsc[dsc["L"] == b][["boolq_id","is_answered","answered_correct"]].copy()
+            merged = pd.merge(da, db, on="boolq_id", suffixes=(f"_{a}", f"_{b}"))
+            both = merged[merged[f"is_answered_{a}"] & merged[f"is_answered_{b}"]]
+            if both.empty:
+                recs.append({
+                    "scaffold": sc, "L_a": a, "L_b": b,
+                    "n_both_answered": 0, "b_a_correct_b_incorrect": 0, "c_a_incorrect_b_correct": 0,
+                    "chi2_cc": 0.0, "p_value": 1.0, "stars": ""
+                })
+                continue
+            a_corr = both[f"answered_correct_{a}"].fillna(False)
+            b_corr = both[f"answered_correct_{b}"].fillna(False)
+            b_cnt = int((a_corr & ~b_corr).sum())
+            c_cnt = int((~a_corr & b_corr).sum())
+            chi2, p = mcnemar_cc(b_cnt, c_cnt)
+            recs.append({
+                "scaffold": sc, "L_a": a, "L_b": b,
+                "n_both_answered": int(len(both)),
+                "b_a_correct_b_incorrect": b_cnt,
+                "c_a_incorrect_b_correct": c_cnt,
+                "chi2_cc": chi2, "p_value": p, "stars": p_to_stars(p),
+            })
+    return pd.DataFrame(recs)
+
+# -----------------------
+# Plots
+# -----------------------
+
+def plot_strict(acc_df: pd.DataFrame, adj_sig: pd.DataFrame, base_sig: pd.DataFrame, out_dir: Path):
+    if plt is None or acc_df.empty:
+        return
+    fig = plt.figure()
+    for sc, g in acc_df.groupby("scaffold"):
+        plt.plot(g["L"], g["acc_strict"], marker="o", label=sc)
+    # annotate adjacent stars at point L_b
+    for _, r in adj_sig.iterrows():
+        if r["p_value"] < 0.05:
+            Lb = r["L_b"]
+            sc = r["scaffold"]
+            g = acc_df[(acc_df["scaffold"] == sc) & (acc_df["L"] == Lb)]
+            if not g.empty:
+                y = float(g["acc_strict"].iloc[0])
+                plt.text(Lb, y + 0.02, f"A{r['stars']}", ha="center", fontsize=8)
+    # annotate baseline stars at point L
+    for _, r in base_sig.iterrows():
+        if r["p_value"] < 0.05:
+            L = r["L"]
+            sc = r["scaffold"]
+            g = acc_df[(acc_df["scaffold"] == sc) & (acc_df["L"] == L)]
+            if not g.empty:
+                y = float(g["acc_strict"].iloc[0])
+                plt.text(L, y + 0.05, f"B{r['stars']}", ha="center", fontsize=8)
+    plt.xlabel("Length (L)")
+    plt.ylabel("Strict accuracy")
+    plt.title("Strict accuracy vs Length (A = adjacent, B = vs baseline)")
+    plt.grid(True, linestyle=":")
+    plt.legend()
+    outp = out_dir / "acc_strict_vs_L_by_scaffold.png"
+    plt.savefig(outp, dpi=150, bbox_inches="tight")
+    plt.close()
+
+def plot_compliance(comp_df: pd.DataFrame, out_dir: Path):
+    if plt is None or comp_df.empty:
+        return
+    fig = plt.figure()
+    for sc, g in comp_df.groupby("scaffold"):
+        plt.plot(g["L"], g["compliance_rate"], marker="o", label=sc)
+    plt.xlabel("Length (L)")
+    plt.ylabel("Compliance (first token YES/NO)")
+    plt.title("Compliance vs Length (by scaffold)")
+    plt.grid(True, linestyle=":")
+    plt.legend()
+    outp = out_dir / "compliance_vs_L_by_scaffold.png"
+    plt.savefig(outp, dpi=150, bbox_inches="tight")
+    plt.close()
+
+def plot_lenient(len_df: pd.DataFrame, out_dir: Path):
+    if plt is None or len_df.empty:
+        return
+    # Coverage + IDK
+    fig = plt.figure()
+    for sc, g in len_df.groupby("scaffold"):
+        plt.plot(g["L"], g["coverage"], marker="o", label=f"{sc} coverage")
+        plt.plot(g["L"], g["idk_rate"], marker="x", label=f"{sc} idk")
+    plt.xlabel("Length (L)")
+    plt.ylabel("Rate")
+    plt.title("Coverage & IDK rate vs Length (lenient)")
+    plt.grid(True, linestyle=":")
+    plt.legend(ncol=2)
+    outp = out_dir / "coverage_idk_vs_L_by_scaffold.png"
+    plt.savefig(outp, dpi=150, bbox_inches="tight")
+    plt.close()
+
+    # Answered accuracy
+    fig = plt.figure()
+    for sc, g in len_df.groupby("scaffold"):
+        plt.plot(g["L"], g["answered_acc"], marker="o", label=sc)
+    plt.xlabel("Length (L)")
+    plt.ylabel("Answered accuracy")
+    plt.title("Answered accuracy vs Length (lenient)")
+    plt.grid(True, linestyle=":")
+    plt.legend()
+    outp = out_dir / "answered_acc_vs_L_by_scaffold.png"
+    plt.savefig(outp, dpi=150, bbox_inches="tight")
+    plt.close()
+
+# -----------------------
+# Main
+# -----------------------
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--in-root", required=True, type=Path,
+                    help="Root directory containing run folders with _manifest.json files.")
+    ap.add_argument("--out-dir", type=Path, default=None,
+                    help="Where to write outputs (default: <in-root>/_analysis).")
+    ap.add_argument("--yn-map", choices=["plain","extended"], default="plain",
+                    help="Lenient parser: map only yes/no (plain) or include true/false, correct/incorrect (extended).")
+    ap.add_argument("--make-plots", action="store_true",
+                    help="Emit PNG plots (requires matplotlib).")
+    args = ap.parse_args()
+
+    out_dir = args.out_dir or (args.in_root / "_analysis")
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    rows = load_rows(args.in_root, yn_map=args.yn_map)
+    if not rows:
+        print(f"[WARN] No rows loaded from {args.in_root}. Did you point --in-root at the runs parent?")
+        return
+    df = pd.DataFrame([r.__dict__ for r in rows])
+    det_path = out_dir / "detailed_rows.csv"
+    df.to_csv(det_path, index=False)
+    print(f"[WRITE] {det_path}  (N={len(df)})")
+
+    # Summaries
+    df_strict = summarize_strict(df)
+    df_strict.to_csv(out_dir / "summary_by_scaffold_L_strict.csv", index=False)
+    df_len = summarize_lenient(df)
+    df_len.to_csv(out_dir / "summary_by_scaffold_L_lenient.csv", index=False)
+
+    # Paired tables
+    write_paired_tables(df, out_dir)
+
+    # Significance (strict)
+    df_adj = significance_adjacent_strict(df)
+    df_adj.to_csv(out_dir / "significance_adjacent_strict.csv", index=False)
+    df_vsbase = significance_vs_baseline_strict(df)
+    if not df_vsbase.empty:
+        df_vsbase.to_csv(out_dir / "significance_vs_baseline_strict.csv", index=False)
+
+    # Lenient answered-only significance
+    df_ansadj = significance_adjacent_answered_only(df)
+    df_ansadj.to_csv(out_dir / "significance_adjacent_answered_only.csv", index=False)
 
     # Plots
     if args.make_plots:
-        # Accuracy vs L (strict), annotated
-        plt.figure()
-        ymin, ymax = 1.0, 0.0
-        scaffolds = list(sorted(df_sum["scaffold"].unique()))
-        for sc in scaffolds:
-            dsc = df_sum[df_sum["scaffold"] == sc].sort_values("L")
-            plt.plot(dsc["L"], dsc["acc_strict"], marker="o", label=sc)
-            ymin = min(ymin, dsc["acc_strict"].min())
-            ymax = max(ymax, dsc["acc_strict"].max())
-
-        # Adjacent annotations (per scaffold)
-        for sc in scaffolds:
-            if sc == "baseline":
-                continue
-            dsc = df_sum[df_sum["scaffold"] == sc].sort_values("L")
-            sig_sc = df_sig_adj[df_sig_adj["scaffold"] == sc].sort_values(["L1", "L2"])
-            for _, row in sig_sc.iterrows():
-                L1, L2 = int(row["L1"]), int(row["L2"])
-                p = float(row["p_value"])
-                stars = p_to_stars(p)
-                # y at a bit above the higher of the two points
-                y1 = float(dsc.loc[dsc["L"] == L1, "acc_strict"].values[0])
-                y2 = float(dsc.loc[dsc["L"] == L2, "acc_strict"].values[0])
-                y_annot = max(y1, y2) + 0.02
-                x_mid = (L1 + L2) / 2.0
-                txt = f"{stars}\n(p={p:.3g})" if stars != "ns" else "ns"
-                plt.text(x_mid, y_annot, txt, ha="center", va="bottom", fontsize=9)
-                ymax = max(ymax, y_annot)
-
-        # Baseline-vs-L annotations (per scaffold & L>1)
-        if not df_sig_base.empty:
-            for sc in sorted(df_sig_base["scaffold"].unique()):
-                sig_sc = df_sig_base[df_sig_base["scaffold"] == sc]
-                dsc = df_sum[(df_sum["scaffold"] == sc)].sort_values("L")
-                for _, row in sig_sc.iterrows():
-                    L = int(row["L_target"])
-                    p = float(row["p_value"])
-                    stars = p_to_stars(p)
-                    # point coordinates
-                    if (dsc["L"] == L).any():
-                        y = float(dsc.loc[dsc["L"] == L, "acc_strict"].values[0])
-                        y_annot = y + 0.04  # slightly higher than adjacent labels
-                        txt = f"{stars} vs L1\n(p={p:.3g})" if stars != "ns" else "ns vs L1"
-                        plt.text(L, y_annot, txt, ha="center", va="bottom", fontsize=9)
-                        ymax = max(ymax, y_annot)
-
-        plt.xlabel("Length (L)")
-        plt.ylabel("Accuracy (strict)")
-        plt.title("BoolQ Accuracy vs Length (by scaffold)\nAdjacency and vs-baseline McNemar significance")
-        plt.legend()
-        plt.ylim(max(0.0, ymin - 0.05), min(1.0, ymax + 0.03))
-        plt.grid(True, linestyle=":")
-        acc_plot = out_dir / "accuracy_vs_L_by_scaffold.png"
-        plt.savefig(acc_plot, dpi=150, bbox_inches="tight")
-        plt.close()
-        print(f"[PLOT] {acc_plot}")
-
-        # Compliance vs L (no stats)
-        plt.figure()
-        for sc in scaffolds:
-            dsc = df_sum[df_sum["scaffold"] == sc].sort_values("L")
-            plt.plot(dsc["L"], dsc["compliance_rate"], marker="o", label=sc)
-        plt.xlabel("Length (L)")
-        plt.ylabel("Compliance (first token YES/NO)")
-        plt.title("Compliance vs Length (by scaffold)")
-        plt.legend()
-        plt.grid(True, linestyle=":")
-        comp_plot = out_dir / "compliance_vs_L_by_scaffold.png"
-        plt.savefig(comp_plot, dpi=150, bbox_inches="tight")
-        plt.close()
-        print(f"[PLOT] {comp_plot}")
+        plot_strict(df_strict, df_adj, df_vsbase if not df_vsbase.empty else pd.DataFrame([]), out_dir)
+        plot_compliance(df_strict, out_dir)
+        plot_lenient(df_len, out_dir)
 
     print("[DONE] Analysis complete.")
-
 
 if __name__ == "__main__":
     main()

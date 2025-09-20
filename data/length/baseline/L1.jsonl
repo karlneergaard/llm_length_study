@@ -1,1 +1,1 @@
-{"length":1,"scaffold":"baseline","turn":1,"prompt":"Answer YES or NO: {QUESTION}"}
+{"length":1,"scaffold":"baseline","turn":1,"prompt":"Answer YES, NO or 'I don't know' to this question: {QUESTION}"}

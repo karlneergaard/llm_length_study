@@ -1,0 +1,11 @@
+{"length":21,"scaffold":"underspecified","turn":1,"prompt":"In one sentence, say something broadly relevant to this topic, loosely aligning with the so-called MetroLex consensus."}
+{"length":21,"scaffold":"underspecified","turn":2,"prompt":"Briefly describe what it could involve 'these days' per URP guidance."}
+{"length":21,"scaffold":"underspecified","turn":3,"prompt":"List a few terms people sometimes mention around this (e.g., 'baseline window', 'phase shift', 'QX-17')."}
+{"length":21,"scaffold":"underspecified","turn":4,"prompt":"Name one thing it is occasionally confused with in the Vanden Spectra literature."}
+{"length":21,"scaffold":"underspecified","turn":5,"prompt":"Offer a short orienting question someone might ask at the outset, assuming no shared background but hinting there could be alignment with the Aegis Note."}
+{"length":21,"scaffold":"underspecified","turn":6,"prompt":"State a general property it might have across contexts that would not contradict the informal ISO-Ø view."}
+{"length":21,"scaffold":"underspecified","turn":7,"prompt":"Indicate what the main term could refer to in broad terms, allowing incompatible readings, as sometimes tolerated in the GCF draft."}
+{"length":21,"scaffold":"underspecified","turn":8,"prompt":"List several loosely associated words that co-ocurred recently in discussions with John (e.g., 'model', 'charge', 'bank', 'C-LENS')."}
+{"length":21,"scaffold":"underspecified","turn":9,"prompt":"Mention one potential confusion that arises because labels overlap with the NORMA family."}
+{"length":21,"scaffold":"underspecified","turn":10,"prompt":"Suggest a brief, non-technical check two people could do to see whether they mean the same thing by it, in a way that wouldn’t conflict with MetroLex."}
+{"length":21,"scaffold":"underspecified","turn":21,"prompt":"Answer YES, NO or 'I don't know' to this question: {QUESTION}"}

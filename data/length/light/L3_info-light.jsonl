@@ -1,3 +1,0 @@
-{"length":3,"scaffold":"light","turn":1,"prompt":"When I ask a YES or NO question, will you answer with a YES or NO?"}
-{"length":3,"scaffold":"light","turn":2,"prompt":"Copy the exact question back to me."}
-{"length":3,"scaffold":"light","turn":3,"prompt":"Answer YES or NO: {QUESTION}"}
