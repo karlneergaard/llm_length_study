@@ -1,0 +1,5 @@
+condition,acc_type,n,total,percent
+baseline,Incorrect,334.0,1002.0,0.3333333333333333
+baseline,Correct,334.0,1002.0,0.3333333333333333
+baseline,IDK,334.0,1002.0,0.3333333333333333
+baseline,NC,0.0,1002.0,0.0
