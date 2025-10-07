@@ -1,21 +1,21 @@
-{"length":21,"scaffold":"semantic","turn":1,"prompt":"In one sentence, give me an overview of the Marsden Looter."}
-{"length":21,"scaffold":"semantic","turn":2,"prompt":"Briefly explain what 'siv-grade recombiner' refers to in the context of the Marsden Looter."}
-{"length":21,"scaffold":"semantic","turn":3,"prompt":"List some key words that are related to siv-grade recombiner so I can look them up later"}
-{"length":21,"scaffold":"semantic","turn":4,"prompt":"Name one thing siv-grade recombiner is often confused with."}
-{"length":21,"scaffold":"semantic","turn":5,"prompt":"Suggest one short question you would ask an expert to better understand siv-grade recombiner."}
-{"length":21,"scaffold":"semantic","turn":6,"prompt":"In one sentence, give me an overview of NERD Fault."}
-{"length":21,"scaffold":"semantic","turn":7,"prompt":"Briefly explain what NERD Fault refers to in the context of the Marsden Looter."}
-{"length":21,"scaffold":"semantic","turn":8,"prompt":"List some key words that are related to NERD Fault so I can look them up later"}
-{"length":21,"scaffold":"semantic","turn":9,"prompt":"Name one thing NERD Fault is often confused with."}
-{"length":21,"scaffold":"semantic","turn":10,"prompt":"Suggest one short question you would ask an expert to better understand NERD Fault."}
-{"length":21,"scaffold":"semantic","turn":11,"prompt":"In one sentence, give me an overview of fastibulation."}
-{"length":21,"scaffold":"semantic","turn":12,"prompt":"Briefly explain what 'fastibulation' refers to in the context of the Marsden Looter."}
-{"length":21,"scaffold":"semantic","turn":13,"prompt":"List some key words that are related to fastibulation so I can look them up later"}
-{"length":21,"scaffold":"semantic","turn":14,"prompt":"Name one thing fastibulation is often confused with."}
-{"length":21,"scaffold":"semantic","turn":15,"prompt":"Suggest one short question you would ask an expert to better understand fastibulation."}
-{"length":21,"scaffold":"semantic","turn":16,"prompt":"In one sentence, give me an overview of TAR-SAR party."}
-{"length":21,"scaffold":"semantic","turn":17,"prompt":"Briefly explain what 'TAR-SAR party' refers to in the context of the Marsden Looter."}
-{"length":21,"scaffold":"semantic","turn":18,"prompt":"List some key words that are related to TAR-SAR party so I can look them up later"}
-{"length":21,"scaffold":"semantic","turn":19,"prompt":"Name one thing TAR-SAR party is often confused with."}
-{"length":21,"scaffold":"semantic","turn":20,"prompt":"Suggest one short question you would ask an expert to better understand TAR-SAR party."}
+{"length":21,"scaffold":"semantic","turn":1,"prompt":"In one sentence, give me an overview of the {topic_primary}."}
+{"length":21,"scaffold":"semantic","turn":2,"prompt":"Briefly explain what '{anchor_a}' refers to in the context of the {topic_primary}."}
+{"length":21,"scaffold":"semantic","turn":3,"prompt":"List some key words that are related to {anchor_a} so I can look them up later"}
+{"length":21,"scaffold":"semantic","turn":4,"prompt":"Name one thing {anchor_a} is often confused with."}
+{"length":21,"scaffold":"semantic","turn":5,"prompt":"Suggest one short question you would ask an expert to better understand {anchor_a}."}
+{"length":21,"scaffold":"semantic","turn":6,"prompt":"In one sentence, give me an overview of {anchor_b}."}
+{"length":21,"scaffold":"semantic","turn":7,"prompt":"Briefly explain what {anchor_b} refers to in the context of the {topic_primary}."}
+{"length":21,"scaffold":"semantic","turn":8,"prompt":"List some key words that are related to {anchor_b} so I can look them up later"}
+{"length":21,"scaffold":"semantic","turn":9,"prompt":"Name one thing {anchor_b} is often confused with."}
+{"length":21,"scaffold":"semantic","turn":10,"prompt":"Suggest one short question you would ask an expert to better understand {anchor_b}."}
+{"length":21,"scaffold":"semantic","turn":11,"prompt":"In one sentence, give me an overview of {anchor_c}."}
+{"length":21,"scaffold":"semantic","turn":12,"prompt":"Briefly explain what '{anchor_c}' refers to in the context of the {topic_primary}."}
+{"length":21,"scaffold":"semantic","turn":13,"prompt":"List some key words that are related to {anchor_c} so I can look them up later"}
+{"length":21,"scaffold":"semantic","turn":14,"prompt":"Name one thing {anchor_c} is often confused with."}
+{"length":21,"scaffold":"semantic","turn":15,"prompt":"Suggest one short question you would ask an expert to better understand {anchor_c}."}
+{"length":21,"scaffold":"semantic","turn":16,"prompt":"In one sentence, give me an overview of {anchor_d}."}
+{"length":21,"scaffold":"semantic","turn":17,"prompt":"Briefly explain what '{anchor_d}' refers to in the context of the {topic_primary}."}
+{"length":21,"scaffold":"semantic","turn":18,"prompt":"List some key words that are related to {anchor_d} so I can look them up later"}
+{"length":21,"scaffold":"semantic","turn":19,"prompt":"Name one thing {anchor_d} is often confused with."}
+{"length":21,"scaffold":"semantic","turn":20,"prompt":"Suggest one short question you would ask an expert to better understand {anchor_d}."}
 {"length":21,"scaffold":"semantic","turn":21,"prompt":"Answer YES, NO or 'I don't know' to this question: {QUESTION}"}

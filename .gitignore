@@ -6,3 +6,8 @@
 /data/boolq_false.csv
 /data/merge_boolq.py
 /data/boolq_trim.csv
+/data/boolq/final_false.jsonl
+/data/boolq/final_true.jsonl
+/data/boolq/final_idk.jsonl
+/data/boolq/merged.csv
+run_length_old.py
