@@ -1,0 +1,1070 @@
+scaffold,L,boolq_id,gold,reply,timing_s,first_token,compliant,pred_strict,correct_strict,pred_label,pred_raw,is_answered,is_idk,answered_correct
+misleading,6,dev_0023,0,No.,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0025,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0039,0,"Yes, carbon can form a polar covalent bond with hydrogen. In a molecule",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0055,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0059,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0068,0,I don't know. The eligibility for the death penalty varies by jurisdiction and typically applies,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0087,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0107,0,"Yes, in Australia, gambling winnings are generally taxable and must be reported on your",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0120,0,"No, a vehicle title and registration are different documents. The title proves ownership,",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0138,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0151,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0163,0,"No, the square root of 2 cannot be written as a fraction; it",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0165,0,"YES, dragon fruit and pitaya are the same thing. They are two names",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0207,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0210,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0221,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0229,0,"Yes, all UK National Insurance numbers have a letter at the end.
+###
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0237,0,"Yes, there is a difference between 2-cycle and 2-stroke engines",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0243,0,"Yes, there is a Chinatown in St. Louis, Missouri.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0248,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0249,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0251,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0257,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0270,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0287,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0295,0,"YES, doves and pigeons are both part of the family Columbidae,",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0298,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0312,0,"I don't know. Adjectives can come before or after nouns, depending on",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0316,0,"No, the internal intercostal muscles contract during expiration, not inspiration.
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0318,0,"Yes, an Ace-2-3-4-5 is a straight.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0321,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0333,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0336,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0343,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0352,0,"I don't know. In soccer, a throw-in is awarded when the ball crosses",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0355,0,"NO
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0364,0,"Yes, a wicket keeper is a mandatory position in cricket. They are responsible for",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0366,0,"Yes, the pelvic brim (also known as the pelvic inlet) separates the abdominal",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0406,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0428,0,"NO, peroxide and hydrogen peroxide are not the same thing. Peroxide refers to",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0429,0,"Yes, flax oil and linseed oil are the same; they are different names",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0430,0,"No, the Banaue Rice Terraces are not one of the 7 Wonders",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0436,0,"Yes, there is such a thing as a broken heart. The term ""broken",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0441,0,"I don't know. Lobster and shrimp are different types of seafood, and while",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0442,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0479,0,"Yes, there are miniature pig breeds, such as the Mangalitsa and the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0481,0,"Yes, there was a 6th borough in New York. It was Staten",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0482,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0487,0,"I don't know. While banana plants can reproduce through seeds, they are not commonly",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0504,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0509,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0532,0,I don't know. While there are ongoing research and developments in brain-computer interfaces,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0534,0,"Yes, the National Guard primarily operates within the United States, although it can be",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0536,0,"No, Thanos did not appear in the first Guardians of Galaxy film.
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0537,0,"Yes, you can receive a caution without being formally arrested. In the UK,",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0546,0,"No, the College of William & Mary is not an Ivy League school.
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0560,0,"Yes, the University of Tampa has a football team.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0568,0,"Yes, the movie Heat was based on a book. The book is ""Heat",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0569,0,"YES, the NBA salary cap is a hard cap, meaning teams cannot exceed the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0588,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0594,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0596,0,"NO. C# is a programming language developed by Microsoft, while Visual C#",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0598,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0612,0,"No, popcorn is made from popped corn kernels, not from corn on the cob",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0617,0,"Yes, France and England have competed in the World Cup. They have faced each",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0662,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0678,0,I don't know. Washing a child's mouth with soap is not a recommended practice for,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0696,0,"Yes, there is a seat belt law in New Hampshire. Drivers and front-seat",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0711,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0718,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0724,0,"Yes, there is a sequel to ""Along Came a Spider."" The book is",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0731,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0737,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0754,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0759,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0764,0,No,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0782,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0817,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0829,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0832,0,"Yes, you can get to South America by car, as it is a continent",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0837,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0853,0,I don't know. While both Girl Scouts and Boy Scouts are youth organizations with similar,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0854,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0862,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0871,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0916,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0922,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0933,0,"Yes, the cremaster muscle is part of the spermatic cord. It is",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0934,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0940,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0944,0,"Yes, Greece and Rome were contemporaneous, with the Roman Republic emerging around",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0952,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0958,0,"No, the eyes are not part of the nervous system. They are part of",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0981,0,"NO, pyruvic acid and pyruvate are not the same thing.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0991,0,"NO, you do not need a license to watch TV in England. However,",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0994,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0996,0,"Yes, Radiator Springs is a fictional town featured in Pixar's animated film """,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1006,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1011,0,"Yes, the World Cup trophy is commonly known as the Jules Rimet Trophy,",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1022,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1049,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1062,0,"No, a wheel and axle cannot be called a lever. A wheel and axle",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1075,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1102,0,"YES, sweating and perspiring are essentially the same thing. Both terms refer to",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1110,0,"No, there are two rounds in the NBA draft, but there are also additional",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1112,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1113,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1121,0,"Yes, there was a world war before World War I. The conflict that occurred",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1133,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1138,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1146,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1155,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1175,0,"Yes, Michigan was a state during the Civil War.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1178,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1183,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1196,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1204,0,"No, the Eye of Agamotto is not the Time Stone. It is",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1205,0,I don't know. Removing the king from a chess game would fundamentally alter the rules,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1209,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1227,0,"YES
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1229,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1230,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1235,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1239,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1241,0,"Yes, there is a main-group element in period 6. The main-group",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1250,0,"Yes, the micropyle serves for the emergence of the radicle during seed germ",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1256,0,Yes,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1261,0,"Yes, Louisiana has a state income tax.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1267,0,"Yes, Better Call Saul is set after Breaking Bad. Both series are part of",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1271,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1283,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1285,0,"Yes, a woman has won the Indianapolis 500. Danica Patrick is the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1286,0,"Yes, there is a difference between lightning bugs and fireflies. Both terms refer",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1294,0,"No, a terminating decimal cannot be written as a recurring decimal. Terminating decimals",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1296,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1303,0,"NO, you don't have to touch the ball to be offside in soccer.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1307,0,"No, you cannot score directly from a kickoff in football. The ball must first",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1311,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1316,0,"No, the Gateway Arch in St. Louis is not a national park. It",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1317,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1333,0,"No, a Dame and a Knight are different titles. A Dame is a female",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1336,0,Yes,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1345,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1359,0,"I don't know. As an AI, I don't have physical capabilities, so I",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1370,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1371,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1372,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1382,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1406,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1408,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1413,0,"NO, Brazil has never won the FIFA World Cup in Europe. All of their",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1419,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1420,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1423,0,"I don't know. ""Take Me Home, Country Roads"" is a song by",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1424,0,"I don't know. Hawaii's climate varies, but generally, it is warm,",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1436,0,"NO, equity in your home is not a liquid asset because it cannot be easily",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1438,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1452,0,"Yes, a neurotransmitter can be both excitatory and inhibitory depending on the type",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1455,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1464,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1467,0,I don't know. The passing grade for A-levels can vary depending on the,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1473,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1489,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1498,0,"Yes, the Nobel Peace Prize is awarded every year.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1508,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1515,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1517,0,"No, hydraulic fluid and brake fluid are not interchangeable. Using hydraulic fluid as brake",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1528,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1533,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1534,0,I don't know. The legality of catching a ball in the stands depends on the,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1546,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1552,0,"No, the poly(A) tail is added after the stop codon during the",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1557,0,"Yes, New York State has the death penalty. It is used for certain crimes",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1563,0,"Yes, the Big Dipper is a part of the constellation Ursa Major.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1627,0,"NO, the esophagus is not in front of the heart. It is located",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1632,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1650,0,"Yes, it is illegal to take a stop sign. Stop signs are traffic control",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1655,0,"Yes, there is a difference between soy and soya sauce. ""Soy""",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1658,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1659,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1673,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1680,0,"I don't know. Picking your nose can potentially affect your sense of smell, but",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1687,0,"Yes, there are warrant officers in the U.S. Air Force.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1698,0,"Yes, Fullmetal Alchemist: Brotherhood is a continuation of the original Fullmetal",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1707,0,"Yes.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1727,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1736,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1737,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1740,0,"No, there is no spongy bone in the medullary cavity.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1743,0,"I don't know. The Last King of Scotland, directed by Kevin Macdonald and",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1749,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1750,0,"I don't know. The concept of ""fighting words"" is a bit complex",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1757,0,"Yes, the profit and loss statement and income statement are the same thing. They",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1763,0,"Yes, the House of Representatives is one part of Congress, along with the Senate",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1775,0,"Yes, the NBA playoffs are played in a 2-3-2 format",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1789,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1806,0,"Yes, the U.S. still issues $1,000 bills, although they",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1814,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1823,0,"No, the MLB All-Star Game does not determine World Series home-field advantage.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1832,0,"Yes, there is a real town called Garrison in Colorado. It is a",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1849,0,"Yes, in a RACI chart, one person can be both Responsible and Account",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1851,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1857,0,"Yes, cows need to give birth to produce milk. After giving birth, a",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1895,0,"No, the empty set is not an element of itself. In set theory,",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1906,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1916,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1919,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1924,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1938,0,"Yes, the empty set is an element of the set that contains the empty set",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1948,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1950,0,"NO, the Gulf of Mexico is considered a sea, not an ocean. It",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1960,0,"NO, the Republic of the Congo and the Democratic Republic of the Congo are two",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1977,0,I don't know. The eligibility for the U.S. presidency is a complex issue,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1995,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1997,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2009,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2032,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2045,0,"No, a Supreme Court justice cannot run for President as they are not eligible for",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2053,0,"Yes, you must be serving to score in tennis.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2061,0,"I don't know. As an AI, I don't have personal relationships or the ability",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2065,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2068,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2078,0,"Yes, black cumin seed and black seed refer to the same spice, Nigella",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2079,0,"Yes, Eeyore from Winnie-the-Pooh is a donkey.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2088,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2091,0,"Yes, the home team can win by two runs in extra innings. In baseball",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2094,0,"Yes, there is an airport in Fort Walton Beach, Florida. It is called",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2095,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2139,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2166,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2184,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2187,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2192,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2196,0,"Yes, red-eared slider turtles lay eggs in water. They are ovip",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2199,0,Yes,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2204,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2220,0,"Yes, the ball is dead on an infield fly. When a batter hits",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2224,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2232,0,"Yes, there is a Roman Catholic cathedral in Dublin. The most famous one is",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2234,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2237,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2247,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2248,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2266,0,"Yes, a Nissan Pathfinder is considered a full-size SUV.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2275,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2295,0,"No, a unanimous vote requires all members to agree, and an abstention means",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2304,0,"No, the House of Representatives is one of the two chambers of Congress, the",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2306,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2310,0,"NO, In-N-Out Burger is not a franchise. It is a privately-owned",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2315,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2323,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2328,0,"Yes, there is such a thing as Corinthian leather. It is a type",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2350,0,"Yes, ""Little House on the Prairie"" is a work of fiction. It",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2382,0,"No, the right atrium receives deoxygenated blood from the body, not",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2387,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2388,0,I don't know. The possibility of retrial due to new evidence depends on the,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2396,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2408,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2413,0,"Yes, the movie ""Stalingrad"" is based on a true story.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2428,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2433,0,"I don't know. Beard policies in the military can vary depending on the branch,",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2434,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2447,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2473,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2479,0,I don't know. Hong Kong is a Special Administrative Region (SAR) of China,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2504,0,"Yes, the Strip is a famous area in the city of Las Vegas known for",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2532,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2537,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2538,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2547,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2548,0,"Yes, the queen bee typically dies after her stinging ability diminishes, which",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2555,0,"NO, lymphoma is a type of cancer that originates in the lymphatic system,",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2566,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2572,0,"No, the Channel Islands are not part of Great Britain. They are self-go",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2577,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2605,0,"Yes, .45 Colt and .45 Long Colt are the same cartridge. The",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2614,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2622,0,"Yes, 7.62 NATO and .308 Win refer to the same cartridge",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2634,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2643,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2655,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2656,0,"No, right of abode and indefinite leave to remain are not the same. Right",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2690,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2719,0,"NO. Electrons flow in the opposite direction to conventional current, which is defined",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2727,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2750,0,"No, cows do not need to get pregnant to give milk. They can continue",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2757,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2770,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2791,0,"No, the gut refers to the entire gastrointestinal tract, which includes the stomach,",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2813,0,"No, The Greatest Showman is a fictional musical drama film, not based on",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2821,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2832,0,"NO, shea butter is made from the nuts of the shea tree (",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2838,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2853,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2870,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2875,0,"No, Aldi is not affiliated with Trader Joe's. They are two separate and",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2880,0,"Yes, the County Court Business Centre is a real court. It is a part",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2890,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2901,0,"No, VW, Audi, and Porsche are not the same company. They are",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2906,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2919,0,"I don't know. The human body can digest and absorb animal protein, but the",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2931,0,"No, I cannot drink under the age of 21 as it is illegal and",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2933,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2956,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2959,0,"Yes, there is a bridge between Morocco and Spain. The Strait of Gibraltar connects",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2967,0,"Yes, the sun can shine from the north. The sun is located in the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2973,0,"Yes, there is a second movie to The Golden Compass. It is titled """,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2991,0,"No, gamblers cannot acquire a statistical advantage over the house in casino games because these",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3000,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3015,0,"No, keyless entry and remote start are different features. Keyless entry allows",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3027,0,I don't know. A Schengen visa allows you to travel within the Schengen,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3029,0,"Yes, the United Kingdom left the European Union. This event is commonly referred to",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_3035,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3040,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3073,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3079,0,"No, salary is not included in the cost of goods sold (COGS).",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3089,0,"No, a peach is not part of the almond family. Peaches belong to",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3105,0,"No, a neutral wire should not be connected to ground as it can create a",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3106,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3107,0,"Yes, there have been recess appointments to the Supreme Court. The most notable example",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_3122,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3143,0,"YES, the Republic of Ireland is part of the Schengen visa area.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_3173,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3183,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3187,0,"NO
+
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3204,0,"Yes, the fundus of the gallbladder is located near the cystic",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_3212,0,"No, a physical address (also known as a MAC address) is a unique",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3221,0,"I don't know. The color change would depend on various factors, such as the",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3231,0,"No, the standard error is not the same as the standard deviation. The standard",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3232,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3238,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3239,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3241,0,"Yes.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_3242,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0031,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0148,0,"No, Sméagol does not die in The Lord of the Rings.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0178,0,Yes,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0410,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0419,0,"Yes, Eric Clapton played on 'While My Guitar Gently Weeps.'",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0448,0,"Yes, Jefferson Airplane is in the Rock and Roll Hall of Fame.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0224,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0317,0,"I don't know. Perfect pitch, also known as absolute pitch, is a rare",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0368,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0507,0,"I don't know. I don't have information on specific plot details of the movie """,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0603,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0938,0,"I don't know. The song ""House of the Rising Sun"" is a traditional",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0076,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0459,0,"Yes, it matters which DNA strand is transcribed. In most cases, only",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0502,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0580,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1089,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1153,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1315,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1482,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1568,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1968,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2223,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2420,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2882,0,"Yes, redback spiders (Latrodectus hasselti) are found",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2899,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2910,0,"No, taro root and elephant ears are not the same. Taro root",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0713,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0816,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0911,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0997,0,"NO, surgical spirit and rubbing alcohol are not the same thing. Surgical spirit is",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1258,0,"Yes, the umbilical cord is inside the amniotic sac.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1422,0,"Yes, root hairs occur along the entire length of a root, although they are",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2120,0,"Yes, Dalmatians are born with spots, but they may fade and",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2353,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2441,0,"Yes, it is possible for a couple to have identical twins, but it is",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2087,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2215,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2503,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2652,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2850,0,I don't know. While many bees have barbed stingers that remain in the,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3062,0,"NO, black and yellow garden spiders are not poisonous to humans. They are harmless",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0400,0,"Yes, a profit and loss account is the same as an income statement.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0432,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0446,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0455,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0472,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0524,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0767,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0875,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0950,0,"NO, Poland Spring water does not come from a spring. It is a brand",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1023,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1171,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1207,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1299,0,"Yes, net earnings and net income are the same. They both refer to the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0157,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0371,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0621,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0699,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0954,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1050,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1208,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1257,0,"NO, Home Bargains and Quality Save are different retail brands.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1805,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1876,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2290,0,"YES, GDP per capita and per capita income are essentially the same, both representing",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2444,0,"NO
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0250,0,"Yes, they celebrate Father's Day in the Netherlands.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0337,0,"Yes, the King's Birthday is a public holiday in Victoria, Australia.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0386,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0591,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0746,0,"Yes, June 12 is a holiday in the Philippines, known as Independence Day",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0845,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0855,0,"Yes, some flight paths do go over the North Pole, especially those that are",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0915,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0945,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0021,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0490,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0581,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0631,0,I don't know. The operation of postal services on Memorial Day can vary by country,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0691,0,"Yes, you still need a stamp if it says Freepost. Freepost is",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0783,0,"NO, the Honda CRF 250 is not a 2-stroke.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0787,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0825,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0885,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0089,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0095,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0211,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0238,0,"No, Beau Abbott does not die in A Quiet Place.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0252,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0256,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0266,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0310,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0359,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0422,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0040,0,"Yes, there is a sequel to the movie The Golden Compass. The sequel is",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0080,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0100,0,I don't have access to specific plot details of movies unless they are widely known.,,i,False,,,other,,False,False,
+misleading,6,dev_0240,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0247,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0260,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0277,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0290,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0303,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0231,0,"NO, penne alla vodka does not contain dairy. It is a traditional Italian",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0401,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0420,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0571,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0583,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0765,0,"Yes, salted duck eggs need to be cooked before consumption to ensure they are safe",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0778,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0815,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0073,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0491,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0615,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0868,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0880,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0953,0,"NO, Monster energy drinks do not contain alcohol. They are non-alcoholic",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0985,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0136,0,"Yes, Battlefield 1 has a single-player campaign.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0367,0,"I don't know
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0618,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0720,0,"Yes, State of Decay is a co-op game on Xbox One.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0770,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0835,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0896,0,"Yes, Naruto Ultimate Ninja Storm has a story mode.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0434,0,"I don't know. While many Xbox games are compatible with the Xbox One, not",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0489,0,"Yes, all of the Far Cry games are connected as they are part of the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0852,0,I don't know. Phase 10 is typically designed for 2-8 players,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0870,0,"I don't know. Paladins are typically associated with Lawful Good, but",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1148,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2595,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0281,0,"Yes, there are tolls on I-70 in Kansas.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0528,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0547,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0623,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0626,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0686,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0822,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1210,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0374,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0900,0,"NO, Fort Walton Beach and Destin are two separate cities in Florida, although",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0913,0,I don't know. Porpoise Spit is not a widely recognized or documented,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1234,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1360,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1544,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1588,0,"NO, Lake George is not a man-made lake; it is a natural lake",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0344,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0379,0,"Yes, New England Baptist Hospital is a teaching hospital.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0474,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0614,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0655,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1195,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1197,0,"No, an ectopic pregnancy cannot be carried to term as it occurs outside the",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1313,0,"Yes, relative risk and risk ratio are the same. They both refer to the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1564,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0078,0,"Yes, there are two brachiocephalic arteries, one on the right",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0166,0,"Yes, the Dietary Guidelines Reference Council (DGRC) recommends consuming at least five",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0851,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0861,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0872,0,"NO, a third-degree burn is generally more severe than a first-degree burn,",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1554,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1719,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1991,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2115,0,I don't know. Being a sumo wrestler can be healthy if it is done,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0105,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0125,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0191,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1292,0,"NO, the Queen of England did not marry her cousin. She married Prince Philip",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1338,0,Yes,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0388,0,"I don't know. Integration policies varied by state and region, with some northern states",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0703,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0833,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0874,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1651,0,"Yes, there are still tin mines in Cornwall, although they are not as prominent",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0072,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0258,0,I don't know. Alcohol sales on Sundays in Wisconsin are subject to local laws and,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0286,0,"Yes.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0348,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0467,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0515,0,I don't know. The ability to place a restraining order on a landlord depends,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0562,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0636,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0740,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0838,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0864,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0873,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0901,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0909,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1134,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0198,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0215,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0223,0,I don't know. The legality of recording covers of songs can vary depending on the,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0234,0,I don't know. The legality of sexual activity between an 18-year-old and,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0272,0,I don't know. The Taconic State Parkway is a toll road in New York,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0453,0,"I don't know. Incest laws vary by jurisdiction, and some places may have",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0499,0,"I don't know. Puerto Rico is a U.S. territory, and its residents",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0552,0,I don't know. Policies regarding phone use in prison can vary widely depending on the,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0680,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0738,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0771,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0888,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1135,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1188,0,I don't know. The ability to purchase a firearm after being dishonorably discharged,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0339,0,"I don't know. While a military ID may be accepted for entry into Canada,",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0357,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0498,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0620,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0878,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1864,0,"No, the U.S. Marines are not part of the Navy. They are",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2080,0,"Yes, the Coast Guard is part of the Department of Defense.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2395,0,"NO, the Governor-General does not have to sign all bills passed by federal Parliament",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2639,0,"No, Canada is not a member of the Human Rights Council. The Human Rights",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3155,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3209,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0209,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0273,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0404,0,"NO, Puerto Rico is not a protectorate of the US. It is an",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0567,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0675,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1172,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1275,0,I don't know. The policy regarding wearing state awards on active duty can vary depending,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1971,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2001,0,"I don't know. The presidential pardon power typically applies to federal offenses, but the",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3004,0,"I don't know. As an AI, I don't have personal experiences or the ability",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3256,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1132,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1233,0,"No, in an adiabatic process, there is no heat exchange with the",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1511,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1633,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2007,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2214,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2239,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2299,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2303,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2477,0,"No, 0 is not in the set of natural numbers. In mathematics,",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2993,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3126,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3188,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3193,0,"Yes, the Georgia Aquarium has whale sharks.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_3234,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3265,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0001,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0579,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1003,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1483,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1551,0,"Yes, Australia is part of the Ring of Fire. The Ring of Fire is",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1702,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1925,0,"NO, percent difference and percent change are not the same. Percent difference is a",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2025,0,"No, the load is not the pivot point of a lever. The pivot point",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2312,0,NO. Turpentine and white spirit are not the same thing. Turp,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2471,0,"Yes, there is a mechanical advantage for a fixed pulley. It allows you to",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2521,0,"NO
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2782,0,"YES, the hydronium ion (H3O+) and the hydrogen ion",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2812,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_3014,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3034,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3159,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3190,0,"NO, mahi-mahi and ahi tuna are different species of fish. Mahi",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0682,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0735,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1505,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1668,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2373,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2793,0,"NO, Eastern Kentucky University is a Division II school.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2929,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0605,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0908,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1388,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1521,0,"I don't know. In Sweden, education is free for students, but there may",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2334,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2641,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0347,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0411,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0439,0,"Yes, the Milwaukee Brewers have made it to the World Series once, in",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0452,0,"Yes, Belgium has reached the World Cup final once, in 2018.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0585,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0656,0,"Yes, Kaká played in the 2002 FIFA World Cup. He was",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0661,0,"Yes, the KSI vs. Logan Paul fight was a pay-per-view event",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0701,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0704,0,"Yes, Wayne Gretzky won a Stanley Cup with the Edmonton Oilers in",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0752,0,"Yes, there is a mercy rule in professional soccer. It is often referred to",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0848,0,I don't know. The ability to sign free agents outside the transfer window depends on,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0883,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1143,0,"Yes, Dan Marino is in the Pro Football Hall of Fame.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1305,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1497,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1777,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2250,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2370,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0083,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0085,0,"Yes, Deion Sanders won a World Series. He was a member of the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0170,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0230,0,"I don't know. In Little League, the rules regarding running on a dropped third",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0412,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0421,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0447,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0544,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0565,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0589,0,I don't know. The definition of goaltending in basketball typically involves the defender,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0593,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0859,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0865,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1518,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1768,0,"Yes, England has won the Women's World Cup once, in 1995.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1779,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1905,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2156,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2158,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2798,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3138,0,"Yes, the Olympic gold medal is made of gold.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0307,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0506,0,"Yes, drywall mud and joint compound are the same; they are both used for",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0608,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0641,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0844,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1032,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1574,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1889,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2093,0,I don't know. It depends on the phone and the network provider. Some phones,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2213,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2735,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2836,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0788,0,"NO, MiniDV tapes and 8mm are not the same. MiniDV",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0798,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1249,0,"YES
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1458,0,I don't know. It depends on the specific powered speakers and their built-in amplifier,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1584,0,"Yes, there is a GMC version of the Avalanche. It is known as the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1589,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1657,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1691,0,"NO, response time refers to how quickly a display can update, while input lag",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1943,0,"Yes, it costs money to join PlayStation Network. You can sign up for",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2682,0,"YES, E-ZPass and EZ TAG refer to the same electronic toll collection system",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2712,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0427,0,"NO, The Barber of Seville is a different musical from Sweeney Todd.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0531,0,"NO. Smaug is one of the most famous dragons in Middle-earth, but",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1915,0,"NO, ""The Hunchback of Notre-Dame"" is a fictional novel written",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1946,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2024,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2265,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0004,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0241,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0326,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0525,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0577,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0799,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0142,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0494,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0527,0,"YES, HeLa cells have a normal number of chromosomes. They are human cells",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0566,0,"No, not all bacteria of a single species are the exact same shape. B",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0648,0,"NO
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0668,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0749,0,"NO, sensory neurons are part of the peripheral nervous system, not the central nervous",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0790,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0867,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0921,0,"I don't know. While it's extremely rare, there have been instances where humans have",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1088,0,I don't know. Breeding rabbits and cats together is not recommended due to differences,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1329,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1402,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1428,0,"NO, sweat glands are not part of the lymphatic system. They are part",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1439,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0020,0,"Yes.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0027,0,"Yes, penguins have feathers arising from the epidermis.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0047,0,"Yes, there is such a thing as a turkey vulture. It is a",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0070,0,"Yes, T. rex and Tyrannosaurus rex refer to the same dinosaur",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0086,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0121,0,"Yes, St. Bernards and Bernese Mountain Dogs are related. They are",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0131,0,"Yes, the latent heat of vaporization changes with temperature. As the temperature increases",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0147,0,"Yes, the navel and the belly button refer to the same anatomical feature,",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0159,0,"No, a tree typically has only one main trunk, although some species can develop",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0190,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0195,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0200,0,"Yes, competitive inhibitors bind to the active site of enzymes.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0214,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0242,0,"Yes, both male and female bighorn sheep have horns.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0522,0,"Yes, a hornet can sting you more than once, as they have a",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0033,0,"NO, federal income tax and Social Security are different. Federal income tax is based",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0123,0,I don't know. Public limited companies can be part of the private sector if they,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0501,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0526,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1076,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1213,0,NO. Discretionary income is the amount of an individual's income left after paying,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1654,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1753,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1825,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2911,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2740,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2517,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1139,0,"Yes, there are state income taxes in New Mexico.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0002,0,"Yes, house tax is the same as property tax. Both terms refer to the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0773,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1186,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1302,0,"Yes, Dodge and Jeep are both brands under the Chrysler Group, which is a",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1349,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1771,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1804,0,"Yes, a two-dollar bill has monetary value and is legal tender in the United",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1873,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1963,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2582,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2598,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3158,0,"Yes, there is a direct link between economic development and social development. Economic development",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0551,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1158,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1364,0,"NO, a jet engine is not an external combustion engine. It is an internal",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1807,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2542,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2562,0,"NO, a ribeye steak and a Delmonico steak are different cuts of",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3005,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_3194,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3195,0,"Yes, a boarding pass and a ticket are essentially the same thing. A boarding",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0013,0,I don't know. It depends on the type of shower gel and the individual's hair,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0043,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0052,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0091,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0116,0,"YES
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0288,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0555,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0627,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0831,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0721,0,"NO, ""Night of the Living Dead"" is a work of fiction and not",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0863,0,"NO. ""The Closer"" and ""Major Crimes"" are two different television",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1357,0,"NO, ""The View"" and ""The Talk"" are different television talk shows",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1951,0,"Yes, ""The Bridge on the River Kwai"" is based on a true",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2131,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2174,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2252,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2309,0,I don't know. Maleficent and the Evil Queen are two distinct characters from,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2364,0,"NO, ""The Outsiders"" is not based on a true story. It",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3075,0,"NO, Pulp Fiction is not based on a true story. It is a",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3205,0,"NO, ""Lady Bird"" is a 2016 film directed by Greta Ger",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0015,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0153,0,"Yes, there is a movie adaptation of ""The Handmaid's Tale"" based",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0161,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0306,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0334,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0338,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0493,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0520,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0212,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0309,0,"NO, ground coriander and cumin are not the same thing. They are distinct spices",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0484,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0654,0,"NO, beef short ribs and spare ribs are different cuts of meat. Short ribs",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0973,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1335,0,"NO, cocoa beans and coffee beans are different types of beans used to produce different",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1443,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0284,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0330,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0443,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0975,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1741,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1770,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1860,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1967,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0236,0,"No, straights in poker do not have to be the same suit. In",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0741,0,I don't know. Winning in solitaire depends on the specific rules and variations of the,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1440,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2062,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2109,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2137,0,"Yes, it is possible to win chess with only a king, but it requires",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0478,0,Yes,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0545,0,"Yes, there is a storyline in Just Cause 3. The game follows the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1125,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1137,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1162,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1177,0,"Yes, Company of Heroes 2 has a campaign mode.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1444,0,"Yes, original Xbox games are compatible with Xbox One through backward compatibility features.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0313,0,"NO, St. Kitts and Nevis is not a U.S. territory",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0823,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0839,0,"NO, West Virginia and Virginia are not the same state. They are two separate",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1222,0,"NO
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1254,0,"NO
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1269,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1334,0,"NO, Patagonia is not a country in its own right. It is a region",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0184,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0322,0,"No, the City of Industry is not in Los Angeles County. It is located",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0557,0,"Yes, the water in the Amazon River is fresh. It is a freshwater river",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0573,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1179,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0619,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0650,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0734,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0061,0,"I don't know. An EMT-Basic may be trained to start an IV,",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0124,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0914,0,"NO, stroke volume and ejection fraction are related but not the same. Stroke",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0955,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1610,0,"NO, soft-tissue damage can include a sprain, but it also encompasses",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1790,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2096,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2277,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2499,0,"NO, a Doctor of Physical Therapy (DPT) is not an MD (",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1959,0,"Yes, normal body temperature can vary throughout the day, typically being slightly lower in",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1992,0,"No, a person cannot transmit rabies to another person. Rabies is primarily",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2047,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1656,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1663,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1752,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2049,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2050,0,"YES
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1442,0,"Yes, a lipid profile and a lipid panel are the same thing. Both terms",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0301,0,"NO, the Berlin Wall and the Berlin Blockade are not the same. The",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0480,0,"No, the United States does not follow the Articles of Confederation. The Articles",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1290,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1819,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2206,0,"NO. The Emancipation Proclamation, issued by President Abraham Lincoln on January",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0376,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0346,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0363,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0535,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0629,0,Yes,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0179,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0402,0,"I don't know. The legality of polygamy, including having more than one",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0513,0,I don't know. The consideration of a purchase price as proof of part performance can,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0606,0,"I don't know. Escaping from prison is illegal in Germany, as in most",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0630,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0795,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1457,0,"NO, the Civil Rights Act is not part of the U.S. Constitution.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1776,0,"NO, an Employment Authorization Document (EAD) is not the same as a",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1862,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1911,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2755,0,"I don't know. In some jurisdictions, there may be alternative pathways to becoming an",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2756,0,"Yes, the Bill of Rights is part of the original Constitution. It consists of",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2921,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2972,0,NO. Commercial law and corporate law are related but distinct fields. Commercial law deals,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0009,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0038,0,"I don't know. The legality of recording a cover song depends on various factors,",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0129,0,I don't know. The legality of private gun sales in Florida can depend on various,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0202,0,"Yes, breaking and entering into a car is typically considered a felony, as it",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0308,0,"Yes, it is illegal for a minor to be in possession of alcohol.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0584,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0644,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0653,0,"Yes, the Family Medical Leave Act (FMLA) is a federal law",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0671,0,"Yes, the state of Kansas has the death penalty.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0757,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1059,0,"Yes, the Supreme Court can review and potentially strike down an executive order if it",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1067,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1097,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1131,0,"Yes, Illinois has a stand your ground law. It allows individuals to use force",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1324,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0305,0,"NO. While language is a significant criterion for classifying states in India, it",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0465,0,"NO, the National Guard is not part of the Coast Guard. They are separate",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0508,0,I don't know. The 22nd Amendment to the U.S. Constitution limits,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0518,0,"YES
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0572,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0898,0,I don't know. The right to vote in Canada varies depending on the province or,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1154,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1221,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1244,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1245,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1273,0,"NO, Guam is not part of the U.S. Virgin Islands. They are",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0647,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0254,0,"Yes, the Vice President is the President of the Senate.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0486,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0736,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0814,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1477,0,"Yes, the cabinet is part of the executive branch.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1721,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1786,0,"Yes, New York City still has rent control.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1970,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1985,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2448,0,"I don't know
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0066,0,"No, not all triangles have at least two acute angles. An obtuse triangle",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0088,0,"Yes, it is possible to create mass from energy, according to Einstein's famous",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0196,0,"Yes, T. rex skulls have been found.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0262,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0271,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0329,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0331,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0387,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0418,0,"Yes, it is possible to have thunder and lightning while snowing. Thunderstorms",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0616,0,"Yes, bicarb soda and baking soda are the same. They are both",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0638,0,"Yes, all rhombuses have two pairs of parallel sides.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0657,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0692,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0744,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0797,0,"Yes, average velocity has a direction associated with it. It is a vector quantity",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0842,0,"Yes, diffraction effects can be seen in sound waves, just as they can in",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1379,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0126,0,"No, according to our current understanding of physics, it is not possible for any",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0342,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0437,0,I don't know. The occurrence of a full moon on the summer solstice depends,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0553,0,"I don't know. In a parallelogram, opposite angles are equal, but",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0652,0,"NO
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0708,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1083,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1142,0,I don't know. Quantum entanglement is a phenomenon where two or more particles,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1354,0,I don't know. The depth of the water table can vary depending on factors such,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1460,0,I don't know. A single-subject research design may not be suitable for all,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1468,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1559,0,"NO, log x typically refers to the logarithm with base 10 (common",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1595,0,"NO, reverse osmosis and deionized water are different processes. Reverse os",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1643,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1692,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1726,0,"NO, the vagus nerve is part of the peripheral nervous system (PNS",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0008,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0323,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0794,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0866,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0910,0,"Yes, the Dewey Decimal System is still in use.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0992,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1446,0,"Yes, the Church of England and the Anglican Church are the same. The Church",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0294,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0521,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0943,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1887,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2892,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2691,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0065,0,"Yes, several players from the 1980 US hockey team, known as the",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0245,0,"No, in American football, a player cannot pass the ball more than once in",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0315,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0361,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0550,0,"Yes, there have been tie games in baseball, although they are extremely rare.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0595,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0966,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1078,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1224,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1251,0,"Yes, Croatia has placed in the FIFA World Cup. They reached the quarter-finals",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1260,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1278,0,"Yes, Cal Ripken Jr. is in the Hall of Fame.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1462,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1494,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1543,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2012,0,"Yes, Dwight Howard played for the Houston Rockets. He joined the team in",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2118,0,I don't know. Breaking someone's wrist by twisting it can cause severe injury and is,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2272,0,"I don't know.
+###",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2338,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2498,0,"Yes, there have been two grand slams in one inning. This occurred on",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2509,0,"Yes, the 2016 Golden State Warriors made a historic comeback from a",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2917,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2966,0,"No, you cannot go to the NBA out of high school. The NBA has",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2974,0,"Yes, it is possible to run for 24 hours, although it is extremely",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_3007,0,"Yes, the Tour de France is different every year due to varying routes, weather",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_3199,0,"Yes, club professionals have won the PGA Championship. Notably, Jack Nicklaus",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0222,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0398,0,"I don't know. In soccer, a throw-in is awarded when the ball crosses",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0426,0,"I don't know. In association football, the goalkeeper is allowed to pick up the",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0464,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0563,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_0658,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1366,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1471,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_1558,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1580,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2401,0,"I don't know. In cricket, a batsman can be run out if they",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2436,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3224,0,I don't know,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0022,0,Yes.,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0132,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0193,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0268,0,YES,,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0646,0,"Yes, multithreading can be useful even on a single processor as it allows",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0697,0,I don't know.,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_0935,0,"Yes, we can have multiple foreign keys in a table.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1159,0,"Yes.
+###",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1376,0,"Yes, a database can contain more than one table.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_1646,0,"No, cast-iron pans cannot be used on an induction cooktop because they",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1869,0,"Yes, a database table can have multiple foreign keys.",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_2397,0,"Yes, there are cell phone jammers, but their use is illegal in many",,yes,True,1.0,False,yes,yes,True,False,False
+misleading,6,dev_0512,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1524,0,NO. The transmission and the engine are not the same thing. The engine is,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1675,0,NO. Input lag refers to the delay between a user's action and the display's,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_1723,0,I don't know. It depends on the specifications of the 3-way lamp and,,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2027,0,"NO
+###",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2104,0,"I don't know. As an AI, I don't have physical capabilities, so I",,i,False,,,idk,i don't know,False,True,
+misleading,6,dev_2262,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2431,0,"NO, in a tree data structure, each node can have only one parent,",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_2524,0,"NO, the iPhone SE and iPhone 5 are not the same.",,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3057,0,NO,,no,True,0.0,True,no,no,True,False,True
+misleading,6,dev_3167,0,"NO, gear oil and motor oil are different types of lubricants designed for specific",,no,True,0.0,True,no,no,True,False,True

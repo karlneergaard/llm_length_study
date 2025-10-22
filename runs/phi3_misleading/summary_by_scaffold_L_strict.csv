@@ -1,0 +1,2 @@
+scaffold,L,N,compliance_rate,compliance_ci_low,compliance_ci_high,acc_strict,acc_strict_ci_low,acc_strict_ci_high
+misleading,6,1002,0.8173652694610778,0.7922447933874337,0.8400615260171325,0.46506986027944114,0.4343782765022966,0.4960282606701569
