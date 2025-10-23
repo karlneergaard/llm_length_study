@@ -1,0 +1,11 @@
+{"length":11,"scaffold":"memory","turn":1,"prompt":"In one sentence, give me an overview of {topic_primary}."}
+{"length":11,"scaffold":"memory","turn":2,"prompt":"Briefly explain what '{related_a}' refers to in the context of {topic_primary}."}
+{"length":11,"scaffold":"memory","turn":3,"prompt":"List some key words that are related to {related_a} so I can look them up later"}
+{"length":11,"scaffold":"memory","turn":4,"prompt":"Name one thing {related_a} is often confused with."}
+{"length":11,"scaffold":"memory","turn":5,"prompt":"Repeat the things {related_a} is often confused with and the key words related to them."}
+{"length":11,"scaffold":"memory","turn":6,"prompt":"In one sentence, give me an overview of {related_b}."}
+{"length":11,"scaffold":"memory","turn":7,"prompt":"Briefly explain what '{related_b}' refers to in the context of {topic_primary}."}
+{"length":11,"scaffold":"memory","turn":8,"prompt":"List some key words that are related to {related_b} so I can look them up later"}
+{"length":11,"scaffold":"memory","turn":9,"prompt":"Name one thing {related_b} is often confused with."}
+{"length":11,"scaffold":"memory","turn":10,"prompt":"Repeat the things {related_a} and {related_b} are often confused with and the key words related to them."}
+{"length":11,"scaffold":"memory","turn":11,"prompt":"Answer YES, NO or 'I don't know' to this question: {QUESTION}"}

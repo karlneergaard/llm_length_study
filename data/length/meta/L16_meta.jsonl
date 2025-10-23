@@ -3,11 +3,11 @@
 {"length":16,"scaffold":"meta","turn":3,"prompt":"When I ask the question, can you answer either a YES, NO or 'I don't know'?"}
 {"length":16,"scaffold":"meta","turn":4,"prompt":"Confirm you won't guess if you don't know the answer."}
 {"length":16,"scaffold":"meta","turn":5,"prompt":"Confirm you will base your answer only on widely accepted facts."}
-{"length":16,"scaffold":"meta","turn":6,"prompt":"Can you repeat my instructions?"}
-{"length":16,"scaffold":"meta","turn":7,"prompt":"Copy the exact question back to me."}
+{"length":16,"scaffold":"meta","turn":6,"prompt":"Confirm you will not use context beyond the question itself."}
+{"length":16,"scaffold":"meta","turn":7,"prompt":"Confirm you will read the question carefully before answering."}
 {"length":16,"scaffold":"meta","turn":8,"prompt":"Confirm you will pinpoint any ambiguous terms after you answer YES, NO or 'I don't know'."}
 {"length":16,"scaffold":"meta","turn":9,"prompt":"Confirm you will treat numbers, dates, and names exactly as written."}
-{"length":16,"scaffold":"meta","turn":10,"prompt":"Repeat the rules in one sentence."}
+{"length":16,"scaffold":"meta","turn":10,"prompt":"Confirm you will not include any explanation unless I ask after your answer."}
 {"length":16,"scaffold":"meta","turn":11,"prompt":"Confirm you will start your final reply with either YES, NO or 'I don't know'."}
 {"length":16,"scaffold":"meta","turn":12,"prompt":"Confirm you will use standard definitions of all terms."}
 {"length":16,"scaffold":"meta","turn":13,"prompt":"Confirm you will not rewrite or reframe the question."}

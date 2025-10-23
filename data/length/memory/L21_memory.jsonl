@@ -1,0 +1,21 @@
+{"length":21,"scaffold":"memory","turn":1,"prompt":"In one sentence, give me an overview of {topic_primary}."}
+{"length":21,"scaffold":"memory","turn":2,"prompt":"Briefly explain what '{related_a}' refers to in the context of {topic_primary}."}
+{"length":21,"scaffold":"memory","turn":3,"prompt":"List some key words that are related to {related_a} so I can look them up later"}
+{"length":21,"scaffold":"memory","turn":4,"prompt":"Name one thing {related_a} is often confused with."}
+{"length":21,"scaffold":"memory","turn":5,"prompt":"Repeat the things {related_a} is often confused with and the key words related to them."}
+{"length":21,"scaffold":"memory","turn":6,"prompt":"In one sentence, give me an overview of {related_b}."}
+{"length":21,"scaffold":"memory","turn":7,"prompt":"Briefly explain what '{related_b}' refers to in the context of {topic_primary}."}
+{"length":21,"scaffold":"memory","turn":8,"prompt":"List some key words that are related to {related_b} so I can look them up later"}
+{"length":21,"scaffold":"memory","turn":9,"prompt":"Name one thing {related_b} is often confused with."}
+{"length":21,"scaffold":"memory","turn":10,"prompt":"Repeat the things {related_a} and {related_b} are often confused with and the key words related to them."}
+{"length":21,"scaffold":"memory","turn":11,"prompt":"In one sentence, give me an overview of {related_c}."}
+{"length":21,"scaffold":"memory","turn":12,"prompt":"Briefly explain what '{related_c}' refers to in the context of {topic_primary}."}
+{"length":21,"scaffold":"memory","turn":13,"prompt":"List some key words that are related to {related_c} so I can look them up later"}
+{"length":21,"scaffold":"memory","turn":14,"prompt":"Name one thing {related_c} is often confused with."}
+{"length":21,"scaffold":"memory","turn":15,"prompt":"Repeat the things {related_a}, {related_b}, and {related_c} are often confused with and the key words related to them."}
+{"length":21,"scaffold":"memory","turn":16,"prompt":"In one sentence, give me an overview of {related_d}."}
+{"length":21,"scaffold":"memory","turn":17,"prompt":"Briefly explain what '{related_d}' refers to in the context of {topic_primary}."}
+{"length":21,"scaffold":"memory","turn":18,"prompt":"List some key words that are related to {related_d} so I can look them up later"}
+{"length":21,"scaffold":"memory","turn":19,"prompt":"Name one thing {related_d} is often confused with."}
+{"length":21,"scaffold":"memory","turn":20,"prompt":"Repeat the things {related_a}, {related_b}, {related_c}, and {related_d} are often confused with and the key words related to them."}
+{"length":21,"scaffold":"memory","turn":21,"prompt":"Answer YES, NO or 'I don't know' to this question: {QUESTION}"}

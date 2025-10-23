@@ -2,33 +2,48 @@
 # -*- coding: utf-8 -*-
 
 """
-run_length.py — Rolling-context runner for BoolQ-length evals.
+run_length_old.py — Rolling-context runner for BoolQ-length evals.
 
 This preserves TRUE multi-turn behavior:
 T1 → A1 → T2 → A2 → … → TL → AL, with each assistant reply appended to the context.
 
-What’s included:
+What’s new in this revision:
 - Input is ONLY --in-final (boolq_final.jsonl).
-- Scaffolds now include: baseline, memory, meta, semantic, underspecified, misleading.
+- Scaffolds now include: baseline, meta, semantic, underspecified, misleading.
 - Strict template filenames:
     data/length/{scaffold}/L{L}_{scaffold}.jsonl
-  And for 'misleading' we branch by gold:
+  And for 'misleading' we branch by gold (NO fallbacks):
     answer==true  -> data/length/misleading/L{L}_misleading_true.jsonl
     answer==false -> data/length/misleading/L{L}_misleading_false.jsonl
 - Deterministic anchor generator for {anchor_a..d} (underspecified, misleading).
 - Progress prints so you can see where it’s working/lagging.
-- Model alias: --model phi4-mini -> microsoft/Phi-4-mini-instruct.
-- Optional --dry-run writes prompts/transcripts without importing torch/transformers.
+- Adds model alias: --model phi4-mini -> microsoft/Phi-4-mini-instruct.
+- NEW: --dry-run writes prompts/transcripts without importing torch/transformers.
 
-Example:
-python run_length.py \
-  --scaffold memory \
-  --lengths 6,11,16,21 \
+NOTE: There are NO top-level imports of torch/transformers so --dry-run stays light.
+
+# Example (dry-run; writes prompts + transcripts only):
+python run_length_old.py \
+  --scaffold misleading \
+  --lengths 6 \
+  --num 5 \
   --in-final data/boolq_final.jsonl \
-  --out-root runs/phi4_memory \
+  --out-root runs/phi4_misleading_L6_dry \
+  --model phi4-mini \
+  --device mps \
+  --dry-run
+
+# Example (writes prompts + responses + JSON):
+python run_length.py \
+  --scaffold misleading \
+  --lengths 6 \
+  --num 10 \
+  --in-final data/boolq_final.jsonl \
+  --out-root runs/phi4_misleading_L6 \
   --model phi4-mini \
   --device mps \
   --skip-existing
+
 """
 
 from __future__ import annotations
@@ -48,7 +63,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 DATA_DIR     = PROJECT_ROOT / "data"
 LENGTH_DIR   = DATA_DIR / "length"
 
-SCAFFOLDS = ("baseline", "memory", "meta", "semantic", "underspecified", "misleading")
+SCAFFOLDS = ("baseline", "meta", "semantic", "underspecified", "misleading")
 
 # Convenience aliases; pass full HF model id to --model to bypass
 MODEL_ALIASES = {
@@ -111,7 +126,7 @@ def resolve_template_path(scaffold: str, L: int, gold_bool: bool) -> Path:
     elif scaffold == "baseline":
         path = base / "L1_baseline.jsonl"
     else:
-        # memory | meta | semantic | underspecified
+        # meta | semantic | underspecified
         path = base / f"L{L}_{scaffold}.jsonl"
 
     if not path.exists():
@@ -180,7 +195,7 @@ def build_placeholder_map(item: dict, scaffold: str) -> Dict[str, Any]:
         "GOLD": "YES" if bool(item.get("answer")) else "NO",
     }
 
-    if scaffold in ("semantic", "memory"):
+    if scaffold == "semantic":
         # pad related terms to 4
         rel = [str(x) for x in topic_related]
         rel += ["", "", "", ""]
@@ -265,13 +280,13 @@ def load_final_items(path: Path, id_include: Optional[List[str]], num: Optional[
 def main():
     ap = argparse.ArgumentParser(description="Rolling-context runner for BoolQ-length evals")
     ap.add_argument("--scaffold", required=True, choices=SCAFFOLDS,
-                    help="baseline|memory|meta|semantic|underspecified|misleading")
+                    help="baseline|meta|semantic|underspecified|misleading")
     ap.add_argument("--lengths", default="",
                     help="Comma-separated. baseline forced to 1; others in {6,11,16,21}")
     ap.add_argument("--in-final", required=True,
                     help="Path to data/boolq_final.jsonl")
     ap.add_argument("--out-root", required=True,
-                    help="Output root, e.g., runs/phi4_memory")
+                    help="Output root, e.g., runs/phi4_semantic")
     ap.add_argument("--num", type=int, default=None,
                     help="Use only N items (after id filter)")
     ap.add_argument("--id-include", default="",
