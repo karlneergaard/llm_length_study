@@ -1,1 +1,4 @@
-
+scaffold,L_a,L_b,n_both_answered,b_a_correct_b_incorrect,c_a_incorrect_b_correct,chi2_cc,p_value,stars
+misleading,6,11,539,2,16,9.38888888888889,0.00914594703842787,**
+misleading,11,16,645,5,8,0.3076923076923077,0.8574039191604412,
+misleading,16,21,676,1,13,8.642857142857142,0.013280897273661229,*

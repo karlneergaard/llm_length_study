@@ -1,0 +1,4 @@
+scaffold,L_a,L_b,n_paired,b_a_correct_b_incorrect,c_a_incorrect_b_correct,chi2_cc,p_value,stars
+memory,6,11,999,32,77,17.761467889908257,0.00013904207887113665,***
+memory,11,16,999,40,40,0.0125,0.9937694906233947,
+memory,16,21,999,33,34,0.0,1.0,

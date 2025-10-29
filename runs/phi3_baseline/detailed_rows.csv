@@ -209,7 +209,6 @@ baseline,1,dev_3183,0,"Yes, the winner of the British Open, also known as The Op
 baseline,1,dev_3204,0,YES,1.876,yes,TRUE,1,FALSE,yes,yes,TRUE,FALSE,FALSE
 baseline,1,dev_3221,0,YES,1.87,yes,TRUE,1,FALSE,yes,yes,TRUE,FALSE,FALSE
 baseline,1,dev_0023,1,NO,1.859,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
-baseline,1,dev_0025,1,"No, a Fire 7 is not the same as a Kindle. The Fire 7 is a tablet developed by Amazon, which runs on the Android operating system. It is part of Amazon's Fire line of devices, which are designed for media consumption, gaming, and productivity. On the other hand, Kindle refers to Amazon's line of e-readers, which are specifically designed for reading digital books and periodicals. Kindle devices",1.86,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 baseline,1,dev_0087,1,NO,1.865,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 baseline,1,dev_0120,1,"No, a vehicle title and registration are not the same. A vehicle title is a legal document that establishes a person or business as the legal owner of a vehicle. It is issued by the state's Department of Motor Vehicles (DMV) or equivalent agency. The title contains important information about the vehicle, such as the make, model, year, and Vehicle Identification Number (VIN).
 
@@ -1180,7 +1179,6 @@ baseline,1,dev_0186,1,Yes,1.866,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 baseline,1,dev_0187,1,YES,1.87,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 baseline,1,dev_0188,1,YES,1.868,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 baseline,1,dev_0190,1,YES,1.868,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
-baseline,1,dev_0193,1,YES,1.87,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 baseline,1,dev_0195,1,YES,1.87,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 baseline,1,dev_0196,1,YES,1.869,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 baseline,1,dev_0200,1,YES,1.87,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
@@ -3252,7 +3250,6 @@ baseline,1,dev_0604,1,"I don't know.
 
 
 In the television series ""Once Upon a Time,"" Maid Marian, portrayed by Lana Parrilla, does not die. She is a central character in the series, which is a darker, more mature adaptation of the fairy tales from the Disney franchise. Maid Marian is the wife of Prince Charming and the mother of their son, Neal Cassidy. Throughout the series,",1.868,i,FALSE,,,idk,i don't know,FALSE,TRUE,
-baseline,1,dev_0608,1,I don't know.,1.868,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 baseline,1,dev_0614,1,I don't know.,1.867,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 baseline,1,dev_0618,1,I don't know.,1.87,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 baseline,1,dev_0620,1,I don't know.,1.867,i,FALSE,,,idk,i don't know,FALSE,TRUE,

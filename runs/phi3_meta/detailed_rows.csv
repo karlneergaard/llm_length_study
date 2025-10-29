@@ -4,7 +4,6 @@ meta,11,dev_0007,1,NO.,15.939,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,11,dev_0008,1,NO.,15.926,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,11,dev_0010,1,NO.,15.938,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,11,dev_0018,1,NO.,15.935,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
-meta,11,dev_0025,1,NO.,15.943,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,11,dev_0032,1,NO.,15.94,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,11,dev_0035,1,NO.,15.939,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,11,dev_0037,0,YES.,15.938,yes,TRUE,1,FALSE,yes,yes,TRUE,FALSE,FALSE
@@ -695,7 +694,6 @@ meta,16,dev_0007,1,NO.,23.909,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,16,dev_0010,1,NO.,23.884,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,16,dev_0011,1,NO.,23.892,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,16,dev_0013,1,NO.,23.91,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
-meta,16,dev_0025,1,NO.,23.91,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,16,dev_0017,1,NO.,23.908,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,16,dev_0018,1,NO.,23.906,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,16,dev_0023,1,NO.,23.909,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
@@ -1748,7 +1746,6 @@ meta,21,dev_0039,0,YES.,32.579,yes,TRUE,1,FALSE,yes,yes,TRUE,FALSE,FALSE
 meta,21,dev_0017,1,NO.,32.61,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,21,dev_0018,1,NO.,32.608,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,21,dev_0023,1,NO.,32.611,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
-meta,21,dev_0025,1,NO.,32.615,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,21,dev_0030,1,NO.,32.584,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,21,dev_0031,1,NO.,32.577,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,21,dev_0032,1,NO.,32.579,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
@@ -2795,7 +2792,6 @@ meta,6,dev_0034,1,NO.,8.452,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,6,dev_0017,1,NO.,8.462,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,6,dev_0018,1,NO.,8.462,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,6,dev_0023,1,NO.,8.463,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
-meta,6,dev_0025,1,NO.,8.469,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,6,dev_0030,1,NO.,8.452,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,6,dev_0032,1,NO.,8.452,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
 meta,6,dev_0035,1,NO.,8.45,no,TRUE,0,FALSE,no,no,TRUE,FALSE,FALSE
@@ -3897,7 +3893,6 @@ meta,11,dev_0180,0,NO.,15.919,no,TRUE,0,TRUE,no,no,TRUE,FALSE,TRUE
 meta,11,dev_0186,1,YES.,15.922,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,11,dev_0187,1,YES.,15.951,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,11,dev_0190,1,YES.,15.94,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
-meta,11,dev_0193,1,YES.,15.952,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,11,dev_0194,1,YES.,15.938,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,11,dev_0195,1,YES.,15.958,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,11,dev_0196,1,YES.,15.941,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
@@ -5324,7 +5319,6 @@ meta,16,dev_0185,0,NO.,23.912,no,TRUE,0,TRUE,no,no,TRUE,FALSE,TRUE
 meta,16,dev_0186,1,YES.,23.879,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,16,dev_0187,1,YES.,23.91,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,16,dev_0190,1,YES.,23.91,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
-meta,16,dev_0193,1,YES.,23.912,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,16,dev_0194,1,YES.,23.909,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,16,dev_0195,1,YES.,23.903,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,16,dev_0196,1,YES.,23.91,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
@@ -6983,7 +6977,6 @@ meta,21,dev_0185,0,NO.,32.615,no,TRUE,0,TRUE,no,no,TRUE,FALSE,TRUE
 meta,21,dev_0186,1,YES.,32.574,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,21,dev_0187,1,YES.,32.614,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,21,dev_0190,1,YES.,32.611,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
-meta,21,dev_0193,1,YES.,32.614,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,21,dev_0194,1,YES.,32.616,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,21,dev_0195,1,YES.,32.618,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,21,dev_0196,1,YES.,32.612,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
@@ -8734,7 +8727,6 @@ meta,6,dev_0185,0,NO.,8.463,no,TRUE,0,TRUE,no,no,TRUE,FALSE,TRUE
 meta,6,dev_0186,1,YES.,8.462,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,6,dev_0187,1,YES.,8.45,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,6,dev_0190,1,YES.,8.462,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
-meta,6,dev_0193,1,YES.,8.45,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,6,dev_0194,1,YES.,8.461,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,6,dev_0195,1,YES.,8.464,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
 meta,6,dev_0196,1,YES.,8.464,yes,TRUE,1,TRUE,yes,yes,TRUE,FALSE,TRUE
@@ -10776,7 +10768,6 @@ meta,11,dev_0588,1,I don't know.,15.914,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,11,dev_0590,1,I don't know.,15.914,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,11,dev_0604,1,I don't know.,15.91,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,11,dev_0607,1,I don't know.,15.908,i,FALSE,,,idk,i don't know,FALSE,TRUE,
-meta,11,dev_0608,1,I don't know.,15.932,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,11,dev_0614,1,I don't know.,15.913,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,11,dev_0615,0,I don't know.,15.93,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,11,dev_0619,1,I don't know.,15.909,i,FALSE,,,idk,i don't know,FALSE,TRUE,
@@ -11426,7 +11417,6 @@ meta,16,dev_0517,0,I don't know.,23.912,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,16,dev_0519,1,I don't know.,23.912,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,16,dev_0544,0,I don't know.,23.902,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,16,dev_0574,1,I don't know.,23.896,i,FALSE,,,idk,i don't know,FALSE,TRUE,
-meta,16,dev_0608,1,I don't know.,23.901,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,16,dev_0614,1,I don't know.,23.901,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,16,dev_0641,1,I don't know.,23.901,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,16,dev_0679,0,I don't know.,23.913,i,FALSE,,,idk,i don't know,FALSE,TRUE,
@@ -11584,7 +11574,6 @@ meta,21,dev_0515,1,I don't know.,32.617,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,21,dev_0517,0,I don't know.,32.614,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,21,dev_0544,0,I don't know.,32.619,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,21,dev_0574,1,I don't know.,32.577,i,FALSE,,,idk,i don't know,FALSE,TRUE,
-meta,21,dev_0608,1,I don't know.,32.62,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,21,dev_0679,0,I don't know.,32.58,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,21,dev_0703,0,I don't know.,32.619,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,21,dev_0743,1,I don't know.,32.613,i,FALSE,,,idk,i don't know,FALSE,TRUE,
@@ -11690,7 +11679,6 @@ meta,6,dev_0474,1,I don't know.,8.45,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,6,dev_0507,0,I don't know.,8.445,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,6,dev_0510,0,I don't know.,8.444,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,6,dev_0517,0,I don't know.,8.446,i,FALSE,,,idk,i don't know,FALSE,TRUE,
-meta,6,dev_0608,1,I don't know.,8.452,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,6,dev_0614,1,I don't know.,8.445,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,6,dev_0680,0,I don't know.,8.444,i,FALSE,,,idk,i don't know,FALSE,TRUE,
 meta,6,dev_0703,0,I don't know.,8.448,i,FALSE,,,idk,i don't know,FALSE,TRUE,

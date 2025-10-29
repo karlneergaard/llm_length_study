@@ -1,0 +1,21 @@
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                11864
+Model:                          Logit   Df Residuals:                    11856
+Method:                           MLE   Df Model:                            7
+Date:                Mon, 27 Oct 2025   Pseudo R-squ.:                0.007950
+Time:                        13:56:08   Log-Likelihood:                -7875.8
+converged:                       True   LL-Null:                       -7938.9
+Covariance Type:            nonrobust   LLR p-value:                 3.838e-24
+====================================================================================================================================
+                                                                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                           -0.6098      0.090     -6.812      0.000      -0.785      -0.434
+C(scaffold, Treatment(reference='semantic'))[T.meta]                 0.3886      0.124      3.131      0.002       0.145       0.632
+C(scaffold, Treatment(reference='semantic'))[T.underspecified]       0.1648      0.127      1.296      0.195      -0.084       0.414
+C(scaffold, Treatment(reference='semantic'))[T.misleading]           0.0080        nan        nan        nan         nan         nan
+L                                                                    0.0062      0.006      1.014      0.311      -0.006       0.018
+C(scaffold, Treatment(reference='semantic'))[T.meta]:L              -0.0032      0.008     -0.376      0.707      -0.020       0.013
+C(scaffold, Treatment(reference='semantic'))[T.underspecified]:L    -0.0231      0.009     -2.642      0.008      -0.040      -0.006
+C(scaffold, Treatment(reference='semantic'))[T.misleading]:L         0.0477        nan        nan        nan         nan         nan
+====================================================================================================================================

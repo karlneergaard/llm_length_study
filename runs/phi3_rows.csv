@@ -209,7 +209,6 @@ baseline,1,dev_3183,0,"Yes, the winner of the British Open, also known as The Op
 baseline,1,dev_3204,0,YES,1.876,yes,True,1.0,False,yes,yes,True,False,False,baseline,FALSE,Incorrect
 baseline,1,dev_3221,0,YES,1.87,yes,True,1.0,False,yes,yes,True,False,False,baseline,FALSE,Incorrect
 baseline,1,dev_0023,1,NO,1.859,no,True,0.0,False,no,no,True,False,False,baseline,FALSE,Incorrect
-baseline,1,dev_0025,1,"No, a Fire 7 is not the same as a Kindle. The Fire 7 is a tablet developed by Amazon, which runs on the Android operating system. It is part of Amazon's Fire line of devices, which are designed for media consumption, gaming, and productivity. On the other hand, Kindle refers to Amazon's line of e-readers, which are specifically designed for reading digital books and periodicals. Kindle devices",1.86,no,True,0.0,False,no,no,True,False,False,baseline,FALSE,Incorrect
 baseline,1,dev_0087,1,NO,1.865,no,True,0.0,False,no,no,True,False,False,baseline,FALSE,Incorrect
 baseline,1,dev_0120,1,"No, a vehicle title and registration are not the same. A vehicle title is a legal document that establishes a person or business as the legal owner of a vehicle. It is issued by the state's Department of Motor Vehicles (DMV) or equivalent agency. The title contains important information about the vehicle, such as the make, model, year, and Vehicle Identification Number (VIN).
 
@@ -860,7 +859,6 @@ baseline,1,dev_0159,1,YES,1.867,yes,True,1.0,True,yes,yes,True,False,True,baseli
 baseline,1,dev_0161,1,Yes,1.868,yes,True,1.0,True,yes,yes,True,False,True,baseline,TRUE,Correct
 baseline,1,dev_0184,1,YES,1.868,yes,True,1.0,True,yes,yes,True,False,True,baseline,TRUE,Correct
 baseline,1,dev_0190,1,YES,1.868,yes,True,1.0,True,yes,yes,True,False,True,baseline,TRUE,Correct
-baseline,1,dev_0193,1,YES,1.87,yes,True,1.0,True,yes,yes,True,False,True,baseline,TRUE,Correct
 baseline,1,dev_0195,1,YES,1.87,yes,True,1.0,True,yes,yes,True,False,True,baseline,TRUE,Correct
 baseline,1,dev_0196,1,YES,1.869,yes,True,1.0,True,yes,yes,True,False,True,baseline,TRUE,Correct
 baseline,1,dev_0200,1,YES,1.87,yes,True,1.0,True,yes,yes,True,False,True,baseline,TRUE,Correct
@@ -1398,7 +1396,6 @@ baseline,1,dev_0580,1,I don't know.,1.868,i,False,,,idk,i don't know,False,True,
 baseline,1,dev_0583,1,I don't know.,1.87,i,False,,,idk,i don't know,False,True,nan,baseline,IDK,IDK
 baseline,1,dev_0585,1,I don't know.,1.868,i,False,,,idk,i don't know,False,True,nan,baseline,IDK,IDK
 baseline,1,dev_0591,1,I don't know.,1.867,i,False,,,idk,i don't know,False,True,nan,baseline,IDK,IDK
-baseline,1,dev_0608,1,I don't know.,1.868,i,False,,,idk,i don't know,False,True,nan,baseline,IDK,IDK
 baseline,1,dev_0614,1,I don't know.,1.867,i,False,,,idk,i don't know,False,True,nan,baseline,IDK,IDK
 baseline,1,dev_0618,1,I don't know.,1.87,i,False,,,idk,i don't know,False,True,nan,baseline,IDK,IDK
 baseline,1,dev_0620,1,I don't know.,1.867,i,False,,,idk,i don't know,False,True,nan,baseline,IDK,IDK
@@ -1552,7 +1549,6 @@ baseline,1,dev_3265,1,"I don't know.
 The Titius–Bode rule is an empirical formula that was once thought to predict the spacing of planets in the Solar System. It suggests that, starting with the innermost planet, each planet is approximately twice as far from the Sun as the previous one. However, this rule is not a physical law and does not accurately describe the orbits of exoplanetary systems. Exoplanet",1.873,i,False,,,idk,i don't know,False,True,nan,baseline,IDK,IDK
 meta,11,dev_0002,1,NO.,15.885,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,11,dev_0008,1,NO.,15.926,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
-meta,11,dev_0025,1,NO.,15.943,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,11,dev_0039,0,YES.,15.939,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
 meta,11,dev_0055,0,YES.,15.939,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
 meta,11,dev_0059,0,YES.,15.937,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
@@ -1895,7 +1891,6 @@ meta,11,dev_3239,1,NO.,15.969,no,True,0.0,False,no,no,True,False,False,meta,FALS
 meta,11,dev_3241,1,NO.,15.965,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,16,dev_0002,1,NO.,23.84,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,16,dev_0013,1,NO.,23.91,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
-meta,16,dev_0025,1,NO.,23.91,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,16,dev_0023,1,NO.,23.909,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,16,dev_0031,1,NO.,23.882,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,16,dev_0039,0,YES.,23.883,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
@@ -2340,7 +2335,6 @@ meta,16,dev_3242,1,NO.,23.916,no,True,0.0,False,no,no,True,False,False,meta,FALS
 meta,21,dev_0002,1,NO.,32.56,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,21,dev_0039,0,YES.,32.579,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
 meta,21,dev_0023,1,NO.,32.611,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
-meta,21,dev_0025,1,NO.,32.615,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,21,dev_0031,1,NO.,32.577,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,21,dev_0040,0,YES.,32.58,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
 meta,21,dev_0055,0,YES.,32.613,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
@@ -2786,7 +2780,6 @@ meta,21,dev_3242,1,NO.,32.585,no,True,0.0,False,no,no,True,False,False,meta,FALS
 meta,6,dev_0002,1,NO.,8.433,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,6,dev_0013,1,NO.,8.463,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,6,dev_0023,1,NO.,8.463,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
-meta,6,dev_0025,1,NO.,8.469,no,True,0.0,False,no,no,True,False,False,meta,FALSE,Incorrect
 meta,6,dev_0039,0,YES.,8.451,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
 meta,6,dev_0040,0,YES.,8.45,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
 meta,6,dev_0055,0,YES.,8.451,yes,True,1.0,False,yes,yes,True,False,False,meta,FALSE,Incorrect
@@ -3291,7 +3284,6 @@ meta,11,dev_0159,1,YES.,15.916,yes,True,1.0,True,yes,yes,True,False,True,meta,TR
 meta,11,dev_0161,1,YES.,15.917,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,11,dev_0179,0,NO.,15.94,no,True,0.0,True,no,no,True,False,True,meta,TRUE,Correct
 meta,11,dev_0190,1,YES.,15.94,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
-meta,11,dev_0193,1,YES.,15.952,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,11,dev_0195,1,YES.,15.958,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,11,dev_0196,1,YES.,15.941,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,11,dev_0202,1,YES.,15.91,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
@@ -3723,7 +3715,6 @@ meta,16,dev_0161,1,YES.,23.881,yes,True,1.0,True,yes,yes,True,False,True,meta,TR
 meta,16,dev_0166,0,NO.,23.912,no,True,0.0,True,no,no,True,False,True,meta,TRUE,Correct
 meta,16,dev_0170,0,NO.,23.91,no,True,0.0,True,no,no,True,False,True,meta,TRUE,Correct
 meta,16,dev_0190,1,YES.,23.91,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
-meta,16,dev_0193,1,YES.,23.912,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,16,dev_0195,1,YES.,23.903,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,16,dev_0196,1,YES.,23.91,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,16,dev_0202,1,YES.,23.921,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
@@ -4237,7 +4228,6 @@ meta,21,dev_0166,0,NO.,32.616,no,True,0.0,True,no,no,True,False,True,meta,TRUE,C
 meta,21,dev_0170,0,NO.,32.61,no,True,0.0,True,no,no,True,False,True,meta,TRUE,Correct
 meta,21,dev_0179,0,NO.,32.582,no,True,0.0,True,no,no,True,False,True,meta,TRUE,Correct
 meta,21,dev_0190,1,YES.,32.611,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
-meta,21,dev_0193,1,YES.,32.614,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,21,dev_0195,1,YES.,32.618,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,21,dev_0196,1,YES.,32.612,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,21,dev_0202,1,YES.,32.616,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
@@ -4778,7 +4768,6 @@ meta,6,dev_0166,0,NO.,8.467,no,True,0.0,True,no,no,True,False,True,meta,TRUE,Cor
 meta,6,dev_0170,0,NO.,8.462,no,True,0.0,True,no,no,True,False,True,meta,TRUE,Correct
 meta,6,dev_0179,0,NO.,8.452,no,True,0.0,True,no,no,True,False,True,meta,TRUE,Correct
 meta,6,dev_0190,1,YES.,8.462,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
-meta,6,dev_0193,1,YES.,8.45,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,6,dev_0195,1,YES.,8.464,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,6,dev_0196,1,YES.,8.464,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
 meta,6,dev_0202,1,YES.,8.415,yes,True,1.0,True,yes,yes,True,False,True,meta,TRUE,Correct
@@ -5410,7 +5399,6 @@ meta,11,dev_0566,0,I don't know.,15.911,i,False,,,idk,i don't know,False,True,na
 meta,11,dev_0567,0,I don't know.,15.913,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,11,dev_0579,0,I don't know.,15.913,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,11,dev_0588,1,I don't know.,15.914,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
-meta,11,dev_0608,1,I don't know.,15.932,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,11,dev_0614,1,I don't know.,15.913,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,11,dev_0615,0,I don't know.,15.93,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,11,dev_0619,1,I don't know.,15.909,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
@@ -5588,7 +5576,6 @@ meta,16,dev_0455,1,I don't know.,23.886,i,False,,,idk,i don't know,False,True,na
 meta,16,dev_0474,1,I don't know.,23.91,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,16,dev_0513,0,I don't know.,23.92,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,16,dev_0544,0,I don't know.,23.902,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
-meta,16,dev_0608,1,I don't know.,23.901,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,16,dev_0614,1,I don't know.,23.901,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,16,dev_0641,1,I don't know.,23.901,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,16,dev_0703,0,I don't know.,23.902,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
@@ -5630,7 +5617,6 @@ meta,21,dev_0379,1,I don't know.,32.615,i,False,,,idk,i don't know,False,True,na
 meta,21,dev_0474,1,I don't know.,32.577,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,21,dev_0515,1,I don't know.,32.617,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,21,dev_0544,0,I don't know.,32.619,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
-meta,21,dev_0608,1,I don't know.,32.62,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,21,dev_0703,0,I don't know.,32.619,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,21,dev_0822,1,I don't know.,32.617,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,21,dev_0833,0,I don't know.,32.58,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
@@ -5664,7 +5650,6 @@ meta,6,dev_0386,1,I don't know.,8.435,i,False,,,idk,i don't know,False,True,nan,
 meta,6,dev_0411,1,I don't know.,8.448,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,6,dev_0474,1,I don't know.,8.45,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,6,dev_0507,0,I don't know.,8.445,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
-meta,6,dev_0608,1,I don't know.,8.452,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,6,dev_0614,1,I don't know.,8.445,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,6,dev_0680,0,I don't know.,8.444,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
 meta,6,dev_0703,0,I don't know.,8.448,i,False,,,idk,i don't know,False,True,nan,meta,IDK,IDK
@@ -5692,7 +5677,6 @@ semantic,11,dev_0020,1,I don't know.,17.684,i,False,,,idk,i don't know,False,Tru
 semantic,11,dev_0021,0,NO,16.369,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,11,dev_0022,1,NO,17.489,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,11,dev_0023,1,NO,17.187,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
-semantic,11,dev_0025,1,NO,17.561,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,11,dev_0027,1,YES,17.353,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,11,dev_0031,1,YES,17.202,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,11,dev_0033,0,NO,17.634,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
@@ -5754,7 +5738,6 @@ semantic,11,dev_0179,0,NO,17.227,no,True,0.0,True,no,no,True,False,True,semantic
 semantic,11,dev_0184,1,NO,17.468,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,11,dev_0190,1,YES,17.482,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,11,dev_0191,1,NO,17.312,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
-semantic,11,dev_0193,1,YES,17.478,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,11,dev_0195,1,YES,17.71,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,11,dev_0196,1,YES,17.598,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,11,dev_0198,0,YES,16.808,yes,True,1.0,False,yes,yes,True,False,False,semantic,FALSE,Incorrect
@@ -5980,7 +5963,6 @@ semantic,11,dev_0598,1,NO,17.546,no,True,0.0,False,no,no,True,False,False,semant
 semantic,11,dev_0603,0,NO,17.669,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,11,dev_0605,0,NO,16.513,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,11,dev_0606,0,NO,17.459,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
-semantic,11,dev_0608,1,I don't know.,17.374,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,11,dev_0612,1,NO,17.86,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,11,dev_0614,1,I don't know.,17.47,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,11,dev_0615,0,NO,18.381,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
@@ -6713,7 +6695,6 @@ semantic,16,dev_0020,1,YES,28.064,yes,True,1.0,True,yes,yes,True,False,True,sema
 semantic,16,dev_0021,0,NO,26.131,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,16,dev_0022,1,NO,27.527,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,16,dev_0023,1,NO,26.753,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
-semantic,16,dev_0025,1,NO,27.526,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,16,dev_0027,1,YES,27.364,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,16,dev_0031,1,I don't know.,27.566,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,16,dev_0033,0,NO,27.715,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
@@ -6777,7 +6758,6 @@ semantic,16,dev_0179,0,NO,26.896,no,True,0.0,True,no,no,True,False,True,semantic
 semantic,16,dev_0184,1,NO,27.482,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,16,dev_0190,1,YES,27.589,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,16,dev_0191,1,NO,27.72,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
-semantic,16,dev_0193,1,YES,26.569,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,16,dev_0195,1,NO,27.976,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,16,dev_0196,1,YES,27.966,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,16,dev_0198,0,YES,26.882,yes,True,1.0,False,yes,yes,True,False,False,semantic,FALSE,Incorrect
@@ -7003,7 +6983,6 @@ semantic,16,dev_0598,1,NO,27.507,no,True,0.0,False,no,no,True,False,False,semant
 semantic,16,dev_0603,0,NO,28.04,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,16,dev_0605,0,NO,26.859,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,16,dev_0606,0,NO,27.633,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
-semantic,16,dev_0608,1,I don't know.,27.357,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,16,dev_0612,1,NO,28.398,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,16,dev_0614,1,I don't know.,27.522,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,16,dev_0615,0,NO,29.437,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
@@ -7736,7 +7715,6 @@ semantic,21,dev_0020,1,YES,40.224,yes,True,1.0,True,yes,yes,True,False,True,sema
 semantic,21,dev_0021,0,NO,37.436,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,21,dev_0022,1,NO,39.168,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,21,dev_0023,1,NO,37.779,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
-semantic,21,dev_0025,1,NO,39.091,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,21,dev_0027,1,YES,39.119,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,21,dev_0031,1,YES,39.377,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,21,dev_0033,0,NO,39.204,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
@@ -7801,7 +7779,6 @@ semantic,21,dev_0179,0,NO,37.83,no,True,0.0,True,no,no,True,False,True,semantic,
 semantic,21,dev_0184,1,YES,38.8,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,21,dev_0190,1,YES,39.139,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,21,dev_0191,1,NO,39.786,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
-semantic,21,dev_0193,1,YES,38.062,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,21,dev_0195,1,NO,39.946,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,21,dev_0196,1,YES,39.933,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,21,dev_0198,0,YES,38.412,yes,True,1.0,False,yes,yes,True,False,False,semantic,FALSE,Incorrect
@@ -8027,7 +8004,6 @@ semantic,21,dev_0598,1,NO,38.904,no,True,0.0,False,no,no,True,False,False,semant
 semantic,21,dev_0603,0,NO,40.0,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,21,dev_0605,0,NO,38.836,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,21,dev_0606,0,NO,39.468,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
-semantic,21,dev_0608,1,I don't know.,38.711,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,21,dev_0612,1,NO,40.559,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,21,dev_0614,1,I don't know.,39.04,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,21,dev_0615,0,NO,42.21,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
@@ -8763,7 +8739,6 @@ semantic,6,dev_0020,1,YES,8.996,yes,True,1.0,True,yes,yes,True,False,True,semant
 semantic,6,dev_0021,0,YES,7.986,yes,True,1.0,False,yes,yes,True,False,False,semantic,FALSE,Incorrect
 semantic,6,dev_0022,1,YES,8.932,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0023,1,NO,6.882,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
-semantic,6,dev_0025,1,NO,9.003,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,6,dev_0027,1,YES,8.907,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0031,1,YES,8.432,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0033,0,NO,9.054,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
@@ -8825,7 +8800,6 @@ semantic,6,dev_0179,0,NO,8.908,no,True,0.0,True,no,no,True,False,True,semantic,T
 semantic,6,dev_0184,1,YES,8.944,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0190,1,YES,8.924,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0191,1,NO,8.639,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
-semantic,6,dev_0193,1,"YES, it is possible for some individuals to type 200 words per minute, especially those who have extensive typing experience and practice.",8.912,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0195,1,YES,9.055,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0196,1,YES,8.957,yes,True,1.0,True,yes,yes,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0198,0,YES,8.205,yes,True,1.0,False,yes,yes,True,False,False,semantic,FALSE,Incorrect
@@ -9050,7 +9024,6 @@ semantic,6,dev_0598,1,NO,9.042,no,True,0.0,False,no,no,True,False,False,semantic
 semantic,6,dev_0603,0,NO,9.005,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0605,0,NO,7.854,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
 semantic,6,dev_0606,0,NO,8.933,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
-semantic,6,dev_0608,1,I don't know.,8.92,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,6,dev_0612,1,NO,9.049,no,True,0.0,False,no,no,True,False,False,semantic,FALSE,Incorrect
 semantic,6,dev_0614,1,I don't know.,8.938,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,6,dev_0615,0,NO,9.252,no,True,0.0,True,no,no,True,False,True,semantic,TRUE,Correct
@@ -9771,7 +9744,6 @@ semantic,6,dev_3256,0,I don't know.,8.915,i,False,,,idk,i don't know,False,True,
 semantic,6,dev_3265,1,I don't know.,8.943,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 semantic,6,dev_0001,0,I don't know.,8.994,i,False,,,idk,i don't know,False,True,nan,semantic,IDK,IDK
 underspecified,11,dev_0023,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
-underspecified,11,dev_0025,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,11,dev_0039,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,11,dev_0055,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,11,dev_0059,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
@@ -10457,7 +10429,6 @@ underspecified,11,dev_2798,0,NO,,no,True,0.0,True,no,no,True,False,True,underspe
 underspecified,11,dev_3138,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,11,dev_0307,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,11,dev_0506,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
-underspecified,11,dev_0608,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,underspecified,IDK,IDK
 underspecified,11,dev_0641,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,11,dev_0844,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,underspecified,IDK,IDK
 underspecified,11,dev_1032,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
@@ -10793,7 +10764,6 @@ underspecified,11,dev_2436,0,NO,,no,True,0.0,True,no,no,True,False,True,underspe
 underspecified,11,dev_3224,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,11,dev_0022,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,11,dev_0132,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
-underspecified,11,dev_0193,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,11,dev_0268,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,11,dev_0646,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,11,dev_0697,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
@@ -10815,7 +10785,6 @@ underspecified,11,dev_2524,0,NO,,no,True,0.0,True,no,no,True,False,True,underspe
 underspecified,11,dev_3057,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,11,dev_3167,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,16,dev_0023,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
-underspecified,16,dev_0025,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,16,dev_0039,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,16,dev_0055,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,16,dev_0059,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
@@ -11523,7 +11492,6 @@ underspecified,16,dev_2798,0,NO,,no,True,0.0,True,no,no,True,False,True,underspe
 underspecified,16,dev_3138,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,16,dev_0307,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,16,dev_0506,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
-underspecified,16,dev_0608,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,underspecified,IDK,IDK
 underspecified,16,dev_0641,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,16,dev_0844,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,16,dev_1032,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
@@ -11857,7 +11825,6 @@ underspecified,16,dev_2436,0,NO,,no,True,0.0,True,no,no,True,False,True,underspe
 underspecified,16,dev_3224,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,16,dev_0022,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,16,dev_0132,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
-underspecified,16,dev_0193,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,16,dev_0268,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,16,dev_0646,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,16,dev_0697,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
@@ -11879,7 +11846,6 @@ underspecified,16,dev_2524,0,NO,,no,True,0.0,True,no,no,True,False,True,underspe
 underspecified,16,dev_3057,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,16,dev_3167,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,21,dev_0023,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
-underspecified,21,dev_0025,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,21,dev_0039,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,21,dev_0055,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,21,dev_0059,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
@@ -12574,7 +12540,6 @@ underspecified,21,dev_2798,0,NO,,no,True,0.0,True,no,no,True,False,True,underspe
 underspecified,21,dev_3138,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,21,dev_0307,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,21,dev_0506,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
-underspecified,21,dev_0608,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,underspecified,IDK,IDK
 underspecified,21,dev_0641,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,21,dev_0844,0,I don't know,,i,False,,,idk,i don't know,False,True,nan,underspecified,IDK,IDK
 underspecified,21,dev_1032,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
@@ -12916,7 +12881,6 @@ underspecified,21,dev_2436,0,NO,,no,True,0.0,True,no,no,True,False,True,underspe
 underspecified,21,dev_3224,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,21,dev_0022,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,21,dev_0132,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
-underspecified,21,dev_0193,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,21,dev_0268,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,21,dev_0646,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,21,dev_0697,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
@@ -12938,7 +12902,6 @@ underspecified,21,dev_2524,0,NO,,no,True,0.0,True,no,no,True,False,True,underspe
 underspecified,21,dev_3057,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,21,dev_3167,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,6,dev_0023,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
-underspecified,6,dev_0025,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,6,dev_0039,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,6,dev_0055,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,6,dev_0059,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
@@ -13622,7 +13585,6 @@ underspecified,6,dev_2798,0,NO,,no,True,0.0,True,no,no,True,False,True,underspec
 underspecified,6,dev_3138,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,6,dev_0307,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,6,dev_0506,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
-underspecified,6,dev_0608,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,underspecified,IDK,IDK
 underspecified,6,dev_0641,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,underspecified,IDK,IDK
 underspecified,6,dev_0844,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,underspecified,IDK,IDK
 underspecified,6,dev_1032,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
@@ -13965,7 +13927,6 @@ underspecified,6,dev_2436,0,NO,,no,True,0.0,True,no,no,True,False,True,underspec
 underspecified,6,dev_3224,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,6,dev_0022,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,6,dev_0132,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
-underspecified,6,dev_0193,0,"YES, it is possible for some individuals to type 200 words per",,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,6,dev_0268,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,6,dev_0646,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
 underspecified,6,dev_0697,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,underspecified,FALSE,Incorrect
@@ -13987,7 +13948,6 @@ underspecified,6,dev_2524,0,NO,,no,True,0.0,True,no,no,True,False,True,underspec
 underspecified,6,dev_3057,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 underspecified,6,dev_3167,0,NO,,no,True,0.0,True,no,no,True,False,True,underspecified,TRUE,Correct
 misleading,6,dev_0023,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,misleading,IDK,IDK
-misleading,6,dev_0025,0,NO,,no,True,0.0,True,no,no,True,False,True,misleading,TRUE,Correct
 misleading,6,dev_0039,0,"No, carbon and hydrogen form nonpolar covalent bonds due",,no,True,0.0,True,no,no,True,False,True,misleading,TRUE,Correct
 misleading,6,dev_0055,0,"YES, Wisconsin has been in the Little League World Series. The state has hosted",,yes,True,1.0,False,yes,yes,True,False,False,misleading,FALSE,Incorrect
 misleading,6,dev_0059,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,misleading,FALSE,Incorrect
@@ -14690,7 +14650,6 @@ misleading,6,dev_2798,0,NO,,no,True,0.0,True,no,no,True,False,True,misleading,TR
 misleading,6,dev_3138,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,misleading,IDK,IDK
 misleading,6,dev_0307,0,NO,,no,True,0.0,True,no,no,True,False,True,misleading,TRUE,Correct
 misleading,6,dev_0506,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,misleading,IDK,IDK
-misleading,6,dev_0608,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,misleading,IDK,IDK
 misleading,6,dev_0641,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,misleading,IDK,IDK
 misleading,6,dev_0844,0,I don't know.,,i,False,,,idk,i don't know,False,True,nan,misleading,IDK,IDK
 misleading,6,dev_1032,0,NO,,no,True,0.0,True,no,no,True,False,True,misleading,TRUE,Correct
@@ -15037,7 +14996,6 @@ misleading,6,dev_2436,0,NO,,no,True,0.0,True,no,no,True,False,True,misleading,TR
 misleading,6,dev_3224,0,NO,,no,True,0.0,True,no,no,True,False,True,misleading,TRUE,Correct
 misleading,6,dev_0022,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,misleading,FALSE,Incorrect
 misleading,6,dev_0132,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,misleading,FALSE,Incorrect
-misleading,6,dev_0193,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,misleading,FALSE,Incorrect
 misleading,6,dev_0268,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,misleading,FALSE,Incorrect
 misleading,6,dev_0646,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,misleading,FALSE,Incorrect
 misleading,6,dev_0697,0,YES,,yes,True,1.0,False,yes,yes,True,False,False,misleading,FALSE,Incorrect
