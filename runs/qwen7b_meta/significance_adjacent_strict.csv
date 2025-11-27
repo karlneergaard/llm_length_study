@@ -1,0 +1,4 @@
+scaffold,L_a,L_b,n_paired,b_a_correct_b_incorrect,c_a_incorrect_b_correct,chi2_cc,p_value,stars
+meta,6,11,999,10,0,8.1,0.017422374639493515,*
+meta,11,16,999,0,1,0.0,1.0,
+meta,16,21,999,2,0,0.5,0.7788007830714049,

@@ -1,0 +1,4 @@
+scaffold,L_a,L_b,n_paired,b_a_correct_b_incorrect,c_a_incorrect_b_correct,chi2_cc,p_value,stars
+semantic,6,11,999,113,36,38.76510067114094,3.821777014047195e-09,***
+semantic,11,16,999,61,38,4.888888888888889,0.08677432947392923,
+semantic,16,21,999,54,35,3.640449438202247,0.16198934474350843,

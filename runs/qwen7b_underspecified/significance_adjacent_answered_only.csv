@@ -1,0 +1,4 @@
+scaffold,L_a,L_b,n_both_answered,b_a_correct_b_incorrect,c_a_incorrect_b_correct,chi2_cc,p_value,stars
+underspecified,6,11,788,13,29,5.357142857142857,0.068661171513085,
+underspecified,11,16,782,22,6,8.035714285714286,0.017991476826658477,*
+underspecified,16,21,765,10,12,0.045454545454545456,0.9775290462529921,

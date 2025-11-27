@@ -1,0 +1,2 @@
+scaffold,L,N,compliance_rate,compliance_ci_low,compliance_ci_high,acc_strict,acc_strict_ci_low,acc_strict_ci_high
+baseline,1,527,0.0,0.0,0.00723681037808642,0.0,0.0,0.00723681037808642

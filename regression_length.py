@@ -16,17 +16,18 @@ RUNS_DIR = PROJECT_ROOT / "runs"
 INPUTS = {
     "phi3": RUNS_DIR / "phi3_rows.csv",
     "phi4": RUNS_DIR / "phi4_rows.csv",
+    "deepseek7b": RUNS_DIR / "deepseek7b_rows.csv",
+    "qwen7b": RUNS_DIR / "qwen7b_rows.csv",
 }
 OUT_DIR = RUNS_DIR / "regression"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-VALID_SCAFFOLDS = ["meta", "memory", "semantic", "underspecified", "misleading"]
+VALID_SCAFFOLDS = ["meta", "semantic", "underspecified", "misleading"]
 VALID_L = [6, 11, 16, 21]
 ACC_ALL = ["Correct", "Incorrect", "IDK"]  # we drop anything else (e.g., NC)
 
 COLORS = {
     "meta":           "#1f77b4",
-    "memory":         "#ff7f0e",
     "semantic":       "#2ca02c",
     "underspecified": "#d62728",
     "misleading":     "#9467bd",

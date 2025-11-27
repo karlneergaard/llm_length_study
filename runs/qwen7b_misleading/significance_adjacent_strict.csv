@@ -1,0 +1,4 @@
+scaffold,L_a,L_b,n_paired,b_a_correct_b_incorrect,c_a_incorrect_b_correct,chi2_cc,p_value,stars
+misleading,6,11,999,41,40,0.0,1.0,
+misleading,11,16,999,40,21,5.311475409836065,0.07024699799012464,
+misleading,16,21,999,24,23,0.0,1.0,

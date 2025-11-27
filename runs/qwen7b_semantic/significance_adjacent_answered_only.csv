@@ -1,0 +1,4 @@
+scaffold,L_a,L_b,n_both_answered,b_a_correct_b_incorrect,c_a_incorrect_b_correct,chi2_cc,p_value,stars
+semantic,6,11,840,25,38,2.2857142857142856,0.31890655732397044,
+semantic,11,16,855,30,25,0.2909090909090909,0.8646291905075963,
+semantic,16,21,838,21,31,1.5576923076923077,0.4589352465875986,

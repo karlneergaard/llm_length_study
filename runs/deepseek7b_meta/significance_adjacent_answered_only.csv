@@ -1,0 +1,4 @@
+scaffold,L_a,L_b,n_both_answered,b_a_correct_b_incorrect,c_a_incorrect_b_correct,chi2_cc,p_value,stars
+meta,6,11,675,88,22,38.40909090909091,4.566378237048738e-09,***
+meta,11,16,688,3,132,121.36296296296297,4.429629868145468e-27,***
+meta,16,21,843,40,18,7.603448275862069,0.022332234791016183,*
